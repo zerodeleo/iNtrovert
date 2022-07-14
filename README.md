@@ -16,3 +16,11 @@ lear
 - Connect to GitHub
 - Enable automatic deploys
 - Add .env ariables to heroku config vars
+
+#BRANCHES
+## iNtrovert-step-1
+- Project setup done
+    - Server connected to database
+    - Automatic deploy via heroku
+    - Users route configured
+    - Calls from FE to BE working
