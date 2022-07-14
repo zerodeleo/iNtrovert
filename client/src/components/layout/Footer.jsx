@@ -1,11 +1,9 @@
 import React from 'react';
 
-import * as styles from '../../css/styles';
-
 const Footer = () => {
   return (
-    <footer className={`Footer ${styles.Footer}`}>
-      <p className={styles.pFooter}>made by: ZeroDeleo</p>
+    <footer className="footer">
+      <p className="footer__text">made by: Code!Bad</p>
     </footer>
   )
 }

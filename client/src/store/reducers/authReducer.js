@@ -1,5 +1,3 @@
-/* eslint-disable default-param-last */
-/* eslint-disable no-console */
 import * as types from '../types';
 
 const initState = {

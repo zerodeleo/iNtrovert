@@ -1,38 +1,32 @@
 import './css/index.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Redux
 import { connect } from 'react-redux';
 
 // Components
 import Dash from './components/Dash';
 import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
-import SignedIn from './components/layout/SignedIn';
 
-// Styles
-import * as styles from './css/styles';
+// Dispatches
+import { signInWithLocalStorage } from './store/actions/authActions';
 
-// Actions
-import { logIn } from './store/actions/authActions';
-
-const App = ({ logInDispatch }) => {
+const App = ({ signInWithLocalStorageDispatch }) => {
 
   useEffect(() => {
-    logInDispatch()
+    // When app loads, it looks in local storage if a uid is saved, if it is, it signs in the user
+    signInWithLocalStorageDispatch()
   }, [])
 
   return (
     <Router>
-      <div className={`App ${styles.App}`}>
-        <br/>
-      <h2 className={'shadow fade-in fs-3'}>Hej Charlie</h2>
-        <Routes>
-          <Route exact path="/charlie" element={<SignedIn />} />
-          <Route exact path="/" element={<Dash />} />
-          <Route path="/signin" element={<SignIn />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Dash />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
@@ -44,7 +38,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  logInDispatch: () => dispatch(logIn()),  
+  signInWithLocalStorageDispatch: () => dispatch(signInWithLocalStorage()),  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,7 +1,6 @@
 const router = require('express').Router();
 let User = require('../models/User');
 const { v4: uuidv4 } = require('uuid');
-const { json } = require('express');
 
 router.route(`/:uid`).get(async(req, res) => {
     const { uid } = req.params;
