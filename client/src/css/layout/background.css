@@ -1,0 +1,50 @@
+.bg {
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.313), rgb(255, 255, 255));
+}
+.red {
+    background-color: rgb(255, 0, 68);
+}
+.c-red {
+    color: rgb(255, 0, 68);
+}
+.orange {
+    background-color: rgb(238, 164, 111);
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: rgb(104, 214, 166);
+}
+.c-green {
+    color: rgb(104, 214, 166);
+}
+
+.shadow {
+    text-shadow: .05em .05em 0 hsl(200 50% 30%);
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.white {
+    background-color: white;
+}
+
+.bg-w02 {
+    background-color:  rgba(255,255,255,0.2);
+}
+.bg-w05 {
+    background-color:  rgba(255,255,255,0.5);
+}
+
+.white-transparent {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.black-transparent-95 {
+    background-color: rgba(45, 40, 40, 0.95);
+}

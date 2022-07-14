@@ -1,0 +1,35 @@
+.t-50-50 {
+    transform: translate(-50%, -50%);
+}
+
+.t-0-50 {
+    transform: translate(0, -50%);
+}
+
+.t-s-20 {
+    transform: scale(0.2);
+}
+
+.t-s-30 {
+    transform: scale(0.3);
+}
+
+.t-s-40 {
+    transform: scale(0.4);
+}
+
+.t-s-50 {
+    transform: scale(0.5);
+}
+
+.t-s-80 {
+    transform: scale(0.8);
+}
+
+.t-s-90 {
+    transform: scale(0.9);
+}
+
+.t-s-95 {
+    transform: scale(0.95);
+}
