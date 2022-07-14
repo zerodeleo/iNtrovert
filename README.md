@@ -17,7 +17,7 @@ lear
 - Enable automatic deploys
 - Add .env ariables to heroku config vars
 
-#BRANCHES
+# BRANCHES
 ## iNtrovert-step-1
 - Project setup done
     - Server connected to database
