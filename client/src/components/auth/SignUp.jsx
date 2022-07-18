@@ -35,10 +35,10 @@ const SignUp = ({signUpDispatch, auth: { uid, authError }}) => {
     e.preventDefault();
     const { username, password, passwordCheck } = credentials;
     if (username === '' || password === '' || passwordCheck === ''){
-      setErr({ ...err, msg: "Please fill in empty fields"})
+      return setErr({ ...err, msg: "Please fill in empty fields"})
     }
     if (password !== passwordCheck) {
-      setErr({ ...err, msg: "Passwords don't match" })
+      return setErr({ ...err, msg: "Passwords don't match" })
     }
     signUpDispatch(credentials);
   }
