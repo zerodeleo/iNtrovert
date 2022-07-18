@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import Dash from './components/Dash';
 import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp'
 
 // Dispatches
 import { signInWithLocalStorage } from './store/actions/authActions';
@@ -16,7 +17,6 @@ import { signInWithLocalStorage } from './store/actions/authActions';
 const App = ({ signInWithLocalStorageDispatch }) => {
 
   useEffect(() => {
-    // When app loads, it looks in local storage if a uid is saved, if it is, it signs in the user
     signInWithLocalStorageDispatch()
   }, [])
 
@@ -25,6 +25,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
       <Routes>
         <Route exact path="/" element={<Dash />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer />
     </Router>

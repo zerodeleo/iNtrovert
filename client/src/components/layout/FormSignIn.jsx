@@ -6,9 +6,9 @@ import Button from './Button';
 
 const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
   return (
-    <form className="form--signin" onSubmit={handleSubmit}>
+    <form className="form form-signin" onSubmit={handleSubmit}>
       <Input
-        className="form__input--signin"
+        className="form__input form__input-signin"
         onChange={handleChange}
         type="text"
         name="username"
@@ -16,7 +16,7 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
         placeholder="Username ..."
       />
       <Input
-        className="form__input--signin"
+        className="form__input form__input-signin"
         onChange={handleChange}
         type="password"
         name="password"
@@ -24,7 +24,7 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
         placeholder="Password ..."
       />
       <Button
-        className="form__btn--signin"
+        className="form__btn form__btn--signin"
         onSubmit={handleSubmit}
         txt="sign in"
         type="submit"

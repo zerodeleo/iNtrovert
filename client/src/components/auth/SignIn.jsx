@@ -1,52 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 // Components
-import Error from '../error/Error';
+import Err from '../error/Err';
 import FormSignIn from '../layout/FormSignIn';
+import Button from '../layout/Button';
 
 // Dispatches
 import { signIn } from '../../store/actions/authActions';
 
-function SignIn({ signInDispatch, authError, auth }) {
+function SignIn({ signInDispatch, auth: { authError, uid } }) {
+  console.log(authError);
+  const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
   });
-  const [error, setError] = useState(false);
+  const [err, setErr] = useState({ msg: null })
 
-  
   useEffect(() => {
-    if (authError) setError(true)
-  },[authError]);
+    if (authError) {
+      setErr({...err, msg: authError})
+    }
+  }, [authError])
   
-  if (auth.uid) return <Navigate to="/" />;
+  if (uid) return <Navigate to="/" />;
 
   const handleChange = (e) => {
-    setError(false);
+    setErr({msg:null});
     const { name, value } = e.target;
     setCredentials({ ...credentials, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { username, password } = credentials;
+    if (username === '' || password === ''){
+      setErr({ ...err, msg: "Please fill in empty fields"})
+      return;
+    }
     signInDispatch(credentials);
   };
 
   return (
-    <section className="Form__container">
+    <section className="form__container form__container-signin">
           <FormSignIn 
             credentials={credentials}
             handleChange={handleChange}
             handleSubmit={handleSubmit} />
-         { error ? <Error msg={authError} /> : null }
+         { err ? <Err msg={err.msg} /> : null }
+         <Button
+          className="btn__navigate btn__navigate--signup"
+          txt="sign up" 
+          onClick={() => navigate('/signup')}
+        />
     </section>
   );
 }
 
 const mapStateToProps = (state) => ({
-  authError: state.auth.authError,
   auth: state.auth,
 });
 

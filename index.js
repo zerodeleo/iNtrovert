@@ -23,6 +23,9 @@ connection.once('open', () => {
 const userRouter = require('./src/routes/users');
 app.use(`/api/users/`, userRouter);
 
+const apiRouter = require('./src/routes/api');
+app.use(`/api/`, apiRouter);
+
 const path = require('path')
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
