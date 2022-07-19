@@ -1,0 +1,42 @@
+$base-color: rgba(91, 201, 135, 0.8);
+$base-color-01: rgba(91, 201, 135, 0.1);
+$font-color:  rgba(67, 37, 93, 0.8);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+	color: $font-color;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: rgba(255,255,255,0.7); /* For browsers that do not support gradients */
+	background-image: linear-gradient(to bottom right, $base-color, $base-color-01);
+}
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media screen and (min-width: 360px) {
+    body {
+        width: 360px;
+        margin: auto;
+    }
+}

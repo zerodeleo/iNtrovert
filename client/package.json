@@ -16,6 +16,7 @@
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
     "rooks": "^5.11.8",
+    "sass": "^1.53.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
