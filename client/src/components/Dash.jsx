@@ -3,13 +3,14 @@ import { Navigate } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
+import UserSettings from './userSettings/UserSettings';
 
 const Dash = ({ auth }) => {
   if (!auth.uid) return <Navigate to="/signin" />;
 
   return (
     <section className="Dash">
-      iNtrovert
+      <UserSettings />
     </section>
   );
 };

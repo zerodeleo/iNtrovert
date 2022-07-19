@@ -60,7 +60,6 @@ const SignUp = ({signUpDispatch, auth: { uid, authError }}) => {
   )
 };
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     auth: state.auth,
   }

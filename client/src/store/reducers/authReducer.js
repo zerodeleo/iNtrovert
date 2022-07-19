@@ -23,7 +23,11 @@ const authReducer = (state = initState, action) => {
     case types.SIGNUP_USER_SUCCESS: 
     return { ...state, username: action.payload.username, uid: action.payload.uid, authError: null};
     case types.SIGNUP_USER_ERROR:
-      return { ...state, authError: action.payload }
+      return { ...state, authError: action.err }
+    case types.EDIT_USER_SUCCESS:
+      return { ...state, username: action.payload.username, authError: null }
+    case types.EDIT_USER_ERROR:
+      return { ...state, authError: action.err }
     default:
       return state;
   }

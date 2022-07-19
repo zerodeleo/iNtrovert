@@ -11,7 +11,6 @@ import Button from '../layout/Button';
 import { signIn } from '../../store/actions/authActions';
 
 function SignIn({ signInDispatch, auth: { authError, uid } }) {
-  console.log(authError);
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     username: '',

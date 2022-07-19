@@ -30,6 +30,14 @@ export const signUp = (credentials) => (dispatch) => {
       return res;
     })
     .then(res => dispatch({type: types.SIGNUP_USER_SUCCESS, payload: res.data}))
-    .catch(err => dispatch({type: types.SIGNUP_USER_ERROR, payload: err.response.data})); 
+    .catch(err => dispatch({type: types.SIGNUP_USER_ERROR, err: err.response.data})); 
   return;
+}
+
+export const editUser = (user) => (dispatch) => {
+  const { uid, username, password } = user;
+
+  axios.put(`/api/users/${uid}`, { username, password })
+    .then(res => dispatch({ type: types.EDIT_USER_SUCCESS, payload: res.data}))
+    .catch(err => dispatch({ type: types.EDIT_USER_ERROR, err: err.response.data}));
 }
