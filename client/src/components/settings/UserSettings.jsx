@@ -13,18 +13,23 @@ import Button from '../layout/Button';
 import Err from '../error/Err';
 
 const UserSettings = ({ auth, authError, editUserDispatch, deleteUserDispatch, logoutUserDispatch }) => {
-  const [ err, setErr ] = useState({ msg: null });
+  const [ err, setErr ] = useState(null);
+  const [ usernameErr, setUsernameErr ] = useState(null);
+  const [ passwordErr, setPasswordErr ] = useState(null);
   const [ user, setUser ] = useState({ uid: auth.uid, username: auth.username, password: '', passwordCheck: '' });
   
   useEffect(() => {
     if (authError) {
       setErr({ ...err, msg: authError })
     }
-  },[authError]);
+  },[auth]);
   
   if (!auth.uid) return <Navigate to="/signin" />;
 
   const handleChange = (e) => {
+    setErr(null)
+    setUsernameErr(null)
+    setPasswordErr(null)
     const { name, value } = e.target;
     setUser({ ...user, [name]: value});
   }
@@ -34,18 +39,20 @@ const UserSettings = ({ auth, authError, editUserDispatch, deleteUserDispatch, l
     const { name } = e.target;
     switch (name) {
       case 'save-username':
-        if (user.username === ''){
-          return setErr({ ...err, msg: "Please fill in empty fields"})
+        if (user.username === '') {
+          return setUsernameErr({ ...err, msg: "Please fill in empty fields"})
         }
-        if (user.username === auth.username) return;
+        if (user.username === auth.username) {
+          return setUsernameErr({ ...err, msg: "Change username before save"})
+        }
         editUserDispatch({...user, username: user.username})
         break;
       case 'save-password':
         if (user.password === '' || user.passwordCheck === ''){
-          return setErr({ ...err, msg: "Please fill in empty fields"})
+          return setPasswordErr({ ...err, msg: "Please fill in empty fields"})
         }
         if (user.password !== user.passwordCheck) {
-          return setErr({ ...err, msg: "Passwords don't match" })
+          return setPasswordErr({ ...err, msg: "Passwords don't match" })
         }
         editUserDispatch({...user, password: user.password});
       break;  
@@ -76,6 +83,7 @@ const UserSettings = ({ auth, authError, editUserDispatch, deleteUserDispatch, l
         name="save-username"
         onClick={handleClick}
       />
+      { usernameErr ? <Err msg={usernameErr.msg} /> : null }
       <Input
         className="input input--edit-password"
         placeholder="enter new password"
@@ -92,14 +100,14 @@ const UserSettings = ({ auth, authError, editUserDispatch, deleteUserDispatch, l
         name="passwordCheck"
         type="password"
         />
-        { err ? <Err msg={err.msg} /> : null }
-
+        { passwordErr ? <Err msg={passwordErr.msg} /> : null }
       <Button
         className="btn btn__settings btn__settings--save-user"
         txt="Save password"
         name="save-password"
         onClick={handleClick}
       />
+      { err ? <Err msg={err.msg} /> : null }
       <Button
         className="btn btn__settings btn__settings--logout"
         txt="Log Out"
@@ -112,6 +120,7 @@ const UserSettings = ({ auth, authError, editUserDispatch, deleteUserDispatch, l
         name="delete"
         onClick={handleClick}
       />
+      
     </section>
   );
 };
