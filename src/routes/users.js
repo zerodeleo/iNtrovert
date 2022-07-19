@@ -17,18 +17,20 @@ router.route(`/:uid`).get(async(req, res) => {
 });
 
 router.route('/:uid').put(async (req, res) => {
-    const {uid} = req.params;
+    const { uid } = req.params;
     const { password } = req.body;
     const username = req.body.username.toLowerCase()
-    const userCheck = await User.findOne({username});
-
+    const userCheck = await User.findOne({ username });
+    
     try {
-        if (userCheck) {
+        if (userCheck && userCheck.uid !== uid ) {
             throw new Error('Username is taken')
         }
-        User.findOneAndUpdate({uid}, {username})
-        .then(data => res.status(201).json({ username }))
-        .catch(err => res.status(500).json(err.message))
+        const salt = await bcrypt.genSalt(10);
+        const hashedPw = await bcrypt.hash(password, salt);
+        User.findOneAndUpdate({ uid }, { username, password: hashedPw })
+            .then(() => res.status(201).json({ username }))
+            .catch(err => res.status(500).json(err.message))
     } catch (err) {
         res.status(401).json(err.message).end();
     }   
@@ -38,11 +40,15 @@ router.route(`/signin/`).post(async(req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
 
-    const validPassword = await bcrypt.compare(password, user.password);
-    if (user && validPassword) res.json({ uid: user.uid, username: user.username })
+    if (user) {
+        const validPassword = await bcrypt.compare(password, user.password);
+        if (validPassword) {
+            return res.json({ uid: user.uid, username: user.username })
+        }
+    }
 
     const err = new Error('Wrong username or password');
-    res.status(401).json(err.message)
+    res.status(401).json(err.message);
 });
 
 router.route(`/signup/`).post(async(req, res) => {
@@ -65,5 +71,12 @@ router.route(`/signup/`).post(async(req, res) => {
         })
         .catch(err => res.status(400).json(err.message));
 });
+
+router.route('/:uid').delete((req, res) => {
+    const {uid} = req.params;
+    User.findOneAndDelete({uid})
+        .then(() => res.status(204).send())
+        .catch((err) => res.status(500).json('internal server error')) 
+})
 
 module.exports = router;

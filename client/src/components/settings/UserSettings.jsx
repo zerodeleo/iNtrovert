@@ -5,14 +5,14 @@ import { Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // Actions
-import { editUser } from '../../store/actions/authActions';
+import { editUser, deleteUser, logoutUser } from '../../store/actions/authActions';
 
 // Components
 import Input from '../layout/Input';
 import Button from '../layout/Button';
 import Err from '../error/Err';
 
-const UserSettings = ({ auth, authError, editUserDispatch }) => {
+const UserSettings = ({ auth, authError, editUserDispatch, deleteUserDispatch, logoutUserDispatch }) => {
   const [ err, setErr ] = useState({ msg: null });
   const [ user, setUser ] = useState({ uid: auth.uid, username: auth.username, password: '', passwordCheck: '' });
   
@@ -33,11 +33,27 @@ const UserSettings = ({ auth, authError, editUserDispatch }) => {
     e.preventDefault();
     const { name } = e.target;
     switch (name) {
-      case 'save':
+      case 'save-username':
+        if (user.username === ''){
+          return setErr({ ...err, msg: "Please fill in empty fields"})
+        }
         if (user.username === auth.username) return;
-        editUserDispatch(user);
+        editUserDispatch({...user, username: user.username})
         break;
+      case 'save-password':
+        if (user.password === '' || user.passwordCheck === ''){
+          return setErr({ ...err, msg: "Please fill in empty fields"})
+        }
+        if (user.password !== user.passwordCheck) {
+          return setErr({ ...err, msg: "Passwords don't match" })
+        }
+        editUserDispatch({...user, password: user.password});
+      break;  
       case 'logout':
+        logoutUserDispatch();
+        break;
+      case 'delete':
+        deleteUserDispatch(auth.uid);
         break;
       default:
         console.log('what the hell are you doing????');
@@ -54,7 +70,12 @@ const UserSettings = ({ auth, authError, editUserDispatch }) => {
         onChange={handleChange}
         name="username"
       />
-      { err ? <Err msg={err.msg} /> : null }
+      <Button
+        className="btn btn__settings btn__settings--save-user"
+        txt="Save username"
+        name="save-username"
+        onClick={handleClick}
+      />
       <Input
         className="input input--edit-password"
         placeholder="enter new password"
@@ -62,7 +83,7 @@ const UserSettings = ({ auth, authError, editUserDispatch }) => {
         onChange={handleChange}
         name="password"
         type="password"
-      />
+        />
       <Input
         className="input input--edit-passwordCheck"
         placeholder="confirm new password"
@@ -70,17 +91,25 @@ const UserSettings = ({ auth, authError, editUserDispatch }) => {
         onChange={handleChange}
         name="passwordCheck"
         type="password"
-      />
+        />
+        { err ? <Err msg={err.msg} /> : null }
+
       <Button
         className="btn btn__settings btn__settings--save-user"
-        txt="Save"
-        name="save"
+        txt="Save password"
+        name="save-password"
         onClick={handleClick}
       />
       <Button
         className="btn btn__settings btn__settings--logout"
         txt="Log Out"
         name="logout"
+        onClick={handleClick}
+      />
+      <Button
+        className="btn__settings--delete"
+        txt="Delete Account"
+        name="delete"
         onClick={handleClick}
       />
     </section>
@@ -94,7 +123,9 @@ const mapStateToProps = (state) => {
 }};
 
 const mapDispatchToProps = (dispatch) => ({
-  editUserDispatch: (user) => dispatch(editUser(user))
+  editUserDispatch: (user) => dispatch(editUser(user)),
+  deleteUserDispatch: (uid) => dispatch(deleteUser(uid)),
+  logoutUserDispatch: () => dispatch(logoutUser())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserSettings);

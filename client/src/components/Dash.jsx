@@ -1,16 +1,22 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
-import UserSettings from './userSettings/UserSettings';
+import Button from './layout/Button';
+import UserSettings from './settings/UserSettings';
 
 const Dash = ({ auth }) => {
+  const navigate = useNavigate();
   if (!auth.uid) return <Navigate to="/signin" />;
 
   return (
     <section className="Dash">
-      <UserSettings />
+      Dash
+      <Button 
+        txt="Settings"
+        onClick={() => navigate('/settings')}
+      />
     </section>
   );
 };

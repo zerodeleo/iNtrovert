@@ -10,6 +10,7 @@ import Dash from './components/Dash';
 import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp'
+import UserSettings from './components/settings/UserSettings';
 
 // Dispatches
 import { signInWithLocalStorage } from './store/actions/authActions';
@@ -26,6 +27,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route exact path="/" element={<Dash />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/settings" element={<UserSettings />} />
       </Routes>
       <Footer />
     </Router>

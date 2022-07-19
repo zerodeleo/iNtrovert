@@ -1,12 +1,8 @@
 import * as types from '../types';
 
-const initState = {
-  uid: null,
-  username: '',
-  authError: null,
-};
+import authInitState from '../initState';
 
-const authReducer = (state = initState, action) => {
+const authReducer = (state = authInitState, action) => {
   switch (action.type) {
     case types.SIGNIN_USER_SUCCESS:
       return {
@@ -28,6 +24,12 @@ const authReducer = (state = initState, action) => {
       return { ...state, username: action.payload.username, authError: null }
     case types.EDIT_USER_ERROR:
       return { ...state, authError: action.err }
+    case types.DELETE_USER_SUCCESS:
+      return authInitState 
+    case types.DELETE_USER_ERROR:
+      return { ...state, authError: action.err }
+    case types.LOGOUT_USER_SUCCESS:
+      return authInitState 
     default:
       return state;
   }

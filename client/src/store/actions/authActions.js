@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as types from '../types';
+import authInitState from '../initState';
 
 export const signInWithLocalStorage = () => (dispatch) => {
   const uid = JSON.parse(localStorage.getItem('uid'));
@@ -40,4 +41,18 @@ export const editUser = (user) => (dispatch) => {
   axios.put(`/api/users/${uid}`, { username, password })
     .then(res => dispatch({ type: types.EDIT_USER_SUCCESS, payload: res.data}))
     .catch(err => dispatch({ type: types.EDIT_USER_ERROR, err: err.response.data}));
+}
+
+export const deleteUser = (uid) => (dispatch) => {
+  axios.delete(`/api/users/${uid}`)
+    .then(res => {
+      localStorage.clear();
+      dispatch({ type: types.DELETE_USER_SUCCESS })
+    })
+    .catch(err => dispatch({ type: types.DELETE_USER_ERROR, err: err.response.data}));
+}
+
+export const logoutUser = () => (dispatch) => {
+    localStorage.clear();
+    dispatch({type: types.LOGOUT_USER_SUCCESS})
 }
