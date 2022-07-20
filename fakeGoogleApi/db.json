@@ -1,0 +1,1922 @@
+{
+  "barsData": {
+    "html_attributions": [],
+    "next_page_token": "AeJbb3da_vjVQN93yr-bxdzEUg0uYIZ8NndZ6HE8bjo6duN5S_OlLUlKx89Ow2u90rP6ZocAd_9ky4BvfDlPoFeFUJqjV7RWmPTxcHvmicswWNPoOp7JzPEvx8Xz1n-augP1UaLfW0xb4onEqGSQRtx-7Miu5nBrf25eUzDhcqSHSGlu6_QHY9baxplX1K1SvJHdKn5KIMs8nKR3ZjxmLaJm0hgpGGshriX_Yxvuy3xm7H-YOIzPtc4dVg6oVMisjcBmVdwRGLEwpU6bLRjc0CGR1d5hjHOw6o72IFCtm6qBp6hrcYdzR7A_eTXQkkckXi6BKVAubofPPVZsfuJo4V_FgDeF-1QjEVuzdOUjgpckM6FjVLgtm3bj82sfglAAkU_HktKHVtZ7NNmJrNCq6rQiTJ4t80JABZrL2sVGfefEhTgqYAlPtYE",
+    "results": [
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3146768,
+            "lng": 18.0760237
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31595662989271,
+              "lng": 18.07748437989272
+            },
+            "southwest": {
+              "lat": 59.31325697010727,
+              "lng": 18.07478472010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "The Central Bar",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 2400,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/104511868691083310918\">A Google User</a>"
+            ],
+            "photo_reference": "AeJbb3dTmAECF9LoXoFc-FcVp-Z9zKR6jPik1v-__TMY3ckQAWK4iDNgZTGLmrQMe-YBbjnunrvhrbRvvBSoyxN0pm_6XUAJhDa9kVegsYvGvHAmAJrjNdyUIUTx33vuLo1W7PZAeGPfND3sQcPgnn5G9FArwYXqkd_aKj1xEJ2gXyknIneK",
+            "width": 3600
+          }
+        ],
+        "place_id": "ChIJFa41a_p3X0YRw9M2bt8MmJI",
+        "plus_code": {
+          "compound_code": "837G+VC Stockholm",
+          "global_code": "9FFW837G+VC"
+        },
+        "price_level": 1,
+        "rating": 3.6,
+        "reference": "ChIJFa41a_p3X0YRw9M2bt8MmJI",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 593,
+        "vicinity": "Folkungagatan 57-59, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3147029,
+            "lng": 18.0762567
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31599407989272,
+              "lng": 18.07763182989272
+            },
+            "southwest": {
+              "lat": 59.31329442010728,
+              "lng": 18.07493217010727
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Honey Honey",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 2988,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/107664006508185578670\">Pär Zettergren</a>"
+            ],
+            "photo_reference": "AeJbb3f_Ws5i2166-3vOMZOhmXc-mLO9-heiXv20SUHVWZLK6R2Bk_I7lVQb5JMewuAuLZPjmYCMN01Uh-Ag-0x1VujAfIus0WIzy9A5Rq7See0mp6pAS6bVQbPc8EQ3QxOCeK_lWGpcalPbol9ynR9__0XgoHy0Vplj-mIugBLyVd0RCRvw",
+            "width": 5312
+          }
+        ],
+        "place_id": "ChIJgTrZFPp3X0YRaDEqWvSkzWc",
+        "plus_code": {
+          "compound_code": "837G+VG Stockholm",
+          "global_code": "9FFW837G+VG"
+        },
+        "price_level": 2,
+        "rating": 3.9,
+        "reference": "ChIJgTrZFPp3X0YRaDEqWvSkzWc",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 615,
+        "vicinity": "Folkungagatan 59, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3146471,
+            "lng": 18.0757578
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31593017989272,
+              "lng": 18.07713662989272
+            },
+            "southwest": {
+              "lat": 59.31323052010728,
+              "lng": 18.07443697010727
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Södra Sidan Pub",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 4248,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/107557836356364274429\">A Google User</a>"
+            ],
+            "photo_reference": "AeJbb3dZ7S-9ATO-QONA-m1AZSaNBSogz93sRsc7zTtnFQeLL6T8JQELB7VaaDKGqEfeLx7iSjZ-xF1YwKU4EEZmKv0pR8FQ_R9B7ahw3mCaiemIb9WLv_ufPhk3nBvGHG2Ke1pRQeT0tt6oYotRXiMBKPW3Z1FTYOrPOXGtM8hWN1ZWiFk3",
+            "width": 5664
+          }
+        ],
+        "place_id": "ChIJCe_jio53X0YR4piKB5xY45w",
+        "plus_code": {
+          "compound_code": "837G+V8 Stockholm",
+          "global_code": "9FFW837G+V8"
+        },
+        "rating": 3.8,
+        "reference": "ChIJCe_jio53X0YR4piKB5xY45w",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 41,
+        "vicinity": "Folkungagatan 57, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.31565039999999,
+            "lng": 18.0835738
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31696832989272,
+              "lng": 18.08489452989272
+            },
+            "southwest": {
+              "lat": 59.31426867010728,
+              "lng": 18.08219487010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "The Big Ben Pub",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 1440,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/109237316546791186352\">Тарас Карпа</a>"
+            ],
+            "photo_reference": "AeJbb3d-B6Zgoqx0mCk1YtaExTtWFploPzpz1Gp3XrVSnlBzjKQs-MO4N5bw14vpf1T2OtdF_3jTCfD2883hoU0s_Lfo7_8Acu77Zcx95094AYEWJfYb_P1WcHLxNQtTGWEfrC8hR_J0vI-vdsletp9-ViPPemr-DsS50m9kwSd6syTJv47T",
+            "width": 2560
+          }
+        ],
+        "place_id": "ChIJcVNYBvl3X0YR6ynQ4q1lVaw",
+        "plus_code": {
+          "compound_code": "838M+78 Stockholm",
+          "global_code": "9FFW838M+78"
+        },
+        "price_level": 2,
+        "rating": 3.8,
+        "reference": "ChIJcVNYBvl3X0YR6ynQ4q1lVaw",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1370,
+        "vicinity": "Folkungagatan 97, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.31444440000001,
+            "lng": 18.0744443
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31575377989272,
+              "lng": 18.07585807989272
+            },
+            "southwest": {
+              "lat": 59.31305412010727,
+              "lng": 18.07315842010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Kellys",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3456,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/107562090378058965366\">Rainer Lohager</a>"
+            ],
+            "photo_reference": "AeJbb3cxoXqG52-tTx0NjqmwDcdhtZMLtqk8DcdTs7jXwNFQA7kQYAzQdLACvdaK7ZyCqO7cXc1RtfEZtnQK6rnTy8WvqTLWFNg9wvMpRpYe50I6cyo7Jf1dYreUuQa5BdnQe0nn4T0cT9DR5KYp-lfPrra_yI6OIjObbh6sLUU-MlLM8WY-",
+            "width": 4608
+          }
+        ],
+        "place_id": "ChIJSf04bvp3X0YRBaBZM7hh9XY",
+        "plus_code": {
+          "compound_code": "837F+QQ Stockholm",
+          "global_code": "9FFW837F+QQ"
+        },
+        "price_level": 1,
+        "rating": 3.6,
+        "reference": "ChIJSf04bvp3X0YRBaBZM7hh9XY",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1391,
+        "vicinity": "Folkungagatan 49, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3146471,
+            "lng": 18.0757578
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31593017989272,
+              "lng": 18.07713662989272
+            },
+            "southwest": {
+              "lat": 59.31323052010728,
+              "lng": 18.07443697010727
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "The Flying Dog",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3120,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/104570689869570707628\">Tobias Castensson</a>"
+            ],
+            "photo_reference": "AeJbb3cWkJsX7RS33QuZxSCitwPIQV7gxJ4Iu2sCgi40BAgiQO4wLDWnIxbVUU3GD_mm5r_3B_k0zRYR43K70iukdmfyLblo2vAUO5gLyt0-w9InXeJ-cGaGQsf2Dnn1FEn9KWZOwFGkNmszDFFi4cwSAU-spGKjjX4-eUvt4WZqetO-lGni",
+            "width": 4160
+          }
+        ],
+        "place_id": "ChIJ1ed7a_p3X0YRCX9g4SkWoF4",
+        "plus_code": {
+          "compound_code": "837G+V8 Stockholm",
+          "global_code": "9FFW837G+V8"
+        },
+        "rating": 3.1,
+        "reference": "ChIJ1ed7a_p3X0YRCX9g4SkWoF4",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 43,
+        "vicinity": "Folkungagatan 57, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3148486,
+            "lng": 18.0741819
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31620252989272,
+              "lng": 18.07553052989272
+            },
+            "southwest": {
+              "lat": 59.31350287010728,
+              "lng": 18.07283087010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Kvarnen",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 2736,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/109946406670459143357\">Tahvo Jauhojärvi</a>"
+            ],
+            "photo_reference": "AeJbb3fAj1OM1Go-bDMh5TXypqZat0fV0ySs9PSQYs1soyu7XdDALDsilf7VBBFQKJ1NOgnmr8ONEjOUcwdUtjjpnHp44tKakemM61AdaFnc4LCzGthCptLPIvFTMEeuBeH9FWdnPKbyjcsuK_aJEKP0hbj7ZdtoMVr64HWYWgJRF3OMV1D0",
+            "width": 3648
+          }
+        ],
+        "place_id": "ChIJa14naPp3X0YRmkZmDwg0-5s",
+        "plus_code": {
+          "compound_code": "837F+WM Stockholm",
+          "global_code": "9FFW837F+WM"
+        },
+        "price_level": 2,
+        "rating": 4.1,
+        "reference": "ChIJa14naPp3X0YRmkZmDwg0-5s",
+        "scope": "GOOGLE",
+        "types": [
+          "night_club",
+          "restaurant",
+          "food",
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 2970,
+        "vicinity": "Tjärhovsgatan 4, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.31122499999999,
+            "lng": 18.0745111
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31272117989273,
+              "lng": 18.07583517989272
+            },
+            "southwest": {
+              "lat": 59.31002152010728,
+              "lng": 18.07313552010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "The Central Bar",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 2400,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/108227062115843665424\">A Google User</a>"
+            ],
+            "photo_reference": "AeJbb3f_q6L9ai61ulGQ991A4pMNMaGrGF6Uw1IfIIhHObSxxE20T05T_U5Fcl1hdUfxhvU1PQZLF2G_SDoVgsEMWLzSWB8SRlsr0JG4gAmDnC_HSlQkPrxJRNJZdlr3UNRXIeGQgzO84cSj9ojUnQ8tCruXBtAATXcbD5scLi4LwHJ1P_op",
+            "width": 3600
+          }
+        ],
+        "place_id": "ChIJN8FU2vB3X0YRSquXVRpgyLo",
+        "plus_code": {
+          "compound_code": "836F+FR Stockholm",
+          "global_code": "9FFW836F+FR"
+        },
+        "price_level": 1,
+        "rating": 3.7,
+        "reference": "ChIJN8FU2vB3X0YRSquXVRpgyLo",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 398,
+        "vicinity": "Götgatan 84, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3081516,
+            "lng": 18.0766493
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.30948412989272,
+              "lng": 18.07785267989272
+            },
+            "southwest": {
+              "lat": 59.30678447010727,
+              "lng": 18.07515302010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Lagerbaren",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 4032,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/112961467970850537960\">A Google User</a>"
+            ],
+            "photo_reference": "AeJbb3f26V61ly0rqmrxvZAvqZU4ICFfp93LG93aI4849ivikdF9cQBpm6iV9_Lvv1iP31leEUC9xH2dmlCvAXzIFuxPcgtgUQLgsI6UWZvF70Y2nIpXr-VVkIN4tCN0JEQWLGO02JG_bmDTahJbCtjRByP51nCUXkIZzpc-MStnFi07sUXP",
+            "width": 3024
+          }
+        ],
+        "place_id": "ChIJP3rGl_Z3X0YRiny7Z34DbD8",
+        "plus_code": {
+          "compound_code": "835G+7M Stockholm",
+          "global_code": "9FFW835G+7M"
+        },
+        "price_level": 2,
+        "rating": 3.9,
+        "reference": "ChIJP3rGl_Z3X0YRiny7Z34DbD8",
+        "scope": "GOOGLE",
+        "types": [
+          "restaurant",
+          "food",
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 561,
+        "vicinity": "Götgatan 97, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3159056,
+            "lng": 18.0723145
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31726507989272,
+              "lng": 18.07370972989272
+            },
+            "southwest": {
+              "lat": 59.31456542010728,
+              "lng": 18.07101007010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Hirschenkeller",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3096,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/110831377197847478472\">Jan Lewerentz</a>"
+            ],
+            "photo_reference": "AeJbb3dhd0rOFhzpnuso8xFCTkHn7VI-nkOYULM1SFrZXydM6yWKJlMDlZJhJnImhrRSBz7iq3dMPDIQdIhhwZJhtwFb7IsKE2h5IW9eYXsfaGbk7eIad0084mSV1O5LFar6fNPSGVsWq_RuaxY6R3hdO_HBiST-OXkk9TQZG3h7NYDWuMdV",
+            "width": 5504
+          }
+        ],
+        "place_id": "ChIJSVZq6fp3X0YRRRfQP60l2lU",
+        "plus_code": {
+          "compound_code": "838C+9W Stockholm",
+          "global_code": "9FFW838C+9W"
+        },
+        "price_level": 1,
+        "rating": 3.6,
+        "reference": "ChIJSVZq6fp3X0YRRRfQP60l2lU",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 759,
+        "vicinity": "Götgatan 46, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.31484809999999,
+            "lng": 18.0709658
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31614937989271,
+              "lng": 18.07210667989272
+            },
+            "southwest": {
+              "lat": 59.31344972010727,
+              "lng": 18.06940702010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Neverland Pub & Restaurang",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3492,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/101212175982629708313\">Ulf</a>"
+            ],
+            "photo_reference": "AeJbb3eTRf-MOJYsc6ijaspb-OqG19BZsPzCuT1ZUWCMMICplCcU-G04BIDsKFqhNVbfLBOXtFFv_lFxmASm5ouNRtp-LMvUNGOSLd1YW8qOS6X-mllDsg1ehVTXr0lE2coeof_NLzx6VNjvqQourN_wR-ruA-j8vm2GWpSqoT4_QtiCIJ1l",
+            "width": 4656
+          }
+        ],
+        "place_id": "ChIJAUuuovp3X0YRhG08gLN089E",
+        "plus_code": {
+          "compound_code": "837C+W9 Stockholm",
+          "global_code": "9FFW837C+W9"
+        },
+        "price_level": 1,
+        "rating": 3.2,
+        "reference": "ChIJAUuuovp3X0YRhG08gLN089E",
+        "scope": "GOOGLE",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 589,
+        "vicinity": "Medborgarplatsen 4, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3134272,
+            "lng": 18.0735969
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31478227989271,
+              "lng": 18.07499832989273
+            },
+            "southwest": {
+              "lat": 59.31208262010726,
+              "lng": 18.07229867010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "The Green Hunter",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 2160,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/102511980306284905712\">Roz Thompson-Van Eeden</a>"
+            ],
+            "photo_reference": "AeJbb3esvxKk-1wwIYLLUQoOe4UrgD67rXm-oTIJv94zyEqKJ6qvKapnAOpv_Kcii0Me6c8kreq9ycRQ9LZ4M9GhEYVMzyr-GGk_DLtHKTrsvU0_PEHFNZtGYe0C3ODLtwb7ySSqrN2Tl95HEP527M3QacCo1shVpPny2ziYbhlexG06ylwy",
+            "width": 2880
+          }
+        ],
+        "place_id": "ChIJ94QKhPB3X0YR5YUD96WzuoI",
+        "plus_code": {
+          "compound_code": "837F+9C Stockholm",
+          "global_code": "9FFW837F+9C"
+        },
+        "price_level": 1,
+        "rating": 3.7,
+        "reference": "ChIJ94QKhPB3X0YR5YUD96WzuoI",
+        "scope": "GOOGLE",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1069,
+        "vicinity": "Götgatan 64, Stockholm"
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "geometry": {
+          "location": {
+            "lat": 59.31433069999999,
+            "lng": 18.075359
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31572712989272,
+              "lng": 18.07668627989272
+            },
+            "southwest": {
+              "lat": 59.31302747010728,
+              "lng": 18.07398662010727
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Ica Baren",
+        "permanently_closed": true,
+        "photos": [
+          {
+            "height": 1125,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/107394536687989641550\">Douglas Cooper</a>"
+            ],
+            "photo_reference": "AeJbb3exoc8xi53ze7IsoKkSmpX8OLZWLgMapV4XiRLrJT3NwJfh3N0NvXrSOBzK3bxtQu6IqwspZxhLl4qWMmqvwnJH9yZ9yfdWU4_cfMq4KwIIyeGqmF-7C-eG8s8Uao0hmuwxXNEW7abK5OVLugSOtTfOGkPM5pkU6TNDYk3uSiDaywos",
+            "width": 2000
+          }
+        ],
+        "place_id": "ChIJMeYv5SZ3X0YRVvPCEMhuDRk",
+        "plus_code": {
+          "compound_code": "837G+P4 Stockholm",
+          "global_code": "9FFW837G+P4"
+        },
+        "rating": 4.4,
+        "reference": "ChIJMeYv5SZ3X0YRVvPCEMhuDRk",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 30,
+        "vicinity": "Folkungagatan 56, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3081371,
+            "lng": 18.0774745
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.30944462989271,
+              "lng": 18.07894817989272
+            },
+            "southwest": {
+              "lat": 59.30674497010727,
+              "lng": 18.07624852010727
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Söder Bar & Restaurang",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3024,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/104934914816098238844\">Sebastian Bolinder</a>"
+            ],
+            "photo_reference": "AeJbb3eYiisGdA4SygtLPOmDlqhXamm8m-zwv2y6KJZFgZlNkb8Y28dbFRWyZ1rR1DtqWMi2ZaI1gloMw4nvB_5fatSqmNTPt6vuPMkwBBRZi9ykxJpUzXM2ZPrGgv5bMO71hvrMhpw7r39W4G7LMYBsw-8UnYneAYOF-PLu-TEpNFlMrQhX",
+            "width": 4032
+          }
+        ],
+        "place_id": "ChIJF7DAnIJ3X0YRo42_fNNIogk",
+        "plus_code": {
+          "compound_code": "835G+7X Stockholm",
+          "global_code": "9FFW835G+7X"
+        },
+        "price_level": 2,
+        "rating": 3.9,
+        "reference": "ChIJF7DAnIJ3X0YRo42_fNNIogk",
+        "scope": "GOOGLE",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 200,
+        "vicinity": "Ringvägen 125, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3161545,
+            "lng": 18.0721792
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31751197989272,
+              "lng": 18.07358937989272
+            },
+            "southwest": {
+              "lat": 59.31481232010728,
+              "lng": 18.07088972010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Crazy Horse",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3024,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/102256835191036932252\">Eugene Alm</a>"
+            ],
+            "photo_reference": "AeJbb3dWUf5dFYeelKBJVfvJvarAgzo1ZiPFXgdpALPU1KApzo-8INkvNNYYzNXJG-0OhVYWBW1ZKP8I-9eGpJGXhhfGSoALVMZBI7ekB230qU7t1i8XGBp42LQLx-BOTepebDxpIhWzKHsDre3QTuXk9hNnMGEE7zs9lgrb0mPvaVwyscny",
+            "width": 4032
+          }
+        ],
+        "place_id": "ChIJXZKDV6B3X0YRjF5OBaXbLSo",
+        "plus_code": {
+          "compound_code": "838C+FV Stockholm",
+          "global_code": "9FFW838C+FV"
+        },
+        "price_level": 1,
+        "rating": 3.8,
+        "reference": "ChIJXZKDV6B3X0YRjF5OBaXbLSo",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 681,
+        "vicinity": "Götgatan 44, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3150802,
+            "lng": 18.0759323
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31645037989271,
+              "lng": 18.07727052989272
+            },
+            "southwest": {
+              "lat": 59.31375072010727,
+              "lng": 18.07457087010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Carmen",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 2448,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/110880103420514740081\">Gonzalo Romeo</a>"
+            ],
+            "photo_reference": "AeJbb3d5lEMSd5FMkpQ2Ai2p1hcAdjzcVgOaXogn--KIGTv2tws_GqtJzH2HQP9BfB-N_pTpouzfgcGlVrgy1LSMQbhNQOKSlj57OOeiGnpz7fTcgD9fdFHQn74La9tMSDfukEMjdhbwjK3u9XAO_Qw6x2dFCrHSEbAfXNAoxZOvxa1kiBjb",
+            "width": 3264
+          }
+        ],
+        "place_id": "ChIJQVyoQPp3X0YR8Wkr30pxiyU",
+        "plus_code": {
+          "compound_code": "838G+29 Stockholm",
+          "global_code": "9FFW838G+29"
+        },
+        "price_level": 1,
+        "rating": 4,
+        "reference": "ChIJQVyoQPp3X0YR8Wkr30pxiyU",
+        "scope": "GOOGLE",
+        "types": [
+          "restaurant",
+          "food",
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1260,
+        "vicinity": "Tjärhovsgatan 14, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.30927209999999,
+            "lng": 18.0831149
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31059602989273,
+              "lng": 18.08454722989272
+            },
+            "southwest": {
+              "lat": 59.30789637010728,
+              "lng": 18.08184757010727
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "BrewDog Södermalm",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 3151,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/115909061990942538139\">BrewDog Bar Södermalm</a>"
+            ],
+            "photo_reference": "AeJbb3ci6jVBdzcn-adddv1c8-r_bW7288QPg6RET4rZLMWtd3XuzNSCXy2vprIJBT_ufI1YJk_AqWuT6TuTz7r13MLHRzFAgIGQiw76nzylzOUl27ecWclbcgA5xlAbvcB6ERtzcGYjuo-rdulO2sYzLk0rYsbShPmwQrbwgAs7vla2Anzd",
+            "width": 4727
+          }
+        ],
+        "place_id": "ChIJZ6m0M_Z3X0YRC-FN_cv_q_M",
+        "plus_code": {
+          "compound_code": "835M+P6 Stockholm",
+          "global_code": "9FFW835M+P6"
+        },
+        "price_level": 2,
+        "rating": 4.2,
+        "reference": "ChIJZ6m0M_Z3X0YRC-FN_cv_q_M",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1099,
+        "vicinity": "Ringvägen 149B, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.30952500000001,
+            "lng": 18.0838744
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31083457989271,
+              "lng": 18.08527172989272
+            },
+            "southwest": {
+              "lat": 59.30813492010727,
+              "lng": 18.08257207010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Resturang Polhem söder",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 4608,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/102185241523771231753\">Grzegorz Zielinski</a>"
+            ],
+            "photo_reference": "AeJbb3d2ZRBbnln4VV1rqR66-vLLJVM5q2yYiUZwnLQCpoyKiftQk9UoumCH_YoRb7vgOKfOs-9tnh4w8doxP-0XMDeyaYXJKHM2-yEXWQy-AveZ66q3BGsPP9JEcjpAJ56A7VnCMcLDzUfhqE8GjseT07iNTwOZM6kKPcGhhjR9rb0ThJPO",
+            "width": 2112
+          }
+        ],
+        "place_id": "ChIJieRh0vd3X0YRY68gQ-VpB0Q",
+        "plus_code": {
+          "compound_code": "835M+RG Stockholm",
+          "global_code": "9FFW835M+RG"
+        },
+        "price_level": 1,
+        "rating": 4.2,
+        "reference": "ChIJieRh0vd3X0YRY68gQ-VpB0Q",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 147,
+        "vicinity": "Ringvägen 153, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.3152308,
+            "lng": 18.0802577
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31650267989273,
+              "lng": 18.08164457989272
+            },
+            "southwest": {
+              "lat": 59.31380302010729,
+              "lng": 18.07894492010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "The Roo and Elk",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 3464,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/107816954550606428456\">shahzeb</a>"
+            ],
+            "photo_reference": "AeJbb3emPf8edPnh-d8fqv-do35I3tspAZQmPKhw2v8NnL4LJaMzILpO67MFtNYyn1cR8tJvse3-MisfIM0Tj_bVP9VJ2o3PCjqX7PT_cmdQAbapBBs0ul8VUvj7Fwr1g1h1aXyGBSn_K4mnLORFZ_juGj1JQZZGe7UDhnc6My-KYtojXo5b",
+            "width": 4618
+          }
+        ],
+        "place_id": "ChIJOTxeyPl3X0YRXuqLSHcJMyI",
+        "plus_code": {
+          "compound_code": "838J+34 Stockholm",
+          "global_code": "9FFW838J+34"
+        },
+        "price_level": 2,
+        "rating": 4.3,
+        "reference": "ChIJOTxeyPl3X0YRXuqLSHcJMyI",
+        "scope": "GOOGLE",
+        "types": [
+          "bar",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 137,
+        "vicinity": "Folkungagatan 81, Stockholm"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 59.31542649999999,
+            "lng": 18.0724216
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 59.31679722989271,
+              "lng": 18.07392202989272
+            },
+            "southwest": {
+              "lat": 59.31409757010727,
+              "lng": 18.07122237010728
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Snaps Bar & Bistro",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3120,
+            "html_attributions": [
+              "<a href=\"https://maps.google.com/maps/contrib/101369668376029365132\">A Google User</a>"
+            ],
+            "photo_reference": "AeJbb3dnbcapWndtAeK3jIxVC5pY78Y4S4DtPWFM3b2DXytSIvXZcJyxXX07uXd4MGAazGhu8ICnowI9nWpsUqY8KxDX0rUO2WmGg-sjAVbiP6SeITOF-OKUDz6tWOiSCYlsoF_pc6mKsTU7G3g62x5MUQ5Nk5guB91Dsi1dFgI_BxSvN18_",
+            "width": 4160
+          }
+        ],
+        "place_id": "ChIJI1Cs7fp3X0YR5bKAkQf3W1U",
+        "plus_code": {
+          "compound_code": "838C+5X Stockholm",
+          "global_code": "9FFW838C+5X"
+        },
+        "price_level": 2,
+        "rating": 3.5,
+        "reference": "ChIJI1Cs7fp3X0YR5bKAkQf3W1U",
+        "scope": "GOOGLE",
+        "types": [
+          "restaurant",
+          "food",
+          "bar",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1103,
+        "vicinity": "Götgatan 48, Stockholm"
+      }
+    ],
+    "status": "OK"
+  },
+  "parksData": {
+      "html_attributions": [],
+      "results": [
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.31401340000001,
+              "lng": 18.0810746
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31527252989273,
+                "lng": 18.08247342989272
+              },
+              "southwest": {
+                "lat": 59.31257287010729,
+                "lng": 18.07977377010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Axel Landquists Park",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 2074,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/113281735479544188060\">Asko Fors</a>"
+              ],
+              "photo_reference": "AeJbb3f7B6WKsdoAlJQLXOmYPYRHVGTV-FZITOnz2e4YMXAX9f3vASd2l5EYr8rU_viu_xnVo5ceIcYIzs4acpTkTNGgpW5so8zcyR3qs090RMjWFM2mxG3E2HAJ8e8pGfQ9IiaHqXfICI39BM4UTSnuGWIxHJEFnxSciFJqXLa1-j6vB_nJ",
+              "width": 4608
+            }
+          ],
+          "place_id": "ChIJgTdZwvl3X0YRbkaING8BR6c",
+          "plus_code": {
+            "compound_code": "837J+JC Stockholm",
+            "global_code": "9FFW837J+JC"
+          },
+          "rating": 3.9,
+          "reference": "ChIJgTdZwvl3X0YRbkaING8BR6c",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 11,
+          "vicinity": "Åsögatan 146, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3105613,
+              "lng": 18.0904563
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31148802989271,
+                "lng": 18.0911426
+              },
+              "southwest": {
+                "lat": 59.30878837010727,
+                "lng": 18.0883974
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Vitabergsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 2736,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/113419149103301013607\">hatem bilir</a>"
+              ],
+              "photo_reference": "AeJbb3f_bQ5WHDl6IoQN9Zm4GT5ALksbL3aw_p9sylBKNBALDu_PDmrin1gpxAq3oVEc0OXey0WD8UOdu0A63YDOR8eMt0rWLJb5Qtqwi5MGH_C_C2hkLRFB2Tlo7hyU2E44hZfSf00pqmyW_mFKyLdn0qmb8Z00eAwAt6vEnDxdFHcZi0y4",
+              "width": 3648
+            }
+          ],
+          "place_id": "ChIJXUZMLB14X0YRcgEn_VzcZ6w",
+          "plus_code": {
+            "compound_code": "836R+65 Stockholm",
+            "global_code": "9FFW836R+65"
+          },
+          "rating": 4.4,
+          "reference": "ChIJXUZMLB14X0YRcgEn_VzcZ6w",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 2115,
+          "vicinity": "Skånegatan/Malmgårdsvägen, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3090516,
+              "lng": 18.0866184
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31049682989272,
+                "lng": 18.08810812989272
+              },
+              "southwest": {
+                "lat": 59.30779717010728,
+                "lng": 18.08540847010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Lilla Blecktornsparkens plaskdamm",
+          "opening_hours": {},
+          "photos": [
+            {
+              "height": 4032,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/103282800335252056653\">A Google User</a>"
+              ],
+              "photo_reference": "AeJbb3e7duaE9nk0UW1du1alw5v36U25GkDaBS8sVV9tc-e7PBTzVq4JCNpt96NhaJElEJ2-UmvKVZFmm2LbSHUonxtbGfBPuhSDdmYTmPPc6kk3b6t6kSGoUPUEsYBv7KtTpQiMimJZIeUezaUrTJBefPFU_v5xHtrVI4HNm5RsgD4FNfaT",
+              "width": 3024
+            }
+          ],
+          "place_id": "ChIJ-fPLHnl5X0YR-KZBzftwSUA",
+          "plus_code": {
+            "compound_code": "835P+JJ Stockholm",
+            "global_code": "9FFW835P+JJ"
+          },
+          "rating": 4.3,
+          "reference": "ChIJ-fPLHnl5X0YR-KZBzftwSUA",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 28,
+          "vicinity": "Katarina Bangata 70, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3083506,
+              "lng": 18.0735452
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.30970672989273,
+                "lng": 18.07489457989272
+              },
+              "southwest": {
+                "lat": 59.30700707010728,
+                "lng": 18.07219492010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Älvsborgsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 4624,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/110585218911951257219\">Yara Mekawei</a>"
+              ],
+              "photo_reference": "AeJbb3c4-3atpfskSZl3mqfGrS0rFCTffBsiASINkYCbZMYTjLz3GlhdQHeFabxf2oNbQov8go9Fh4o6SqWIiA00Tkakzh0pynEroQsblwJca7yWXuMu__QHogydIBKo4ntCISByKYJlt1yD5Lb0bCHMIvSYeWlgXCIJ2BpPax2qPI0Ok00c",
+              "width": 2136
+            }
+          ],
+          "place_id": "ChIJb5a6U_F3X0YRUkqZqCF5rec",
+          "plus_code": {
+            "compound_code": "835F+8C Stockholm",
+            "global_code": "9FFW835F+8C"
+          },
+          "rating": 3.3,
+          "reference": "ChIJb5a6U_F3X0YRUkqZqCF5rec",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 3,
+          "vicinity": "Ringvägen 109C, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.30971979999999,
+              "lng": 18.0774692
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31102827989272,
+                "lng": 18.07884167989272
+              },
+              "southwest": {
+                "lat": 59.30832862010728,
+                "lng": 18.07614202010727
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Gotlandsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3472,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/109296913862716073396\">Андрей Горин</a>"
+              ],
+              "photo_reference": "AeJbb3dsZ3YE_UCxqENq_RGCF5OBfOXH9V8CK1aW3SdrqG76yOGy9H3zRh8GsmVjiBFXnSlc-bmjkf7tqp-1CT-7PxqHhoEOQKsHQM-X7KuR57sg28WcFvU4PIboJwWkiJ9-h_ceA11ENEg5Wbs1c7fHHbQVc8CFJx4C3cxsojUiNEjgdLdu",
+              "width": 4624
+            }
+          ],
+          "place_id": "ChIJFa2c3fZ3X0YRh5xbmpvhKRY",
+          "plus_code": {
+            "compound_code": "835G+VX Stockholm",
+            "global_code": "9FFW835G+VX"
+          },
+          "rating": 3.3,
+          "reference": "ChIJFa2c3fZ3X0YRh5xbmpvhKRY",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 7,
+          "vicinity": "Gotlandsgatan 48, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3073981,
+              "lng": 18.0935221
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.30900742989272,
+                "lng": 18.09461317989272
+              },
+              "southwest": {
+                "lat": 59.30630777010727,
+                "lng": 18.09191352010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Anna Lindhs park",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 4032,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108380912744690233412\">Eric Chagas</a>"
+              ],
+              "photo_reference": "AeJbb3cxViZOe9tD9SCy_NlbPMD7hdu9BD0vtwJSAOEW0vklo7ehh3L3o59r8Ps0q8v74tbYcfFp8d75KM8MtPRzZkiPLFMQfSeDc-5kFwpYPzNj-FRSkWU3EYiaXjSLEJUr5uXXH-qdQyvQDUga_V1waHAV8ayBJ6-KCSAbJ32s53MkiYVF",
+              "width": 3024
+            }
+          ],
+          "place_id": "ChIJMQ2yeRx4X0YRE9IaFqpW_Dg",
+          "plus_code": {
+            "compound_code": "834V+XC Stockholm",
+            "global_code": "9FFW834V+XC"
+          },
+          "rating": 4.2,
+          "reference": "ChIJMQ2yeRx4X0YRE9IaFqpW_Dg",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 138,
+          "vicinity": "Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3168156,
+              "lng": 18.0801701
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31808517989272,
+                "lng": 18.08155607989272
+              },
+              "southwest": {
+                "lat": 59.31538552010727,
+                "lng": 18.07885642010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Sandbacksparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3096,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/117829922928124622836\">A Google User</a>"
+              ],
+              "photo_reference": "AeJbb3f4n468dLlqW_NGQZKY7yIhC-pd4R8CzIllJ2Y26BhX_UEq2tZV9BpF-QL7vbi4RhHFag-T2mDiBYzibFQ6mLhrPyeN0MIuXwXV1dl9MNDUVj-WqY-3lRhyDKf3Mj8JwHNRRvaKw6fvSibNG2U4mXJ8zmGYfV-fOf_p2MKVEiCDLoCW",
+              "width": 5504
+            }
+          ],
+          "place_id": "ChIJ3ZiQ2Pt3X0YR1XtrLw06th4",
+          "plus_code": {
+            "compound_code": "838J+P3 Stockholm",
+            "global_code": "9FFW838J+P3"
+          },
+          "rating": 3.7,
+          "reference": "ChIJ3ZiQ2Pt3X0YR1XtrLw06th4",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 39,
+          "vicinity": "Sandbacksgatan 4, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3062527,
+              "lng": 18.0820505
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.30808422989271,
+                "lng": 18.08399602989272
+              },
+              "southwest": {
+                "lat": 59.30538457010727,
+                "lng": 18.08129637010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Tullgårdsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3000,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/117096733509984931541\">Bahram Bahar</a>"
+              ],
+              "photo_reference": "AeJbb3ekeflnRBi5eCh1cgl0nSClgTYPYg3gxwzcxwYVQ1qVqn29M2BKi__u-SCRZXXlR2UejFOowNJ2F1gTgaxyCXfTi6aoFw7y15kht1Rr0NsAuPw6zNp8F55HSF9w1JOxGm7a6iAx-PtiTmaMxlke8hgxRyMS0O2o6CirTUMoqLF1iiPL",
+              "width": 4000
+            }
+          ],
+          "place_id": "ChIJkfgz-fV3X0YR1aeliqbGyR4",
+          "plus_code": {
+            "compound_code": "834J+GR Stockholm",
+            "global_code": "9FFW834J+GR"
+          },
+          "rating": 3.9,
+          "reference": "ChIJkfgz-fV3X0YR1aeliqbGyR4",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 88,
+          "vicinity": "Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3071608,
+              "lng": 18.0869078
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.30853827989272,
+                "lng": 18.08874934999999
+              },
+              "southwest": {
+                "lat": 59.30583862010728,
+                "lng": 18.08138315
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Stora Blecktornsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 4032,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/112908333807742717268\">tepolo</a>"
+              ],
+              "photo_reference": "AeJbb3fJKwCDr2RlSyb8Byi2vtAnTU0M6hIk1d7FhtL2NCQauZtFrY6VmfgFhhUNANfZZfgqGDmVo0QqhoNWpIDmaXb3p2WmckP1ux7vQmVwxWldIJdtVdnanbTp_S5nKgtZVUlN9aYg5avXEF7ZrlwYz8J4263iA9HkJcncZmg1Z4fs0e6t",
+              "width": 3024
+            }
+          ],
+          "place_id": "ChIJK_BfxB14X0YRf-74eDekinA",
+          "plus_code": {
+            "compound_code": "834P+VQ Stockholm",
+            "global_code": "9FFW834P+VQ"
+          },
+          "rating": 4.2,
+          "reference": "ChIJK_BfxB14X0YRf-74eDekinA",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 609,
+          "vicinity": "Katarina Bangata 78, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3111685,
+              "lng": 18.0938353
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31248327989272,
+                "lng": 18.09551492989272
+              },
+              "southwest": {
+                "lat": 59.30978362010728,
+                "lng": 18.09281527010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Tengdahlsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 4032,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/113424601072890168135\">J S J</a>"
+              ],
+              "photo_reference": "AeJbb3fWQS8Dsly6hRWIx_o_0AXyF-mpU2b6m1xbS8JxsCcaFmLnO_wpZgytiEl-1eo94CGBJDBIcl5ClyraUzV2ni5gjIOidfqnEZ67S1ytq3zdI9bBa5JGWFGvfcl6DnHNWSCjgvJMr9INQqF9ysH1kV8_hlUqIudIN4CNozeD3kDqdpk",
+              "width": 3024
+            }
+          ],
+          "place_id": "ChIJp_3HNQN4X0YR2nVlypudKWM",
+          "plus_code": {
+            "compound_code": "836V+FG Stockholm",
+            "global_code": "9FFW836V+FG"
+          },
+          "rating": 4.2,
+          "reference": "ChIJp_3HNQN4X0YR2nVlypudKWM",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 81,
+          "vicinity": "Barnängsgatan 52E, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3123461,
+              "lng": 18.0833482
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31372592989271,
+                "lng": 18.08494107989272
+              },
+              "southwest": {
+                "lat": 59.31102627010727,
+                "lng": 18.08224142010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Nytorget",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3024,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/107124543424067417984\">Carina Nordstrom</a>"
+              ],
+              "photo_reference": "AeJbb3c3__9B0oZV0PaWgX6HkSWgKz0oO-RewGOjN82IEdwJr-175KZ0gxlmURTsLyUMHSCq-iVjljxxrfBc2fclSOASFhSnu_lryl-8SnaiP7rB5nESnYtSpwKh1DoWV2FQCmj-yXaYcGtrTxkNdHJLjko4KwBWbyWtYHtntg6ueHkD-x-8",
+              "width": 4032
+            }
+          ],
+          "place_id": "ChIJ4Sn9h_d3X0YRBe_T11uKV3A",
+          "plus_code": {
+            "compound_code": "836M+W8 Stockholm",
+            "global_code": "9FFW836M+W8"
+          },
+          "rating": 4.3,
+          "reference": "ChIJ4Sn9h_d3X0YRBe_T11uKV3A",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 690,
+          "vicinity": "Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.31574149999999,
+              "lng": 18.0871614
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31701442989272,
+                "lng": 18.08852127989272
+              },
+              "southwest": {
+                "lat": 59.31431477010727,
+                "lng": 18.08582162010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Stigbergsparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 4032,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/109901321977271698045\">Christian Habib</a>"
+              ],
+              "photo_reference": "AeJbb3czDiNUoHMfBJbWW6vAeBEWhjVcXVYZdx78olH3UKwi_BxdcoSRiVfm-w7-HEyMKJnDjuVhoA__XEYDhxrrVkqizU_MXUbE4DK49JzUj-jZ7qRVyNreMK69P26b5RnpkMx83ayWqHzMwS5pEVidE--g8mR7m-fmdxNOvjT1iOCQRJUs",
+              "width": 2268
+            }
+          ],
+          "place_id": "ChIJqfjV7Ph3X0YRX8uZsRlNPFA",
+          "plus_code": {
+            "compound_code": "838P+7V Stockholm",
+            "global_code": "9FFW838P+7V"
+          },
+          "rating": 3.9,
+          "reference": "ChIJqfjV7Ph3X0YRX8uZsRlNPFA",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 76,
+          "vicinity": "Folkungagatan 111, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3152532,
+              "lng": 18.0793153
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31662087989272,
+                "lng": 18.08079892989272
+              },
+              "southwest": {
+                "lat": 59.31392122010728,
+                "lng": 18.07809927010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Droskan",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 2988,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/105464159872609824405\">Simon Granit Ossoinak</a>"
+              ],
+              "photo_reference": "AeJbb3f_URrd4TKwgFoEL0HErU4jgJk0dxZh6Bk96JtL92BnsiF3y1tcxlcY9mof5V2xPgDw4j9Uj3qaxJCi0JFPTrMdn9k4aBTXznngWOlMxQOc0yzG-ZEw0vd2BIWL9raz4DdC0fWgZdNmcJwxai6AH2-UJjbqqEH2C0h8_Q4hhaO6BQQ4",
+              "width": 5312
+            }
+          ],
+          "place_id": "ChIJqajoh_l3X0YRRFokPhu9eOo",
+          "plus_code": {
+            "compound_code": "838H+4P Stockholm",
+            "global_code": "9FFW838H+4P"
+          },
+          "rating": 3,
+          "reference": "ChIJqajoh_l3X0YRRFokPhu9eOo",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 5,
+          "vicinity": "Södermannagatan 6, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.307081,
+              "lng": 18.0735635
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.30861687989272,
+                "lng": 18.07489167989272
+              },
+              "southwest": {
+                "lat": 59.30591722010728,
+                "lng": 18.07219202010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Tullhagen",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3024,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/111624913772520551827\">Morvarid Ayn</a>"
+              ],
+              "photo_reference": "AeJbb3cD5AQCkxgKHf2xemMJAqlqy9-_g1EZiDcaDEX6YdQxN5icTAsiwF2XoS5NoXJXRzavD4M9t1OjIdEbPuv4_3aNBAo63NaRC8_38F_RlDDERh3XVaTyEZL2BCFQMR3clFzmVRQ_MY78aGTIth4InMK3b2ZxLxbkwSaLlo4fKTz_iXHI",
+              "width": 4032
+            }
+          ],
+          "place_id": "ChIJZ0SmCPR3X0YRiup6U6j1p-0",
+          "plus_code": {
+            "compound_code": "834F+RC Stockholm",
+            "global_code": "9FFW834F+RC"
+          },
+          "rating": 3.5,
+          "reference": "ChIJZ0SmCPR3X0YRiup6U6j1p-0",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 2,
+          "vicinity": "Ringvägen 94, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3149622,
+              "lng": 18.0743803
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31630972989273,
+                "lng": 18.07573127989272
+              },
+              "southwest": {
+                "lat": 59.31361007010729,
+                "lng": 18.07303162010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Skatepark",
+          "opening_hours": {},
+          "place_id": "ChIJbzW_f6p3X0YR-4YGFKXOgM4",
+          "plus_code": {
+            "compound_code": "837F+XQ Stockholm",
+            "global_code": "9FFW837F+XQ"
+          },
+          "rating": 0,
+          "reference": "ChIJbzW_f6p3X0YR-4YGFKXOgM4",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 0,
+          "vicinity": "Tjärhovsgatan 4, Stockholm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.31147429999999,
+              "lng": 18.085424
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31284077989273,
+                "lng": 18.08691017989272
+              },
+              "southwest": {
+                "lat": 59.31014112010728,
+                "lng": 18.08421052010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Malongenparken",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3448,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/101642988859116175207\">Josep Panadero</a>"
+              ],
+              "photo_reference": "AeJbb3e9urRWtlYtsWIFT1mqF_aT30fHEKu8mee_iW_gUVJHiZHXBxU7Np05xGO2bnSk1h11ZRbEQjasNVInj1NIwAIlwcLNKXbylyyT2RmLJXAxks6s1orMvdAo7_l_IvpTYoYEUrvkjAv_hDjc4SuBmJw5zpIqEPZ0_aRiI8ICbain_it0",
+              "width": 4592
+            }
+          ],
+          "place_id": "ChIJZbeT-vd3X0YRnWxbUHf7LYQ",
+          "plus_code": {
+            "compound_code": "836P+H5 Stockholm",
+            "global_code": "9FFW836P+H5"
+          },
+          "rating": 5,
+          "reference": "ChIJZbeT-vd3X0YRnWxbUHf7LYQ",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 1,
+          "vicinity": "Södermalm"
+        },
+        {
+          "business_status": "OPERATIONAL",
+          "geometry": {
+            "location": {
+              "lat": 59.3168968,
+              "lng": 18.0866523
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 59.31818757989273,
+                "lng": 18.08798792989272
+              },
+              "southwest": {
+                "lat": 59.31548792010729,
+                "lng": 18.08528827010728
+              }
+            }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+          "icon_background_color": "#4DB546",
+          "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+          "name": "Anna Lindhagens garden plot",
+          "opening_hours": {
+            "open_now": true
+          },
+          "photos": [
+            {
+              "height": 3024,
+              "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/105792690979627286715\">Sergio Tilli</a>"
+              ],
+              "photo_reference": "AeJbb3dlR6LfDaV1DQ2Dc3FxoMkgo8riifPKPADZPtF0jxYxcFv-TGa3IGGY4Cth3Y8w3n_ncxQLfLR59w_A3_w8aP0tr1XHHAZYJE4z3rsxNoGvcDwqAvNs_RBYb7nacueOelEAms0A-DmIF4JhDN1Sdbhy954LP0esSQi2OSmjD4091Wfq",
+              "width": 4032
+            }
+          ],
+          "place_id": "ChIJHScl2_h3X0YR0MT2ooPxHSo",
+          "plus_code": {
+            "compound_code": "838P+QM Stockholm",
+            "global_code": "9FFW838P+QM"
+          },
+          "rating": 5,
+          "reference": "ChIJHScl2_h3X0YR0MT2ooPxHSo",
+          "scope": "GOOGLE",
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "user_ratings_total": 8,
+          "vicinity": "Stigbergsgatan 33, Stockholm"
+        }
+      ],
+      "status": "OK"
+  }
+}

@@ -24,3 +24,8 @@ lear
     - Automatic deploy via heroku
     - Users route configured
     - Calls from FE to BE working
+
+# client is running on localhost:3000
+# server is running on localhost:4000
+# fakeGoogleApi is running on localhost:5001
+# fakeBestTimeApi is running on localhost:5002
