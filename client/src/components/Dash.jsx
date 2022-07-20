@@ -3,8 +3,17 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
-import Button from './layout/Button';
-import UserSettings from './settings/UserSettings';
+// import Button from './layout/Button';
+// import UserSettings from './settings/UserSettings';
+
+// MUI
+import AppBar from '@mui/material/AppBar';
+import IconButton from '@mui/material/IconButton';
+import SettingsIcon from '@mui/icons-material/Settings';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Toolbar from '@mui/material/Toolbar';
+
 
 const Dash = ({ auth }) => {
   const navigate = useNavigate();
@@ -12,19 +21,34 @@ const Dash = ({ auth }) => {
 
   return (
     <section className="Dash">
-      Dash
-      <Button 
-        txt="Settings"
-        onClick={() => navigate('/settings')}
-      />
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Hello {auth.username}
+            </Typography>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={() => navigate('/settings')}
+              color="inherit"
+            >
+              <SettingsIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </Box>
     </section>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
-  auth: state.auth,
-}};
+    auth: state.auth,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => ({
 

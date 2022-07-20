@@ -9,17 +9,16 @@ import { connect } from 'react-redux';
 import Dash from './components/Dash';
 import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp'
+import SignUp from './components/auth/SignUp';
 import UserSettings from './components/settings/UserSettings';
 
 // Dispatches
 import { signInWithLocalStorage } from './store/actions/authActions';
 
 const App = ({ signInWithLocalStorageDispatch }) => {
-
   useEffect(() => {
-    signInWithLocalStorageDispatch()
-  }, [])
+    signInWithLocalStorageDispatch();
+  }, []);
 
   return (
     <Router>
@@ -32,16 +31,16 @@ const App = ({ signInWithLocalStorageDispatch }) => {
       <Footer />
     </Router>
   );
-}
+};
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     auth: state.auth,
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch) => ({
-  signInWithLocalStorageDispatch: () => dispatch(signInWithLocalStorage()),  
+  signInWithLocalStorageDispatch: () => dispatch(signInWithLocalStorage()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

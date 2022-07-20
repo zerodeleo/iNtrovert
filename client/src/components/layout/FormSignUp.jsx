@@ -2,7 +2,7 @@ import React from 'react';
 
 // Components
 import Input from './Input';
-import Button from './Button';
+import Btn from './Btn';
 
 const FormSignUp = ({ credentials, handleChange, handleSubmit }) => {
   return (
@@ -31,14 +31,14 @@ const FormSignUp = ({ credentials, handleChange, handleSubmit }) => {
         value={credentials.passwordCheck}
         placeholder="Repeat Password ..."
       />
-      <Button
+      <Btn
         className="form__btn form__btn--signup"
         onSubmit={handleSubmit}
         txt="sign up"
         type="submit"
       />
-  </form>
-  )
-}
+    </form>
+  );
+};
 
 export default FormSignUp;

@@ -1,73 +1,72 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { signUp } from '../../store/actions/authActions';
-import { connect } from 'react-redux'; 
+import { connect } from 'react-redux';
 
 // Components
 import FormSignUp from '../layout/FormSignUp';
 import Err from '../error/Err';
-import Button from '../layout/Button';
+import Btn from '../layout/Btn';
 
-const SignUp = ({signUpDispatch, auth: { uid, authError }}) => {
+const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     username: 'julia',
     password: '123',
     passwordCheck: '123',
-  })
-  const [err, setErr] = useState({ msg: null })
+  });
+  const [err, setErr] = useState({ msg: null });
 
   useEffect(() => {
     if (authError) {
-      setErr({...err, msg: authError})
+      setErr({ ...err, msg: authError });
     }
-  }, [authError])
+  }, [authError]);
 
   if (uid) return <Navigate to="/" />;
 
   const handleChange = (e) => {
-    setErr({msg: null});
+    setErr({ msg: null });
     const { name, value } = e.target;
     setCredentials({ ...credentials, [name]: value });
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const { username, password, passwordCheck } = credentials;
-    if (username === '' || password === '' || passwordCheck === ''){
-      return setErr({ ...err, msg: "Please fill in empty fields"})
+    if (username === '' || password === '' || passwordCheck === '') {
+      return setErr({ ...err, msg: 'Please fill in empty fields' });
     }
     if (password !== passwordCheck) {
-      return setErr({ ...err, msg: "Passwords don't match" })
+      return setErr({ ...err, msg: 'Passwords don\'t match' });
     }
     signUpDispatch(credentials);
-  }
+  };
 
   return (
     <section className="form__container form__container-signup">
       <FormSignUp
-            credentials={credentials}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit} />
+        credentials={credentials}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit} />
       { err.msg ? <Err msg={err.msg} /> : null }
-      <Button
-          className="btn__navigate btn__navigate--signin"
-          txt="sign in" 
-          onClick={() => navigate('/signin')}
-        />
+      <Btn
+        className="btn__navigate btn__navigate--signin"
+        txt="sign in"
+        onClick={() => navigate('/signin')}
+      />
     </section>
-    
-  )
+
+  );
 };
 const mapStateToProps = (state) => {
   return {
     auth: state.auth,
-  }
-  
+  };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  signUpDispatch: credentials => dispatch(signUp(credentials)),
-})
+  signUpDispatch: (credentials) => dispatch(signUp(credentials)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

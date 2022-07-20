@@ -5,29 +5,30 @@ import { Navigate, useNavigate } from 'react-router-dom';
 // Components
 import Err from '../error/Err';
 import FormSignIn from '../layout/FormSignIn';
-import Button from '../layout/Button';
+import Btn from '../layout/Btn';
 
 // Dispatches
 import { signIn } from '../../store/actions/authActions';
+
 
 function SignIn({ signInDispatch, auth: { authError, uid } }) {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     username: '',
-    password: ''
+    password: '',
   });
-  const [err, setErr] = useState({ msg: null })
+  const [err, setErr] = useState({ msg: null });
 
   useEffect(() => {
     if (authError) {
-      setErr({...err, msg: authError})
+      setErr({ ...err, msg: authError });
     }
-  }, [authError])
-  
+  }, [authError]);
+
   if (uid) return <Navigate to="/" />;
 
   const handleChange = (e) => {
-    setErr({msg:null});
+    setErr({ msg: null });
     const { name, value } = e.target;
     setCredentials({ ...credentials, [name]: value });
   };
@@ -35,8 +36,8 @@ function SignIn({ signInDispatch, auth: { authError, uid } }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = credentials;
-    if (username === '' || password === ''){
-      setErr({ ...err, msg: "Please fill in empty fields"})
+    if (username === '' || password === '') {
+      setErr({ ...err, msg: 'Please fill in empty fields' });
       return;
     }
     signInDispatch(credentials);
@@ -44,16 +45,16 @@ function SignIn({ signInDispatch, auth: { authError, uid } }) {
 
   return (
     <section className="form__container form__container-signin">
-          <FormSignIn 
-            credentials={credentials}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit} />
-         { err ? <Err msg={err.msg} /> : null }
-         <Button
-          className="btn__navigate btn__navigate--signup"
-          txt="sign up" 
-          onClick={() => navigate('/signup')}
-        />
+      <FormSignIn
+        credentials={credentials}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit} />
+      { err ? <Err msg={err.msg} /> : null }
+      <Btn
+        className="btn__navigate btn__navigate--signup"
+        txt="sign up"
+        onClick={() => navigate('/signup')}
+      />
     </section>
   );
 }

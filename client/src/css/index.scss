@@ -10,7 +10,7 @@ $font-color:  rgba(67, 37, 93, 0.8);
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 1s;
+	animation-duration: .3s;
 	color: $font-color;
 }
 
@@ -39,4 +39,12 @@ body {
         width: 360px;
         margin: auto;
     }
+}
+
+.UserSettings,
+.form-signup,
+.form-signin {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
 }

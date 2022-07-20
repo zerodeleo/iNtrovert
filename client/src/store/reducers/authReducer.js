@@ -16,20 +16,20 @@ const authReducer = (state = authInitState, action) => {
         ...state,
         authError: action.err,
       };
-    case types.SIGNUP_USER_SUCCESS: 
-    return { ...state, username: action.payload.username, uid: action.payload.uid, authError: null};
+    case types.SIGNUP_USER_SUCCESS:
+      return { ...state, username: action.payload.username, uid: action.payload.uid, authError: null };
     case types.SIGNUP_USER_ERROR:
-      return { ...state, authError: action.err }
+      return { ...state, authError: action.err };
     case types.EDIT_USER_SUCCESS:
-      return { ...state, username: action.payload.username, authError: null }
+      return { ...state, username: action.payload.username, authError: null };
     case types.EDIT_USER_ERROR:
-      return { ...state, authError: action.err }
+      return { ...state, authError: action.err };
     case types.DELETE_USER_SUCCESS:
-      return authInitState 
+      return authInitState;
     case types.DELETE_USER_ERROR:
-      return { ...state, authError: action.err }
+      return { ...state, authError: action.err };
     case types.LOGOUT_USER_SUCCESS:
-      return authInitState 
+      return authInitState;
     default:
       return state;
   }

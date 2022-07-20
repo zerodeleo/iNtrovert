@@ -2,7 +2,7 @@ import React from 'react';
 
 // Components
 import Input from './Input';
-import Button from './Button';
+import Btn from './Btn';
 
 const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
   return (
@@ -23,14 +23,14 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
         value={credentials.password}
         placeholder="Password ..."
       />
-      <Button
+      <Btn
         className="form__btn form__btn--signin"
         onSubmit={handleSubmit}
         txt="sign in"
         type="submit"
       />
-  </form>
-  )
-}
+    </form>
+  );
+};
 
 export default FormSignIn;
