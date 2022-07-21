@@ -14,11 +14,19 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 
+import Btn from './layout/Btn';
+
+
+
 
 const Dash = ({ auth }) => {
   const navigate = useNavigate();
   if (!auth.uid) return <Navigate to="/signin" />;
-
+  
+  const navigateToVenue = () => {
+    console.log('hello')
+    return <Navigate to="/venues" />
+  }
   return (
     <section className="Dash">
       <Box sx={{ flexGrow: 1 }}>
@@ -40,6 +48,12 @@ const Dash = ({ auth }) => {
           </Toolbar>
         </AppBar>
       </Box>
+      <Btn
+        className="dash__btn dash__btn--redirect"
+        onClick={navigateToVenue}
+        txt="see venues"
+        type="submit"
+      />
     </section>
   );
 };
