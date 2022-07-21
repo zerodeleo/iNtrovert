@@ -4,4 +4,8 @@ export const authInitState = {
   authError: null,
 };
 
+export const apiActions = [];
+
+export const preferencesInitState = ['bars', 'parks'];
+
 export const apiInitState = [];

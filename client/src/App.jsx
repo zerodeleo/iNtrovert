@@ -11,7 +11,6 @@ import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import UserSettings from './components/settings/UserSettings';
-import Call from './components/test/Call';
 import VenuesList from './components/venues/VenuesList';
 
 // Dispatches
@@ -30,7 +29,6 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<UserSettings />} />
-        <Route path="/call" element={<Call />} />
         <Route path="/venues" element={<VenuesList />} />
       </Routes>
       <Footer />

@@ -18,3 +18,6 @@ export const LOGOUT_USER_ERROR = 'LOGOUT_USER_ERROR';
 export const FETCH_API_SUCCESS = 'FETCH_API_SUCCESS';
 export const FETCH_API_ERROR = 'FETCH_API_ERROR';
 
+// preferencesActions
+export const EDIT_PREFERENCES_SUCCESS = 'EDIT_PREFERENCES_SUCCESS';
+

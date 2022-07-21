@@ -13,7 +13,7 @@ import ListSubheader from '@mui/material/ListSubheader';
 
 const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
   useEffect(() => {
-    apiCallDispatch({ location: 'bla', type: 'park' });
+    apiCallDispatch({ location: 'bla', type: 'bar', types: ['bars', 'parks'] });
   }, []);
 
   const { innerWidth: width, innerHeight: height } = window;
@@ -66,7 +66,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  apiCallDispatch: ({ location, type }) => dispatch(apiCall.apiCall({ location, type })),
+  apiCallDispatch: ({ location, type }) => dispatch(apiCall({ location, type })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(VenuesList);

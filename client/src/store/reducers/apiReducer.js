@@ -1,11 +1,11 @@
 import * as types from '../types';
 
-//Utils functions
+// Utils functions
 import { sortVenueList } from '../../utils';
 
 import { apiInitState } from '../initState';
 
-const authReducer = (state = apiInitState, action) => {
+const apiReducer = (state = apiInitState, action) => {
   switch (action.type) {
     case types.FETCH_API_SUCCESS:
       const venueList = sortVenueList(action.payload);
@@ -17,4 +17,4 @@ const authReducer = (state = apiInitState, action) => {
   }
 };
 
-export default authReducer;
+export default apiReducer;
