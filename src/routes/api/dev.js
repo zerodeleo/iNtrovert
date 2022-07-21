@@ -34,6 +34,7 @@ router.route(`/bars`).get(async (req, res) => {
                   busynessNum: venue.analysis.venue_forecasted_busyness,
                   createdAt: new Date().getTime(),
                   id: Math.floor(Math.random() * 10000000000),
+                  type: 'bar',
                 };
               });
               return resObj;

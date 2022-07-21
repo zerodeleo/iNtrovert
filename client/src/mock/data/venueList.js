@@ -1,4 +1,4 @@
-export const venueList = [
+export const venueList =  [
      {
        name: 'The Central Bar',
        rating: 3.6,
@@ -7,8 +7,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 20,
-       createdAt: 1658389751042,
-       id: 6988815256
+       createdAt: 1658390011940,
+       id: 102958507,
+       type: 'bar'
      },
      {
        name: 'Honey Honey',
@@ -18,8 +19,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 45,
-       createdAt: 1658389751042,
-       id: 3810658581
+       createdAt: 1658390011940,
+       id: 2079521517,
+       type: 'bar'
      },
      {
        name: 'Södra Sidan Pub',
@@ -29,8 +31,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 20,
-       createdAt: 1658389751042,
-       id: 9509434849
+       createdAt: 1658390011940,
+       id: 5747828058,
+       type: 'bar'
      },
      {
        name: 'The Big Ben Pub',
@@ -40,8 +43,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 30,
-       createdAt: 1658389751042,
-       id: 5076922266
+       createdAt: 1658390011940,
+       id: 4902441332,
+       type: 'bar'
      },
      {
        name: 'Kellys',
@@ -51,8 +55,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 20,
-       createdAt: 1658389751042,
-       id: 310357163
+       createdAt: 1658390011940,
+       id: 1212205820,
+       type: 'bar'
      },
      {
        name: 'The Flying Dog',
@@ -62,8 +67,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 85,
-       createdAt: 1658389751042,
-       id: 4187799604
+       createdAt: 1658390011940,
+       id: 2264614531,
+       type: 'bar'
      },
      {
        name: 'Kvarnen',
@@ -73,8 +79,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 15,
-       createdAt: 1658389751042,
-       id: 6825146388
+       createdAt: 1658390011940,
+       id: 6871724767,
+       type: 'bar'
      },
      {
        name: 'The Central Bar',
@@ -84,8 +91,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 20,
-       createdAt: 1658389751042,
-       id: 9323408804
+       createdAt: 1658390011940,
+       id: 8264862622,
+       type: 'bar'
      },
      {
        name: 'Lagerbaren',
@@ -95,8 +103,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 70,
-       createdAt: 1658389751042,
-       id: 5401727903
+       createdAt: 1658390011940,
+       id: 8544249119,
+       type: 'bar'
      },
      {
        name: 'Hirschenkeller',
@@ -106,8 +115,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 35,
-       createdAt: 1658389751042,
-       id: 5075036161
+       createdAt: 1658390011941,
+       id: 3225460479,
+       type: 'bar'
      },
      {
        name: 'Neverland Pub & Restaurang',
@@ -117,8 +127,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 50,
-       createdAt: 1658389751042,
-       id: 2369270580
+       createdAt: 1658390011941,
+       id: 6573802383,
+       type: 'bar'
      },
      {
        name: 'The Green Hunter',
@@ -128,8 +139,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 20,
-       createdAt: 1658389751042,
-       id: 3583779218
+       createdAt: 1658390011941,
+       id: 247598870,
+       type: 'bar'
      },
      {
        name: 'Ica Baren',
@@ -139,8 +151,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: undefined,
-       createdAt: 1658389751042,
-       id: 7304030497
+       createdAt: 1658390011941,
+       id: 3313152765,
+       type: 'bar'
      },
      {
        name: 'Söder Bar & Restaurang',
@@ -150,8 +163,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 40,
-       createdAt: 1658389751042,
-       id: 3870841871
+       createdAt: 1658390011941,
+       id: 391120130,
+       type: 'bar'
      },
      {
        name: 'Crazy Horse',
@@ -161,8 +175,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 35,
-       createdAt: 1658389751042,
-       id: 7863113957
+       createdAt: 1658390011941,
+       id: 792959083,
+       type: 'bar'
      },
      {
        name: 'Carmen',
@@ -172,8 +187,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 20,
-       createdAt: 1658389751042,
-       id: 218451841
+       createdAt: 1658390011941,
+       id: 1287198358,
+       type: 'bar'
      },
      {
        name: 'BrewDog Södermalm',
@@ -183,8 +199,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 60,
-       createdAt: 1658389751042,
-       id: 6652247191
+       createdAt: 1658390011941,
+       id: 9594576066,
+       type: 'bar'
      },
      {
        name: 'Resturang Polhem söder',
@@ -194,8 +211,9 @@ export const venueList = [
        busynessDelta: false,
        busynessTxt: 'julia is working on this',
        busynessNum: 30,
-       createdAt: 1658389751042,
-       id: 8035146456
+       createdAt: 1658390011941,
+       id: 9594986591,
+       type: 'bar'
      },
      {
        name: 'The Roo and Elk',
@@ -205,8 +223,9 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 55,
-       createdAt: 1658389751042,
-       id: 6870313622
+       createdAt: 1658390011941,
+       id: 5545006458,
+       type: 'bar'
      },
      {
        name: 'Snaps Bar & Bistro',
@@ -216,7 +235,8 @@ export const venueList = [
        busynessDelta: true,
        busynessTxt: 'julia is working on this',
        busynessNum: 35,
-       createdAt: 1658389751042,
-       id: 4582890379
+       createdAt: 1658390011941,
+       id: 1763767401,
+       type: 'bar'
      }
    ]
