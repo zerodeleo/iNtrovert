@@ -1,5 +1,5 @@
 const busynessTxt = (busynessNum) => {
-  if (!busynessNum) return 'no data';
+  if (!busynessNum && busynessNum !== 0) return 'no data';
   const busynessTxts = [
     {
       range: [0, 10],
@@ -42,9 +42,14 @@ const busynessTxt = (busynessNum) => {
       txt: 'very very very above average',
     },
   ];
-  for ( let i = 0; i > busynessTxts.length; i++ ) {
-    
+  for ( let i = 0; i < busynessTxts.length; i++ ) {
+    if (
+      busynessNum >= busynessTxts[i].range[0] &&
+      busynessNum <= busynessTxts[i].range[1]) {
+      return busynessTxts[i].txt;
+    }
   }
+  return 'util function failed';
 };
 
 module.exports = { busynessTxt };

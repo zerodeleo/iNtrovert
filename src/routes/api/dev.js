@@ -3,6 +3,7 @@ const { Router } = require('express');
 require('dotenv').config();
 
 const axios = require('axios');
+const { busynessTxt } = require('./utils');
 const router = new Router();
 
 const fakeGoogleApiPath = 'http://localhost:5001';
@@ -29,8 +30,11 @@ router.route(`/bars`).get(async (req, res) => {
                 return {
                   ...el,
                   busynessDelta:
-                  venue.analysis.venue_live_forecasted_delta > 0 ? true : false,
-                  busynessTxt: 'julia is working on this',
+                    venue.analysis.venue_live_forecasted_delta > 0 ?
+                    true :
+                    false,
+                  busynessTxt:
+                    busynessTxt(venue.analysis.venue_forecasted_busyness),
                   busynessNum: venue.analysis.venue_forecasted_busyness,
                   createdAt: new Date().getTime(),
                   id: Math.floor(Math.random() * 10000000000),

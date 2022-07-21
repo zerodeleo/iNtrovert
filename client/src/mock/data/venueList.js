@@ -1,14 +1,14 @@
-export const venueList =  [
+export const venueList =   [
      {
        name: 'The Central Bar',
        rating: 3.6,
        place_id: 'ChIJFa41a_p3X0YRw9M2bt8MmJI',
        vicinity: 'Folkungagatan 57-59, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 20,
-       createdAt: 1658390011940,
-       id: 102958507,
+       createdAt: 1658390459775,
+       id: 3663557834,
        type: 'bar'
      },
      {
@@ -17,10 +17,10 @@ export const venueList =  [
        place_id: 'ChIJgTrZFPp3X0YRaDEqWvSkzWc',
        vicinity: 'Folkungagatan 59, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'below average',
        busynessNum: 45,
-       createdAt: 1658390011940,
-       id: 2079521517,
+       createdAt: 1658390459775,
+       id: 3467246086,
        type: 'bar'
      },
      {
@@ -29,10 +29,10 @@ export const venueList =  [
        place_id: 'ChIJCe_jio53X0YR4piKB5xY45w',
        vicinity: 'Folkungagatan 57, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 20,
-       createdAt: 1658390011940,
-       id: 5747828058,
+       createdAt: 1658390459775,
+       id: 3280549454,
        type: 'bar'
      },
      {
@@ -41,10 +41,10 @@ export const venueList =  [
        place_id: 'ChIJcVNYBvl3X0YR6ynQ4q1lVaw',
        vicinity: 'Folkungagatan 97, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very low',
        busynessNum: 30,
-       createdAt: 1658390011940,
-       id: 4902441332,
+       createdAt: 1658390459775,
+       id: 7507974854,
        type: 'bar'
      },
      {
@@ -53,10 +53,10 @@ export const venueList =  [
        place_id: 'ChIJSf04bvp3X0YRBaBZM7hh9XY',
        vicinity: 'Folkungagatan 49, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 20,
-       createdAt: 1658390011940,
-       id: 1212205820,
+       createdAt: 1658390459775,
+       id: 1130244206,
        type: 'bar'
      },
      {
@@ -65,10 +65,10 @@ export const venueList =  [
        place_id: 'ChIJ1ed7a_p3X0YRCX9g4SkWoF4',
        vicinity: 'Folkungagatan 57, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very above average',
        busynessNum: 85,
-       createdAt: 1658390011940,
-       id: 2264614531,
+       createdAt: 1658390459775,
+       id: 2016762418,
        type: 'bar'
      },
      {
@@ -77,10 +77,10 @@ export const venueList =  [
        place_id: 'ChIJa14naPp3X0YRmkZmDwg0-5s',
        vicinity: 'Tjärhovsgatan 4, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 15,
-       createdAt: 1658390011940,
-       id: 6871724767,
+       createdAt: 1658390459775,
+       id: 2832875735,
        type: 'bar'
      },
      {
@@ -89,10 +89,10 @@ export const venueList =  [
        place_id: 'ChIJN8FU2vB3X0YRSquXVRpgyLo',
        vicinity: 'Götgatan 84, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 20,
-       createdAt: 1658390011940,
-       id: 8264862622,
+       createdAt: 1658390459775,
+       id: 8163051213,
        type: 'bar'
      },
      {
@@ -101,10 +101,10 @@ export const venueList =  [
        place_id: 'ChIJP3rGl_Z3X0YRiny7Z34DbD8',
        vicinity: 'Götgatan 97, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'above average',
        busynessNum: 70,
-       createdAt: 1658390011940,
-       id: 8544249119,
+       createdAt: 1658390459775,
+       id: 8709646791,
        type: 'bar'
      },
      {
@@ -113,10 +113,10 @@ export const venueList =  [
        place_id: 'ChIJSVZq6fp3X0YRRRfQP60l2lU',
        vicinity: 'Götgatan 46, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'low',
        busynessNum: 35,
-       createdAt: 1658390011941,
-       id: 3225460479,
+       createdAt: 1658390459775,
+       id: 9383878699,
        type: 'bar'
      },
      {
@@ -125,10 +125,10 @@ export const venueList =  [
        place_id: 'ChIJAUuuovp3X0YRhG08gLN089E',
        vicinity: 'Medborgarplatsen 4, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'below average',
        busynessNum: 50,
-       createdAt: 1658390011941,
-       id: 6573802383,
+       createdAt: 1658390459775,
+       id: 7089091072,
        type: 'bar'
      },
      {
@@ -137,10 +137,10 @@ export const venueList =  [
        place_id: 'ChIJ94QKhPB3X0YR5YUD96WzuoI',
        vicinity: 'Götgatan 64, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 20,
-       createdAt: 1658390011941,
-       id: 247598870,
+       createdAt: 1658390459775,
+       id: 6669379398,
        type: 'bar'
      },
      {
@@ -149,10 +149,10 @@ export const venueList =  [
        place_id: 'ChIJMeYv5SZ3X0YRVvPCEMhuDRk',
        vicinity: 'Folkungagatan 56, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'no data',
        busynessNum: undefined,
-       createdAt: 1658390011941,
-       id: 3313152765,
+       createdAt: 1658390459775,
+       id: 8824563017,
        type: 'bar'
      },
      {
@@ -161,10 +161,10 @@ export const venueList =  [
        place_id: 'ChIJF7DAnIJ3X0YRo42_fNNIogk',
        vicinity: 'Ringvägen 125, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'low',
        busynessNum: 40,
-       createdAt: 1658390011941,
-       id: 391120130,
+       createdAt: 1658390459775,
+       id: 4801358216,
        type: 'bar'
      },
      {
@@ -173,10 +173,10 @@ export const venueList =  [
        place_id: 'ChIJXZKDV6B3X0YRjF5OBaXbLSo',
        vicinity: 'Götgatan 44, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'low',
        busynessNum: 35,
-       createdAt: 1658390011941,
-       id: 792959083,
+       createdAt: 1658390459775,
+       id: 8968747251,
        type: 'bar'
      },
      {
@@ -185,10 +185,10 @@ export const venueList =  [
        place_id: 'ChIJQVyoQPp3X0YR8Wkr30pxiyU',
        vicinity: 'Tjärhovsgatan 14, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very very low',
        busynessNum: 20,
-       createdAt: 1658390011941,
-       id: 1287198358,
+       createdAt: 1658390459775,
+       id: 732238953,
        type: 'bar'
      },
      {
@@ -197,10 +197,10 @@ export const venueList =  [
        place_id: 'ChIJZ6m0M_Z3X0YRC-FN_cv_q_M',
        vicinity: 'Ringvägen 149B, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'average',
        busynessNum: 60,
-       createdAt: 1658390011941,
-       id: 9594576066,
+       createdAt: 1658390459775,
+       id: 3139047210,
        type: 'bar'
      },
      {
@@ -209,10 +209,10 @@ export const venueList =  [
        place_id: 'ChIJieRh0vd3X0YRY68gQ-VpB0Q',
        vicinity: 'Ringvägen 153, Stockholm',
        busynessDelta: false,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'very low',
        busynessNum: 30,
-       createdAt: 1658390011941,
-       id: 9594986591,
+       createdAt: 1658390459775,
+       id: 6964452195,
        type: 'bar'
      },
      {
@@ -221,10 +221,10 @@ export const venueList =  [
        place_id: 'ChIJOTxeyPl3X0YRXuqLSHcJMyI',
        vicinity: 'Folkungagatan 81, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'average',
        busynessNum: 55,
-       createdAt: 1658390011941,
-       id: 5545006458,
+       createdAt: 1658390459775,
+       id: 4292462542,
        type: 'bar'
      },
      {
@@ -233,10 +233,10 @@ export const venueList =  [
        place_id: 'ChIJI1Cs7fp3X0YR5bKAkQf3W1U',
        vicinity: 'Götgatan 48, Stockholm',
        busynessDelta: true,
-       busynessTxt: 'julia is working on this',
+       busynessTxt: 'low',
        busynessNum: 35,
-       createdAt: 1658390011941,
-       id: 1763767401,
+       createdAt: 1658390459775,
+       id: 1010269850,
        type: 'bar'
      }
    ]
