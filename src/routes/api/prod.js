@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const router = new Router();
 
-router.route(`/parks`).get((req, res) => {
+router.route(`/call`).post((req, res) => {
   res.json('PROD Not implemented').end();
 });
 

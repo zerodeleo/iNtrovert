@@ -24,18 +24,18 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Dash = ({ auth }) => {
   const navigate = useNavigate();
   if (!auth.uid) return <Navigate to="/signin" />;
-  
+
   const navigateToVenue = () => {
-    console.log('hello')
-    return <Navigate to="/venues" />
-  }
+    console.log('hello');
+    return <Navigate to="/venues" />;
+  };
   return (
     <section className="Dash">
       <Box sm={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-          <AccountCircleIcon fontSize='large'/>
-          
+            <AccountCircleIcon fontSize='large'/>
+
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hello {auth.username}
             </Typography>
