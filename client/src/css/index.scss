@@ -41,9 +41,11 @@ body {
 
 .align{
 	display: flex;
-	gap: 12px;
+	gap: 8px;
 	align-items: center;
-	font-size: smaller;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 16px;
 }
 
 .action-align {
@@ -53,7 +55,8 @@ body {
 }
 
 .busyness-txt {
-	border: 1px solid gray;
+	
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 	border-radius: 8px;
 	text-align: center;
 	display:flex;
@@ -61,13 +64,17 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 16px;
-
 }
 
 .footer {
-	background-color: azure;
-	margin: 4rem 0;
+	background-color: #9c27b0;
 	text-align: center;
+	position: fixed;
+  bottom: 0;
+	min-width: 375px;
+	color: #fff;
+	margin:0 auto;
+	padding: 16px 0;
 }
 
 
@@ -82,8 +89,8 @@ body {
 
 @media screen and (min-width: 375px) {
     body {
-        width: 375px;
-        margin: auto;
+			width: 375px;
+      margin: auto;
     }
 }
 

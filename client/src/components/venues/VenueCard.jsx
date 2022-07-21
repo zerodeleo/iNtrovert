@@ -1,7 +1,6 @@
 import React from 'react';
 
 // MUI
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -19,7 +18,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 const getIcon = (type) => {
   switch (type) {
     case 'bar':
-      return <LocalBarIcon sx={{ color: yellow[500] }}/>;
+      return <LocalBarIcon fontSize='large' sx={{ color: yellow[600] }}/>;
     case 'park':
       return <ForestIcon fontSize='large' sx={{ color: green[500] }}/>;
     default:
@@ -43,7 +42,7 @@ const VenueCard = ({ venue }) => {
       <p>{venue.busynessDelta}</p>
       <p>{venue.busynessTxt}</p>
       <p>{venue.busynessNum}</p> */}
-      <Card variant="outlined" sx={{ minWidth: 275 }}>
+      <Card variant="outlined" sx={{ minWidth: 275, margin: 2, bgcolor: '#fbf5fc' }}>
         <CardContent>
           <div>
             {/* <Typography className='align' variant='h6' color="text.secondary" gutterBottom>
@@ -61,7 +60,7 @@ const VenueCard = ({ venue }) => {
           </Typography>
           <div className='align'> Ratings
             <StarIcon
-              sx={{ color: yellow[500] }}
+              sx={{ color: yellow[800] }}
             /> {venue.rating}
           </div>
           <Typography variant="h6" className='busyness-txt'>

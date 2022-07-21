@@ -13,10 +13,8 @@ import Btn from './layout/Btn';
 import AppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import SettingsIcon from '@mui/icons-material/Settings';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
-import { Button } from '@mui/material';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
@@ -31,27 +29,25 @@ const Dash = ({ auth }) => {
   };
   return (
     <section className="Dash">
-      <Box sm={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <AccountCircleIcon fontSize='large'/>
+      <AppBar color='secondary' position="static">
+        <Toolbar>
+          <AccountCircleIcon fontSize='large'/>
 
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hello {auth.username}
-            </Typography>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={() => navigate('/settings')}
-              color="inherit"
-            >
-              <SettingsIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-      </Box>
+          </Typography>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={() => navigate('/settings')}
+            color="inherit"
+          >
+            <SettingsIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
       <Btn
         className="dash__btn dash__btn--redirect"
         onClick={navigateToVenue}
