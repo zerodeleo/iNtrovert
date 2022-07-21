@@ -12,9 +12,11 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import UserSettings from './components/settings/UserSettings';
 import Call from './components/test/Call';
+import VenuesCollection from './components/venues/VenuesCollection';
 
 // Dispatches
 import { signInWithLocalStorage } from './store/actions/authActions';
+
 
 const App = ({ signInWithLocalStorageDispatch }) => {
   useEffect(() => {
@@ -29,6 +31,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<UserSettings />} />
         <Route path="/call" element={<Call />} />
+        <Route path="/venues" element={<VenuesCollection />} />
       </Routes>
       <Footer />
     </Router>
