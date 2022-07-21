@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
@@ -37,6 +37,7 @@ const UserSettings = ({
     password: '',
     passwordCheck: '',
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (authError) {
@@ -100,61 +101,67 @@ const UserSettings = ({
       > */}
       <Typography variant='h4' align='center'>User Settings</Typography>
 
-        <Input
-          className="input input--edit-username"
-          placeholder={ user.username }
-          value={ user.username }
-          onChange={handleChange}
-          name="username"
-        />
-        
-        <Btn
-          className="btn btn__settings btn__settings--save-user"
-          txt="Save username"
-          name="save-username"
-          onClick={handleClick}
-        />
-        { usernameErr ? <Err msg={usernameErr.msg} /> : null }
-        <Input
-          className="input input--edit-password"
-          placeholder="enter new password"
-          value={ user.password }
-          onChange={handleChange}
-          name="password"
-          type="password"
-        />
-        <Input
-          className="input input--edit-passwordCheck"
-          placeholder="confirm new password"
-          value={ user.passwordCheck }
-          onChange={handleChange}
-          name="passwordCheck"
-          type="password"
-        />
-        { passwordErr ? <Err msg={passwordErr.msg} /> : null }
-        <Btn
-          className="btn btn__settings btn__settings--save-user"
-          txt="Save password"
-          name="save-password"
-          onClick={handleClick}
-        />
-        { err ? <Err msg={err.msg} /> : null }
-        <Btn
-          className="btn btn__settings btn__settings--logout"
-          variant='contained'
-          color='secondary'
-          txt="Log Out"
-          name="logout"
-          onClick={handleClick}
-        />
-        <Btn
-          className="btn__settings--delete"
-          txt="Delete Account"
-          name="delete"
-          variant="outlined"
-          color="error"
-          onClick={handleClick}
-        />
+      <Input
+        className="input input--edit-username"
+        placeholder={ user.username }
+        value={ user.username }
+        onChange={handleChange}
+        name="username"
+      />
+      <Btn
+        className="btn btn__settings btn__settings--save-user"
+        txt="Save username"
+        name="save-username"
+        onClick={handleClick}
+      />
+      { usernameErr ? <Err msg={usernameErr.msg} /> : null }
+      <Input
+        className="input input--edit-password"
+        placeholder="enter new password"
+        value={ user.password }
+        onChange={handleChange}
+        name="password"
+        type="password"
+      />
+      <Input
+        className="input input--edit-passwordCheck"
+        placeholder="confirm new password"
+        value={ user.passwordCheck }
+        onChange={handleChange}
+        name="passwordCheck"
+        type="password"
+      />
+      { passwordErr ? <Err msg={passwordErr.msg} /> : null }
+      <Btn
+        className="btn btn__settings btn__settings--save-user"
+        txt="Save password"
+        name="save-password"
+        onClick={handleClick}
+      />
+      { err ? <Err msg={err.msg} /> : null }
+      <Btn
+        className="btn btn__settings btn__settings--logout"
+        variant='contained'
+        color='secondary'
+        txt="Log Out"
+        name="logout"
+        onClick={handleClick}
+      />
+      <Btn
+        className="btn__settings--delete"
+        txt="Delete Account"
+        name="delete"
+        variant="outlined"
+        color="error"
+        onClick={handleClick}
+      />
+
+      <Btn
+        className="btn__settings--back"
+        txt="Back"
+        name="back"
+        onClick={() => navigate('/')}
+      />
       {/* </Box> */}
 
     </section>

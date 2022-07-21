@@ -11,7 +11,7 @@ $font-color:  rgba(67, 37, 93, 0.8);
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: .3s;
-	color: $font-color;
+	// color: $font-color;
 }
 
 html {
@@ -39,8 +39,32 @@ body {
 	padding: 16px;
 }
 
-.footer {
+.align{
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	font-size: smaller;
+}
 
+.action-align {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 12px;
+}
+
+.busyness-txt {
+	border: 1px solid gray;
+	border-radius: 8px;
+	text-align: center;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+
+}
+
+.footer {
 	background-color: azure;
 	margin: 4rem 0;
 	text-align: center;

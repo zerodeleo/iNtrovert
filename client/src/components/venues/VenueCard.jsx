@@ -3,14 +3,14 @@ import React from 'react';
 // MUI
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { green, red, yellow } from '@mui/material/colors';
 
 
 // MUI Icons
-import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
 import ForestIcon from '@mui/icons-material/Forest';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
@@ -19,9 +19,9 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 const getIcon = (type) => {
   switch (type) {
     case 'bar':
-      return <LocalBarIcon />;
+      return <LocalBarIcon sx={{ color: yellow[500] }}/>;
     case 'park':
-      return <ForestIcon />;
+      return <ForestIcon fontSize='large' sx={{ color: green[500] }}/>;
     default:
       return;
   }
@@ -29,8 +29,8 @@ const getIcon = (type) => {
 
 const getArrow = (busynessDelta) => {
   return busynessDelta ?
-  <ArrowUpwardIcon sx={{ color: 'green' }}/> :
-  <ArrowDownwardIcon sx={{ color: 'red' }}/>;
+  <ArrowUpwardIcon fontSize='large' sx={{ color: green[500] }}/> :
+  <ArrowDownwardIcon fontSize='large'sx={{ color: red[500] }}/>;
 };
 
 const VenueCard = ({ venue }) => {
@@ -43,25 +43,36 @@ const VenueCard = ({ venue }) => {
       <p>{venue.busynessDelta}</p>
       <p>{venue.busynessTxt}</p>
       <p>{venue.busynessNum}</p> */}
-      <Card sx={{ minWidth: 275 }}>
+      <Card variant="outlined" sx={{ minWidth: 275 }}>
         <CardContent>
-          <Typography variant='h6' color="text.secondary" gutterBottom>
-            <StarBorderIcon /> {venue.rating}
-            { getIcon(venue.type) }
-          </Typography>
+          <div>
+            {/* <Typography className='align' variant='h6' color="text.secondary" gutterBottom>
+              <StarBorderIcon size="large"
+              /> {venue.rating}
+              { getIcon(venue.type) }
+            </Typography> */}
+
+          </div>
           <Typography variant="h5" component="div">
             { venue.name }
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
             { venue.vicinity }
           </Typography>
-          <Typography variant="body2">
-            { venue.busynessTxt } {getArrow(venue.busynessDelta)}
+          <div className='align'> Ratings
+            <StarIcon
+              sx={{ color: yellow[500] }}
+            /> {venue.rating}
+          </div>
+          <Typography variant="h6" className='busyness-txt'>
+            { venue.busynessTxt }
+            {getArrow(venue.busynessDelta)}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Open in Maps</Button>
-        </CardActions>
+        <div className='action-align'>
+          <Button size="small" >Open in Maps</Button>
+          { getIcon(venue.type) }
+        </div>
       </Card>
     </section>
   );
