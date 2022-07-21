@@ -5,6 +5,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // Components
+import Btn from './layout/Btn';
 // import Button from './layout/Button';
 // import UserSettings from './settings/UserSettings';
 
@@ -17,9 +18,7 @@ import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 import { Button } from '@mui/material';
 
-import Btn from './layout/Btn';
-
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const Dash = ({ auth }) => {
@@ -32,9 +31,11 @@ const Dash = ({ auth }) => {
   }
   return (
     <section className="Dash">
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sm={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
+          <AccountCircleIcon fontSize='large'/>
+          
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hello {auth.username}
             </Typography>

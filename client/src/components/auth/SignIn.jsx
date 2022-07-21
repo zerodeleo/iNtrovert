@@ -52,7 +52,7 @@ function SignIn({ signInDispatch, auth: { authError, uid } }) {
       { err ? <Err msg={err.msg} /> : null }
       <Btn
         className="btn__navigate btn__navigate--signup"
-        txt="sign up"
+        txt="Not a member?   sign up"
         onClick={() => navigate('/signup')}
       />
     </section>
