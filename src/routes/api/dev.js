@@ -32,7 +32,11 @@ router.route(`/bars`).get(async (req, res) => {
                   busynessDelta:
                     venue.analysis.venue_live_forecasted_delta > 0 ?
                     true :
+                    typeof
+                    venue.analysis.venue_live_forecasted_delta === 'undefined' ?
+                    undefined :
                     false,
+                  busynessDeltaNum: venue.analysis.venue_live_forecasted_delta,
                   busynessTxt:
                     busynessTxt(venue.analysis.venue_forecasted_busyness),
                   busynessNum: venue.analysis.venue_forecasted_busyness,
