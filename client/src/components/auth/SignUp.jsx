@@ -51,8 +51,8 @@ const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
         handleSubmit={handleSubmit} />
       { err.msg ? <Err msg={err.msg} /> : null }
       <Btn
-        className="btn__navigate btn__navigate--signin"
-        txt="sign in"
+        className="btn__navigate btn__navigate--signin "
+        txt="Already a memeber? Sign in"
         onClick={() => navigate('/signin')}
       />
     </section>

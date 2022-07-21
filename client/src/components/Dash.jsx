@@ -13,6 +13,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const Dash = ({ auth }) => {
@@ -21,9 +22,11 @@ const Dash = ({ auth }) => {
 
   return (
     <section className="Dash">
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sm={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
+          <AccountCircleIcon fontSize='large'/>
+          
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hello {auth.username}
             </Typography>

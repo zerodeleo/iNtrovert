@@ -15,13 +15,27 @@ $font-color:  rgba(67, 37, 93, 0.8);
 }
 
 html {
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+  width: 100%;
+	box-sizing: border-box;
 }
 
 body {
 	background-color: rgba(255,255,255,0.7); /* For browsers that do not support gradients */
 	background-image: linear-gradient(to bottom right, $base-color, $base-color-01);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+.form__container{
+	width: 100%;
+	margin-top: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.pd {
+	padding: 16px;
 }
 
 
@@ -34,9 +48,9 @@ body {
 	}
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 375px) {
     body {
-        width: 360px;
+        width: 375px;
         margin: auto;
     }
 }
@@ -46,5 +60,6 @@ body {
 .form-signin {
 	display: flex;
 	flex-direction: column;
-	gap: .5rem;
+	gap: 0.8rem;
+	// padding: 8px;
 }

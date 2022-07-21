@@ -5,7 +5,9 @@ import { Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // MUI
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
+
 
 // Actions
 import {
@@ -87,15 +89,16 @@ const UserSettings = ({
   };
 
   return (
-    <section className="UserSettings">
-      <Box
+    <section className="UserSettings pd">
+      {/* <Box
         component="form"
         sx={{
-          '& > :not(style)': { m: 1, width: '25ch' },
+          '& > :not(style)': { m: 1, width: '100%' },
         }}
         noValidate
         autoComplete="off"
-      >
+      > */}
+      <Typography variant='h4' align='center'>User Settings</Typography>
 
         <Input
           className="input input--edit-username"
@@ -104,6 +107,7 @@ const UserSettings = ({
           onChange={handleChange}
           name="username"
         />
+        
         <Btn
           className="btn btn__settings btn__settings--save-user"
           txt="Save username"
@@ -137,6 +141,8 @@ const UserSettings = ({
         { err ? <Err msg={err.msg} /> : null }
         <Btn
           className="btn btn__settings btn__settings--logout"
+          variant='contained'
+          color='secondary'
           txt="Log Out"
           name="logout"
           onClick={handleClick}
@@ -149,7 +155,7 @@ const UserSettings = ({
           color="error"
           onClick={handleClick}
         />
-      </Box>
+      {/* </Box> */}
 
     </section>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography } from '@mui/material';
 
 // Components
 import Input from './Input';
@@ -6,7 +7,8 @@ import Btn from './Btn';
 
 const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
   return (
-    <form className="form form-signin" onSubmit={handleSubmit}>
+    <form className="form form-signin pd" onSubmit={handleSubmit}>
+      <Typography variant='h4' align='center'> Sign in</Typography>
       <Input
         className="form__input form__input-signin"
         onChange={handleChange}
@@ -28,6 +30,8 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
         onSubmit={handleSubmit}
         txt="sign in"
         type="submit"
+        variant='contained'
+        color='secondary'
       />
     </form>
   );
