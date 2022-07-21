@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 const { Router } = require('express');
 require('dotenv').config();
@@ -9,18 +10,20 @@ const router = new Router();
 const fakeGoogleApiPath = 'http://localhost:5001';
 const fakeBestTimeApiPath = 'http://localhost:5002';
 
-router.route(`/bars`).get(async (req, res) => {
-  await axios.get(`${fakeGoogleApiPath}/barsData`)
+router.route(`/call`).post(async (req, res) => {
+  const { type, location } = req.body;
+
+  await axios.get(`${fakeGoogleApiPath}/${type}sData`)
       .then((googleRes) => {
-        const besttimeRes = axios.get(`${fakeBestTimeApiPath}/barsData`);
+        const besttimeRes = axios.get(`${fakeBestTimeApiPath}/${type}sData`);
         const bars = googleRes.data.results.map((result) => {
           const { name, rating, place_id, vicinity } = result;
           return { name, rating, place_id, vicinity };
         });
         return { besttimeRes, bars };
       })
-      .then((obj) => {
-        obj.besttimeRes
+      .then(async (obj) => {
+        return obj.besttimeRes
             .then((data) => data.data)
             .then((data) => {
               const resObj = obj.bars.map((el) => {
@@ -42,14 +45,16 @@ router.route(`/bars`).get(async (req, res) => {
                   busynessNum: venue.analysis.venue_forecasted_busyness,
                   createdAt: new Date().getTime(),
                   id: Math.floor(Math.random() * 10000000000),
-                  type: 'bar',
+                  type,
                 };
               });
               return resObj;
             })
-            .then((res) => console.log(res));
+            .then((data) => data)
+            .catch((err) => res.status(500).json(err));
       })
-      .then(() => res.end());
+      .then((data) => res.json(data).end())
+      .catch((err) => res.status(500).json(err));
 });
 
 module.exports = router;

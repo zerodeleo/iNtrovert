@@ -1,6 +1,5 @@
 import axios from 'axios';
 import * as types from '../types';
-import authInitState from '../initState';
 
 export const signInWithLocalStorage = () => (dispatch) => {
   const uid = JSON.parse(localStorage.getItem('uid'));

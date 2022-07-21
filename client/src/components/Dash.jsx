@@ -3,6 +3,8 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
+
+// Components
 // import Button from './layout/Button';
 // import UserSettings from './settings/UserSettings';
 
@@ -13,6 +15,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
+import { Button } from '@mui/material';
 
 
 const Dash = ({ auth }) => {

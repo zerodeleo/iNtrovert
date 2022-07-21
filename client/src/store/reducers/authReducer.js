@@ -1,6 +1,6 @@
 import * as types from '../types';
 
-import authInitState from '../initState';
+import { authInitState } from '../initState';
 
 const authReducer = (state = authInitState, action) => {
   switch (action.type) {
