@@ -60,4 +60,13 @@ const mergeNestedArr = (arr) => {
   return resultArr;
 };
 
-module.exports = { busynessTxt, mergeNestedArr };
+const getGoogleVenues = ({ types, res }) => {
+  const typesArr = res.data.map((typeArr) => {
+    if (types.find((type) => type === typeArr.type)) {
+      return typeArr.results;
+    }
+  });
+  return mergeNestedArr(typesArr);
+};
+
+module.exports = { busynessTxt, getGoogleVenues };

@@ -5,7 +5,7 @@ const { Router } = require('express');
 require('dotenv').config();
 
 const axios = require('axios');
-const { busynessTxt, mergeNestedArr } = require('./utils');
+const { getGoogleVenues } = require('./utils');
 const router = new Router();
 
 const fakeGoogleApiPath = 'http://localhost:5001';
@@ -19,14 +19,7 @@ router.route(`/call`).get(async (req, res) => {
 
   await axios.get(`${fakeGoogleApiPath}/data`)
       .then((res) => {
-        const resArr = res.data;
-        console.log(res.data);
-        const typesArr = resArr.map((typeArr) => {
-          if (types.find((type) => type === typeArr.type)) {
-            return typeArr.results;
-          }
-        });
-        const mergedArr = mergeNestedArr(typesArr);
+        const googleVenues = getGoogleVenues({ types, res });
       });
 });
 
