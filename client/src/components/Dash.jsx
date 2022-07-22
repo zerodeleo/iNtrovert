@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 // Components
 import Btn from './layout/Btn';
+import VenuesList from './venues/VenuesList';
 // import Button from './layout/Button';
 // import UserSettings from './settings/UserSettings';
 
@@ -48,12 +49,13 @@ const Dash = ({ auth }) => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Btn
+      {/* <Btn
         className="dash__btn dash__btn--redirect"
         onClick={navigateToVenue}
         txt="see venues"
         type="submit"
-      />
+      /> */}
+      <VenuesList />
     </section>
   );
 };
