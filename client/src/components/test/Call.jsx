@@ -16,7 +16,7 @@ const Call = ({ apiCallDispatch }) => {
     <article>
       Call
     </article>
-  )
+  );
 };
 
 const mapStateToProps = (state) => {
@@ -27,7 +27,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  apiCallDispatch: ({location, type}) => dispatch(apiCall.apiCall({location, type}))
+  apiCallDispatch: ({ location, type }) => dispatch(apiCall.apiCall({ location, type })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Call);
