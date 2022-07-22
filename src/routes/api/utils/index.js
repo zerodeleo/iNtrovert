@@ -52,4 +52,12 @@ const busynessTxt = (busynessNum) => {
   return 'util function failed';
 };
 
-module.exports = { busynessTxt };
+const mergeNestedArr = (arr) => {
+  let resultArr = [];
+  for (let i = 0; i < arr.length; i ++) {
+    resultArr = [...resultArr, ...arr[i]];
+  };
+  return resultArr;
+};
+
+module.exports = { busynessTxt, mergeNestedArr };
