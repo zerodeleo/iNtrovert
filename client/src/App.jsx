@@ -10,6 +10,7 @@ import Dash from './components/Dash';
 import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
+import Preferences from './components/settings/Preferences';
 import UserSettings from './components/settings/UserSettings';
 import Call from './components/test/Call';
 import VenuesList from './components/venues/VenuesList';
@@ -32,6 +33,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route path="/settings" element={<UserSettings />} />
         <Route path="/call" element={<Call />} />
         <Route path="/venues" element={<VenuesList />} />
+        <Route path="/preferences" element={<Preferences />} />
       </Routes>
       <Footer />
     </Router>

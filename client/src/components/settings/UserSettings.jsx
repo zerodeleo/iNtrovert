@@ -20,6 +20,7 @@ import Input from '../layout/Input';
 import Btn from '../layout/Btn';
 import Err from '../error/Err';
 
+
 const UserSettings = ({
   auth,
   authError,
@@ -161,6 +162,7 @@ const UserSettings = ({
         name="back"
         onClick={() => navigate('/')}
       />
+      {/* <Preferences /> */}
       {/* </Box> */}
 
     </section>

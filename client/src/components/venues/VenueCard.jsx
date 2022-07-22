@@ -35,27 +35,12 @@ const getArrow = (busynessDelta) => {
 const VenueCard = ({ venue }) => {
   return (
     <section className='venue--card'>
-      {/* <h2>{venue.name}</h2>
-      <p>{venue.vicinity}</p>
-      <p>{venue.type}</p>
-      <p>{venue.rating}</p>
-      <p>{venue.busynessDelta}</p>
-      <p>{venue.busynessTxt}</p>
-      <p>{venue.busynessNum}</p> */}
-      <Card variant="outlined" sx={{ minWidth: 275, margin: 2, bgcolor: '#fbf5fc' }}>
+      <Card sx={{ minWidth: 275, margin: 2, bgcolor: '#fbf5fc' }}>
         <CardContent>
-          <div>
-            {/* <Typography className='align' variant='h6' color="text.secondary" gutterBottom>
-              <StarBorderIcon size="large"
-              /> {venue.rating}
-              { getIcon(venue.type) }
-            </Typography> */}
-
-          </div>
           <Typography variant="h5" component="div">
             { venue.name }
           </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          <Typography color="text.secondary">
             { venue.vicinity }
           </Typography>
           <div className='align'> Ratings

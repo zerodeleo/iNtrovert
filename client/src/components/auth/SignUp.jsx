@@ -11,9 +11,9 @@ import Btn from '../layout/Btn';
 const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
-    username: 'julia',
-    password: '123',
-    passwordCheck: '123',
+    username: '',
+    password: '',
+    passwordCheck: '',
   });
   const [err, setErr] = useState({ msg: null });
 
@@ -23,7 +23,7 @@ const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
     }
   }, [authError]);
 
-  if (uid) return <Navigate to="/" />;
+  if (uid) return <Navigate to="/preferences" />;
 
   const handleChange = (e) => {
     setErr({ msg: null });

@@ -18,13 +18,6 @@ const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
 
   return (
     <div>
-      {/* { venueList ? venueList.map((venue) => (
-                <VenueCard
-                key={venue.id}
-                id={venue.place_id}
-                venue={venue}
-                 />
-            )) : null } */}
       <List
         sx={{
           'width': '100%',
@@ -39,8 +32,8 @@ const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
       >
         { venueList ? [0].map((sectionId) => (
           <li key={`section-${sectionId}`}>
-            <ul>
-              <ListSubheader>{`Venue list`}</ListSubheader>
+            <ul className='ul-container'>
+              {/* <ListSubheader >{`Venue list`}</ListSubheader> */}
               {venueList.map((venue) => (
                 <VenueCard
                   key={venue.id}

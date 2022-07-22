@@ -1,5 +1,5 @@
 const busynessTxt = (busynessNum) => {
-  if (!busynessNum && busynessNum !== 0) return 'no data';
+  if (!busynessNum && busynessNum !== 0) return 'information is not available';
   const busynessTxts = [
     {
       range: [0, 10],
