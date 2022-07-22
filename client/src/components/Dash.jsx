@@ -4,8 +4,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 // Redux
 import { connect } from 'react-redux';
 
-// Components
-import Btn from './layout/Btn';
+// Component
 import VenuesList from './venues/VenuesList';
 // import Button from './layout/Button';
 // import UserSettings from './settings/UserSettings';
@@ -23,11 +22,6 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Dash = ({ auth }) => {
   const navigate = useNavigate();
   if (!auth.uid) return <Navigate to="/signin" />;
-
-  const navigateToVenue = () => {
-    console.log('hello');
-    return <Navigate to="/venues" />;
-  };
   return (
     <section className="Dash">
       <AppBar color='secondary' position="static">
@@ -49,12 +43,6 @@ const Dash = ({ auth }) => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      {/* <Btn
-        className="dash__btn dash__btn--redirect"
-        onClick={navigateToVenue}
-        txt="see venues"
-        type="submit"
-      /> */}
       <VenuesList />
     </section>
   );
