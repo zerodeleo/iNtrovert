@@ -7,7 +7,6 @@ import apiCall from '../../store/actions/apiActions';
 
 // MUI
 import List from '@mui/material/List';
-import ListSubheader from '@mui/material/ListSubheader';
 
 const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
   useEffect(() => {

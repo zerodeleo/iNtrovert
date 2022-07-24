@@ -28,8 +28,8 @@ const getIcon = (type) => {
 
 const getArrow = (busynessDelta) => {
   return busynessDelta ?
-  <ArrowUpwardIcon fontSize='large' sx={{ color: green[500] }}/> :
-  <ArrowDownwardIcon fontSize='large'sx={{ color: red[500] }}/>;
+  <ArrowUpwardIcon fontSize='medium' sx={{ color: green[500] }}/> :
+  <ArrowDownwardIcon fontSize='medium'sx={{ color: red[500] }}/>;
 };
 
 const VenueCard = ({ venue }) => {
@@ -48,10 +48,13 @@ const VenueCard = ({ venue }) => {
               sx={{ color: yellow[800] }}
             /> {venue.rating}
           </div>
-          <Typography variant="h6" className='busyness-txt'>
-            { venue.busynessTxt }
-            {getArrow(venue.busynessDelta)}
+          <Typography variant="h6" m={ 1 }>
+            Busyness:{ venue.busynessTxt }
           </Typography>
+          <div className='arrow-text'>
+            {getArrow(venue.busynessDelta)}
+            <Typography>People are expected<br></br> to arrive soon</Typography>
+          </div>
         </CardContent>
         <div className='action-align'>
           <Button size="small" >Open in Maps</Button>
