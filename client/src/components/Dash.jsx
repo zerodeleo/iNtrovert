@@ -6,8 +6,6 @@ import { connect } from 'react-redux';
 
 // Component
 import VenuesList from './venues/VenuesList';
-// import Button from './layout/Button';
-// import UserSettings from './settings/UserSettings';
 
 // MUI
 import AppBar from '@mui/material/AppBar';

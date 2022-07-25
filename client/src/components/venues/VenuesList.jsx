@@ -3,14 +3,17 @@ import VenueCard from './VenueCard';
 import { connect } from 'react-redux';
 
 // Actions
-import apiCall from '../../store/actions/apiActions';
+import { getVenuesList } from '../../store/actions/venuesActions';
 
 // MUI
 import List from '@mui/material/List';
 
-const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
+const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch }) => {
   useEffect(() => {
-    apiCallDispatch({ location: 'bla', type: ['park'] });
+    const typesKeys = [...Object.keys(preferences)];
+    const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
+    console.log(types);
+    getVenuesListDispatch({ types });
   }, []);
 
   const { innerWidth: width, innerHeight: height } = window;
@@ -29,11 +32,11 @@ const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
         }}
         subheader={<li />}
       >
-        { venueList ? [0].map((sectionId) => (
+        { venuesList ? [0].map((sectionId) => (
           <li key={`section-${sectionId}`}>
             <ul className='ul-container'>
               {/* <ListSubheader >{`Venue list`}</ListSubheader> */}
-              {venueList.map((venue) => (
+              {venuesList.map((venue) => (
                 <VenueCard
                   key={venue.id}
                   id={venue.place_id}
@@ -49,14 +52,14 @@ const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  console.log(state.venues);
   return {
-    api: state.api,
+    venues: state.venues,
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  apiCallDispatch: ({ location, type }) => dispatch(apiCall.apiCall({ location, type })),
+  getVenuesListDispatch: ({ types }) => dispatch(getVenuesList({ types })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(VenuesList);

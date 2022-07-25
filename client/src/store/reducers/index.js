@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
-import apiReducer from './apiReducer';
+import venuesReducer from './venuesReducer';
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  api: apiReducer,
+  venues: venuesReducer,
 });
 
 export default rootReducer;

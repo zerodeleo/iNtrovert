@@ -4,4 +4,9 @@ export const authInitState = {
   authError: null,
 };
 
-export const apiInitState = [];
+
+export const venuesInitState = {
+  venuesList: [],
+  preferences: { park: false, bar: false, gym: false, restaurant: false, library: false, pool: false },
+  venuesError: null,
+};

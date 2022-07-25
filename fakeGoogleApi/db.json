@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "type": "bars",
+      "type": "bar",
       "html_attributions": [],
       "next_page_token": "AeJbb3da_vjVQN93yr-bxdzEUg0uYIZ8NndZ6HE8bjo6duN5S_OlLUlKx89Ow2u90rP6ZocAd_9ky4BvfDlPoFeFUJqjV7RWmPTxcHvmicswWNPoOp7JzPEvx8Xz1n-augP1UaLfW0xb4onEqGSQRtx-7Miu5nBrf25eUzDhcqSHSGlu6_QHY9baxplX1K1SvJHdKn5KIMs8nKR3ZjxmLaJm0hgpGGshriX_Yxvuy3xm7H-YOIzPtc4dVg6oVMisjcBmVdwRGLEwpU6bLRjc0CGR1d5hjHOw6o72IFCtm6qBp6hrcYdzR7A_eTXQkkckXi6BKVAubofPPVZsfuJo4V_FgDeF-1QjEVuzdOUjgpckM6FjVLgtm3bj82sfglAAkU_HktKHVtZ7NNmJrNCq6rQiTJ4t80JABZrL2sVGfefEhTgqYAlPtYE",
       "results": [
@@ -1063,7 +1063,7 @@
       "status": "OK"
     },
     {
-        "type": "parks",
+        "type": "park",
         "html_attributions": [],
         "results": [
           {

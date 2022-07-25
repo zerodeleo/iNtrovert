@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const busynessTxtFunc = (busynessNum) => {
-  if (!busynessNum && busynessNum !== 0) return 'information is not available';
+  if (!busynessNum && busynessNum !== 0) return 'no data';
   const busynessTxts = [
     {
       range: [0, 10],
@@ -57,7 +57,9 @@ const busynessTxtFunc = (busynessNum) => {
 const mergeNestedArr = (arr) => {
   let resultArr = [];
   for (let i = 0; i < arr.length; i ++) {
-    resultArr = [...resultArr, ...arr[i]];
+    if (arr[i]) {
+      resultArr = [...resultArr, ...arr[i]];
+    }
   };
   return resultArr;
 };
@@ -68,7 +70,6 @@ const getGoogleVenues = ({ types, res }) => {
       return typeArr.results;
     }
   });
-
   return mergeNestedArr(typesArr);
 };
 
