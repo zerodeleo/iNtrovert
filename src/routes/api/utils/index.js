@@ -1,4 +1,6 @@
-const busynessTxt = (busynessNum) => {
+require('dotenv').config();
+
+const busynessTxtFunc = (busynessNum) => {
   if (!busynessNum && busynessNum !== 0) return 'information is not available';
   const busynessTxts = [
     {
@@ -52,4 +54,91 @@ const busynessTxt = (busynessNum) => {
   return 'util function failed';
 };
 
-module.exports = { busynessTxt };
+const mergeNestedArr = (arr) => {
+  let resultArr = [];
+  for (let i = 0; i < arr.length; i ++) {
+    resultArr = [...resultArr, ...arr[i]];
+  };
+  return resultArr;
+};
+
+const getGoogleVenues = ({ types, res }) => {
+  const typesArr = res.data.map((typeArr) => {
+    if (types.find((type) => type === typeArr.type)) {
+      return typeArr.results;
+    }
+  });
+
+  return mergeNestedArr(typesArr);
+};
+
+const getBestTimeURLSearchParams = (googleVenues) => {
+  const venuesNames = googleVenues.map((obj) => obj.name);
+  const venuesAddresses = googleVenues.map((obj) => obj.vicinity);
+  const params = new URLSearchParams({
+    'api_key_private': process.env.BESTTIME_API_KEY,
+    'venue_names': venuesNames,
+    'venue_addresses': venuesAddresses,
+  });
+  return params;
+};
+
+const getBestTimeURLSearchParamsFake = (googleVenues) => {
+  return googleVenues.map((obj) => {
+    return new URLSearchParams({
+      'venue_name': obj.name,
+      'venue_addresses': obj.vicinity,
+    });
+  });
+};
+
+const getBestTimeURLSearchParamsFakeOne = (googleVenues) => {
+  const newArr = [];
+  newArr.push(
+      new URLSearchParams({
+        'venue_name': 'Honey Honey',
+        'venue_addresses': 'Folkungagatan 59, Stockholm',
+      }),
+  );
+  return newArr;
+};
+
+const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues }) => {
+  return googleVenues.map((googleVenue) => {
+    const besttimeVenue = besttimeVenues.find((besttimeElement) =>
+      besttimeElement.venue_info.venue_name === googleVenue.name,
+    );
+    const busynessTxt = busynessTxtFunc(
+        besttimeVenue.analysis.venue_forecasted_busyness,
+    );
+
+    const busynessDeltaTxt =
+    besttimeVenue.analysis.venue_live_forecasted_delta === true ?
+    'People are expecting to leave' :
+    'People are expecting to arrive';
+
+    return {
+      name: googleVenue.name,
+      place_id: googleVenue.place_id,
+      rating: googleVenue.rating,
+      vicinity: googleVenue.vicinity,
+      busynessNum: besttimeVenue.analysis.venue_forecasted_busyness,
+      busynessTxt,
+      busynessDeltaTxt,
+      busynessDeltaNum: besttimeVenue.analysis.venue_live_forecasted_delta,
+      createdAt: new Date().getTime(),
+      id: Math.floor(Math.random() * 10000000000),
+      type: googleVenue.type,
+    };
+  });
+};
+
+module.exports = {
+  busynessTxtFunc,
+  getGoogleVenues,
+  getBestTimeURLSearchParams,
+  getBestTimeURLSearchParamsFake,
+  getBestTimeURLSearchParamsFakeOne,
+  combineGoogleAndBesttime,
+  mergeNestedArr,
+};
