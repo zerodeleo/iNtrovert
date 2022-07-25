@@ -12,7 +12,7 @@ const fakeGoogleApiPath = 'http://localhost:5001';
 const fakeBestTimeApiPath = 'http://localhost:5002';
 
 
-router.route(`/call`).get(async (req, res) => {
+router.route(`/call`).post(async (req, res) => {
   const { type, location } = req.body;
 
   const types = ['parks', 'bars'];

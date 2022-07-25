@@ -10,7 +10,7 @@ import List from '@mui/material/List';
 
 const VenuesList = ({ api: { venueList }, apiCallDispatch }) => {
   useEffect(() => {
-    apiCallDispatch({ location: 'bla', type: ['park'] });
+    apiCallDispatch({ location: 'bla', type: ['park', 'bar'] });
   }, []);
 
   const { innerWidth: width, innerHeight: height } = window;
