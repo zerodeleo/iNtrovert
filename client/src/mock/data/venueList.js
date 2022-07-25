@@ -1,4 +1,4 @@
-export const venueList =  [
+export const venueList = [
   {
     name: 'The Central Bar',
     rating: 3.6,
@@ -258,5 +258,5 @@ export const venueList =  [
     createdAt: 1658392270238,
     id: 2960336802,
     type: 'bar',
-  }
-]
+  },
+];

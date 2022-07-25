@@ -1,6 +1,6 @@
 import * as types from '../types';
 
-//Utils functions
+// Utils functions
 import { sortVenueList } from '../../utils';
 
 import { apiInitState } from '../initState';
