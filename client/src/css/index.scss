@@ -45,7 +45,7 @@ body {
 	align-items: center;
 	font-size: 14px;
 	font-weight: 500;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
 }
 
 .action-align {
@@ -54,18 +54,28 @@ body {
 	padding: 8px 12px;
 }
 
-.busyness-txt {
-	
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-	border-radius: 8px;
-	text-align: center;
-	display:flex;
-	flex-direction: column;
+.icons-container {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	background-color: #fff;
+	border: 1px solid black;
 	gap: 16px;
+	margin: 16px;
+	padding: 32px;
 }
 
+.ul-container {
+margin-bottom: 64px;
+}
+
+.arrow-text {
+	display: flex;
+	gap: 16px;
+	
+
+
+}
 .footer {
 	background-color: #9c27b0;
 	text-align: center;
