@@ -9,3 +9,5 @@ export const sortVenueList = (venueList) => {
       });
 };
 
+export const allVenuesList = ['park', 'bar', 'library', 'pool', 'gym', 'restaurant'];
+

@@ -7,9 +7,11 @@ import { venuesInitState } from '../initState';
 
 const venuesReducer = (state = venuesInitState, action) => {
   switch (action.type) {
+    case types.SET_PREFERENCES_SUCCESS:
+      return { ...state, preferences: action.payload, venuesError: null };
     case types.FETCH_API_SUCCESS:
       const venuesList = sortVenueList(action.payload);
-      return { ...state, venuesList, venuesError: null };
+      return { ...state, venuesList, preferences: action.preferences, venuesError: null };
     case types.FETCH_API_ERROR:
       return { ...state, venuesError: action.err };
     default:

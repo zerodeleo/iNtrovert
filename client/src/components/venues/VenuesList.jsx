@@ -8,14 +8,7 @@ import { getVenuesList } from '../../store/actions/venuesActions';
 // MUI
 import List from '@mui/material/List';
 
-const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch }) => {
-  useEffect(() => {
-    const typesKeys = [...Object.keys(preferences)];
-    const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
-    console.log(types);
-    getVenuesListDispatch({ types });
-  }, []);
-
+const VenuesList = ({ venues: { venuesList }, getVenuesListDispatch }) => {
   const { innerWidth: width, innerHeight: height } = window;
 
   return (

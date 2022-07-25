@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import PreferencesList from './settings/preferences/PreferencesList';
 
 
 const Dash = ({ auth }) => {
@@ -41,6 +42,7 @@ const Dash = ({ auth }) => {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <PreferencesList />
       <VenuesList />
     </section>
   );
