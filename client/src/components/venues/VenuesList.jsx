@@ -8,8 +8,14 @@ import { getVenuesList } from '../../store/actions/venuesActions';
 // MUI
 import List from '@mui/material/List';
 
-const VenuesList = ({ venues: { venuesList }, getVenuesListDispatch }) => {
+const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch }) => {
   const { innerWidth: width, innerHeight: height } = window;
+
+  useEffect(() => {
+    const typesKeys = [...Object.keys(preferences)];
+    const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
+    getVenuesListDispatch({ types });
+  }, []);
 
   return (
     <div>
@@ -45,7 +51,6 @@ const VenuesList = ({ venues: { venuesList }, getVenuesListDispatch }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.venues);
   return {
     venues: state.venues,
   };

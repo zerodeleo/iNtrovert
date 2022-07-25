@@ -23,7 +23,7 @@ const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
     }
   }, [authError]);
 
-  if (uid) return <Navigate to="/preferences" />;
+  if (uid) return <Navigate to="/" />;
 
   const handleChange = (e) => {
     setErr({ msg: null });

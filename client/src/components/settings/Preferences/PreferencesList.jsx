@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 // Actions
-import { getVenuesList } from '../../../store/actions/venuesActions';
+import { getVenuesList, setPreferences } from '../../../store/actions/venuesActions';
 
 import { allVenuesList } from '../../../utils';
 
@@ -12,8 +12,25 @@ import { Button, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import PreferencesCard from './PreferencesCard';
 
-const PreferencesList = ({ venues, getVenuesListDispatch }) => {
+// Actions
+import { getPreferences } from '../../../store/actions/venuesActions';
+
+const PreferencesList = ({
+  venues,
+  getVenuesListDispatch,
+  setPreferencesDispatch,
+  uid,
+  getPreferencesDispatch,
+}) => {
   const [preferences, setPreferences] = useState({ ...venues.preferences });
+
+  useEffect(() => {
+    getPreferencesDispatch();
+  }, []);
+
+  useEffect(() => {
+    setPreferences({ ...venues.preferences });
+  }, [venues.preferences]);
 
   const navigate = useNavigate();
 
@@ -26,6 +43,7 @@ const PreferencesList = ({ venues, getVenuesListDispatch }) => {
     e.preventDefault();
     const typesKeys = [...Object.keys(preferences)];
     const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
+    setPreferencesDispatch({ uid, preferences });
     getVenuesListDispatch({ types });
     navigate('/');
   };
@@ -55,11 +73,14 @@ const PreferencesList = ({ venues, getVenuesListDispatch }) => {
 const mapStateToProps = (state) => {
   return {
     venues: state.venues,
+    uid: state.auth.uid,
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   getVenuesListDispatch: ({ types }) => dispatch(getVenuesList({ types })),
+  setPreferencesDispatch: ({ uid, preferences }) => dispatch(setPreferences({ uid, preferences })),
+  getPreferencesDispatch: () => dispatch(getPreferences()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PreferencesList);

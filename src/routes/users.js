@@ -81,4 +81,24 @@ router.route('/:uid').delete((req, res) => {
       .catch((err) => res.status(500).json('internal server error'));
 });
 
+router.route('/preferences/:uid').put((req, res) => {
+  console.log(req.body, req.params);
+  const { preferences } = req.body;
+  const { uid } = req.params;
+  User.findOneAndUpdate({ uid }, { preferences })
+      .then(() => res.status(201).json())
+      .catch((err) => res.status(500).json(err.message));
+});
+
+router.route('/preferences/:uid').get((req, res) => {
+  const { uid } = req.params;
+  User.findOne({ uid })
+      .then((data) => {
+        console.log('hello ', data);
+        return data;
+      })
+      .then((data) => res.status(200).json({ preferences: data.preferences }))
+      .catch((err) => res.status(500).json(err.message));
+});
+
 module.exports = router;

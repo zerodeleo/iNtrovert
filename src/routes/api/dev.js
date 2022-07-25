@@ -14,7 +14,6 @@ const fakeBestTimeApiPath = 'http://localhost:5002';
 
 router.route(`/venues`).post(async (req, res) => {
   const { types } = req.body;
-  console.log(types);
 
   if (types) {
     await axios.get(`${fakeGoogleApiPath}/data`)

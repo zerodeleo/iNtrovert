@@ -17,10 +17,10 @@ import Toolbar from '@mui/material/Toolbar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PreferencesList from './settings/preferences/PreferencesList';
 
-
 const Dash = ({ auth }) => {
   const navigate = useNavigate();
   if (!auth.uid) return <Navigate to="/signin" />;
+
   return (
     <section className="Dash">
       <AppBar color='secondary' position="static">
@@ -54,8 +54,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Dash);
+export default connect(mapStateToProps, null)(Dash);

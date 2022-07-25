@@ -6,6 +6,7 @@ const UserSchema = new Schema({
   uid: { type: String, required: true },
   username: { type: String, required: true },
   password: { type: String, required: true },
+  preferences: { type: Object, required: false },
 }, {
   timestamps: true,
 });

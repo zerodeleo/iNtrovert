@@ -16,7 +16,6 @@ import VenuesList from './components/venues/VenuesList';
 // Dispatches
 import { signInWithLocalStorage } from './store/actions/authActions';
 
-
 const App = ({ signInWithLocalStorageDispatch }) => {
   useEffect(() => {
     signInWithLocalStorageDispatch();
@@ -36,14 +35,8 @@ const App = ({ signInWithLocalStorageDispatch }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    auth: state.auth,
-  };
-};
-
 const mapDispatchToProps = (dispatch) => ({
   signInWithLocalStorageDispatch: () => dispatch(signInWithLocalStorage()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
