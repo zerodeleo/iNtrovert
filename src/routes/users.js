@@ -20,7 +20,7 @@ router.route(`/:uid`).get(async (req, res) => {
 
 router.route('/:uid').put(async (req, res) => {
   const { uid } = req.params;
-  const { password } = req.body; // this route update updates the password when clicking on edit username
+  const { password } = req.body;
   const username = req.body.username.toLowerCase();
   const userCheck = await User.findOne({ username });
 
@@ -96,7 +96,7 @@ router.route('/preferences/:uid').get((req, res) => {
         console.log('hello ', data);
         return data;
       })
-      .then((data) => res.status(200).json({ preferences: data.preferences }))
+      .then((data) => res.status(200).json(data.preferences))
       .catch((err) => res.status(500).json(err.message));
 });
 

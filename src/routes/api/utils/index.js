@@ -54,10 +54,13 @@ const busynessTxtFunc = (busynessNum) => {
   return 'util function failed';
 };
 
-const mergeNestedArr = (arr) => {
+const mergeNestedArr = (arr, types) => {
   let resultArr = [];
   for (let i = 0; i < arr.length; i ++) {
     if (arr[i]) {
+      if (types) {
+        console.log(types);
+      }
       resultArr = [...resultArr, ...arr[i]];
     }
   };
@@ -104,7 +107,7 @@ const getBestTimeURLSearchParamsFakeOne = (googleVenues) => {
   return newArr;
 };
 
-const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues }) => {
+const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
   return googleVenues.map((googleVenue) => {
     const besttimeVenue = besttimeVenues.find((besttimeElement) =>
       besttimeElement.venue_info.venue_name === googleVenue.name,
@@ -120,6 +123,8 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues }) => {
       return 'People are expecting to arrive';
     };
 
+    const type = googleVenue.types.filter((el) => el === types.map((el) => el));
+
     return {
       name: googleVenue.name,
       place_id: googleVenue.place_id,
@@ -132,7 +137,7 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues }) => {
       busynessDeltaNum: besttimeVenue.analysis.venue_live_forecasted_delta,
       createdAt: new Date().getTime(),
       id: Math.floor(Math.random() * 10000000000),
-      type: googleVenue.type,
+      type: googleVenue.types[0],
     };
   });
 };

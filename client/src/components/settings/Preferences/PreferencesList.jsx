@@ -22,20 +22,19 @@ const PreferencesList = ({
   getPreferencesDispatch,
   togglePref,
 }) => {
-  const [preferences, setPreferences] = useState({ ...venues.preferences });
+  const [preferences, setPreferences] = useState(venues.preferences);
 
   useEffect(() => {
     getPreferencesDispatch();
   }, []);
 
-  useEffect(() => {
-    setPreferences({ ...venues.preferences });
-  }, [venues.preferences]);
-
   const handleClick = (e) => {
-    const { name, checked }= e.target;
+    e.stopPropagation();
+    const { name, checked } = e.target;
     setPreferences({ ...preferences, [name]: checked });
   };
+
+  console.log('hello ', venues.preferences);
 
   const handleSubmit = (e) => {
     e.preventDefault();

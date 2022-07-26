@@ -38,9 +38,8 @@ const VenueCard = ({ venue }) => {
   const [toggle, setToggle] = useState(false);
 
   const handleMapsClick = (e) => {
-    console.log('maps');
   };
-  const handleToggleClick = () => {
+  const handleToggleClick = (e) => {
     setToggle(!toggle);
   };
 
@@ -51,7 +50,7 @@ const VenueCard = ({ venue }) => {
         margin: 2,
         p: 1.5,
         borderRadius: 4,
-        bgcolor: '#eee' }} name="toggle" onClick={handleToggleClick}>
+        bgcolor: '#eee' }} onClick={handleToggleClick}>
         <div className='image-container'>
           <CardMedia
             sx={{ borderRadius: 4 }}
@@ -63,7 +62,7 @@ const VenueCard = ({ venue }) => {
           />
           <FavoriteBorderIcon className='fav-icon'/>
         </div>
-        <CardContent sx={{ p: 0, mt: 1 }}>
+        <CardContent className='no-padding' sx={{ p: 0, mt: 1 }}>
           <Typography variant="h5" component="div">
             { venue.name }
           </Typography>

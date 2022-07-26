@@ -6,7 +6,6 @@ import Card from '@mui/material/Card';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import { green } from '@mui/material/colors';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
-import ForestIcon from '@mui/icons-material/Forest';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import PoolIcon from '@mui/icons-material/Pool';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
@@ -17,7 +16,6 @@ import { Typography } from '@mui/material';
 
 
 const icon = (bool, preference) => {
-  console.log(preference);
   switch (preference) {
     case 'bar':
       return bool ?

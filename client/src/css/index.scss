@@ -30,6 +30,10 @@ $base-color: #E0E1E0;
 	color: black;
 }
 
+.no-padding {
+	padding-bottom: 0 !important;
+}
+
 * {
 	font-family: 'Red Hat Display';
 }

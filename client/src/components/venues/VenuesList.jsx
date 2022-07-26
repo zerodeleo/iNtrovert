@@ -13,7 +13,7 @@ const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch
 
   useEffect(() => {
     const typesKeys = [...Object.keys(preferences)];
-    const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
+    const types = typesKeys.filter((t, idx) => preferences[`${t}`] ? typesKeys[idx] : null);
     getVenuesListDispatch({ types });
   }, []);
 

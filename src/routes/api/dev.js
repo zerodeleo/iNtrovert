@@ -20,7 +20,7 @@ router.route(`/venues`).post(async (req, res) => {
     types.forEach((type, idx) => idx === 0 ? null : query += `&type=${type}`);
     await axios.get(`${fakeGoogleApiPath}/data?${query}`)
         .then((res) => res.data.map((data) => data.results))
-        .then((data) => mergeNestedArr(data))
+        .then((arr) => mergeNestedArr(arr, types))
         .then((googleVenues) => ({
           googleVenues,
           URLSearchParams: getBestTimeURLSearchParamsFake(googleVenues),
@@ -41,7 +41,7 @@ router.route(`/venues`).post(async (req, res) => {
           return { googleVenues, besttimeVenues: mergeNestedArr(besttimeVenues) };
         })
         .then(({ googleVenues, besttimeVenues }) => {
-          return combineGoogleAndBesttime({ googleVenues, besttimeVenues });
+          return combineGoogleAndBesttime({ googleVenues, besttimeVenues, types });
         })
         .then((data) => res.json(data).end());
   } else {

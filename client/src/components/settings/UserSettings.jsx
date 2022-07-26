@@ -39,8 +39,6 @@ const UserSettings = ({
   settings,
   propTest,
 }) => {
-  console.log(propTest);
-
   const [expanded, setExpanded] = useState(false);
   const [err, setErr] = useState(null);
   const [usernameErr, setUsernameErr] = useState(null);
