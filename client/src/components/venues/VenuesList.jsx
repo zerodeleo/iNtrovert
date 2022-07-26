@@ -23,7 +23,7 @@ const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch
         sx={{
           'width': '100%',
           'maxWidth': width,
-          'bgcolor': 'background.paper',
+          'bgcolor': 'transparent',
           'position': 'relative',
           'overflow': 'auto',
           'maxHeight': height,

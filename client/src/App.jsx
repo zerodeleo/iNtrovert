@@ -22,6 +22,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
   }, []);
 
   return (
+
     <Router>
       <Routes>
         <Route exact path="/" element={<Dash />} />
@@ -32,6 +33,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
       </Routes>
       {/* <Footer /> */}
     </Router>
+
   );
 };
 
