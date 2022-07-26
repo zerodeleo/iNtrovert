@@ -9,7 +9,7 @@ import Drawer from '@mui/material/Drawer';
 import TuneIcon from '@mui/icons-material/Tune';
 import Btn from './Btn';
 
-import PreferencesList from '../settings/preferences/PreferencesList';
+import PreferencesList from '../settings/Preferences/PreferencesList';
 
 const BottomNav = (props) => {
   const { pref, togglePref } = props;
@@ -20,13 +20,14 @@ const BottomNav = (props) => {
 
     >
       <div>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', p: '10%' }}>
+        {/* <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', p: '10%', height: '70vh' }}> */}
+        <Box>
           <PreferencesList togglePref={togglePref} />
-          <Btn
+          {/* <Btn
             onClick={togglePref(false)}
             txt="BACK"
             variant="contained"
-          />
+          /> */}
         </Box>
       </div>
     </Box>
