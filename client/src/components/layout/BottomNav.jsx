@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import { AiOutlineHeart, AiOutlineUser } from 'react-icons/ai';
 
 
 // whatever
@@ -39,12 +40,27 @@ const BottomNav = (props) => {
         width: '100%',
       }}
       >
-        <BottomNavigation
+        <BottomNavigation sx={{ backgroundColor: '#35463D', borderRadius: '15px', p: '5px' }}
+          showLabels
+        >
+          <BottomNavigationAction
+            onClick={togglePref(true)}
+            icon={<AiOutlineUser />}
+            sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }} />
+          <BottomNavigationAction
+            onClick={togglePref(true)}
+            icon={<TuneIcon />}
+            sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }}/>
+          <BottomNavigationAction
+            icon={<AiOutlineHeart />}
+            sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }} />
+        </BottomNavigation>
+        {/* <BottomNavigation
           showLabels
         >
           {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
-          <BottomNavigationAction onClick={togglePref(true)} label="Preferences" icon={<TuneIcon />} />
-        </BottomNavigation>
+        {/* <BottomNavigationAction onClick={togglePref(true)} label="Preferences" icon={<TuneIcon />} />
+        </BottomNavigation> */}
       </Box>
       <Drawer
         open={pref}

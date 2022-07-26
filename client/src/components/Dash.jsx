@@ -39,10 +39,8 @@ const Dash = ({ auth }) => {
           backdropFilter: 'blur(2px)',
           letterSpacing: '2px',
           backgroundColor: 'transparent',
-          borderBottomLeftRadius: '15px',
-          borderBottomRightRadius: '15px',
           color: '#3F273A',
-          boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px',
+          boxShadow: 'none',
           zIndex: '999',
           textTransform: 'uppercase' }}>
         <Toolbar>

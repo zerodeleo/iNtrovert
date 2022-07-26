@@ -51,9 +51,20 @@ body, html {
   width: 100%;
 }
 
-.venue--card {
-	background-color: #9c27b0;
-}
+.fav-icon {
+	background-color: white;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	padding: 8px;
+	border-radius: 8px;
+	color:gray;
+	
+ }
+ 
+ .image-container {
+	 position: relative;
+ }
 
 .form__container{
 	width: 100%;
@@ -115,8 +126,6 @@ margin-bottom: 64px;
 	padding: 16px 0;
 }
 
-
-
 .UserSettings,
 .form-signup,
 .form-signin {
@@ -125,3 +134,5 @@ margin-bottom: 64px;
 	gap: 0.8rem;
 	// padding: 8px;
 }
+
+

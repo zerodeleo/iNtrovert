@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // MUI
 import Card from '@mui/material/Card';
@@ -6,7 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { green, red, yellow } from '@mui/material/colors';
-
+import CardMedia from '@mui/material/CardMedia';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { ImStarEmpty } from 'react-icons/im';
 
 // MUI Icons
 import StarIcon from '@mui/icons-material/Star';
@@ -28,38 +30,66 @@ const getIcon = (type) => {
 
 const getArrow = (busynessDelta) => {
   return busynessDelta ?
-  <ArrowUpwardIcon fontSize='medium' sx={{ color: green[500] }}/> :
-  <ArrowDownwardIcon fontSize='medium'sx={{ color: red[500] }}/>;
+  <ArrowUpwardIcon fontSize='medium' sx={{ color: '#3C905F' }}/> :
+  <ArrowDownwardIcon fontSize='medium'sx={{ color: '#b83d43' }}/>;
 };
 
 const VenueCard = ({ venue }) => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleMapsClick = (e) => {
+    console.log('maps');
+  };
+  const handleToggleClick = () => {
+    setToggle(!toggle);
+  };
+
   return (
-    <section>
-      <Card className='venue--card' sx={{ minWidth: 275, margin: 2 }}>
-        <CardContent>
+    <section className="venue--card">
+      <Card sx={{
+        minWidth: 275,
+        margin: 2,
+        p: 1.5,
+        borderRadius: 4,
+        bgcolor: '#eee' }} name="toggle" onClick={handleToggleClick}>
+        <div className='image-container'>
+          <CardMedia
+            sx={{ borderRadius: 4 }}
+            component="img"
+            height="180"
+            // eslint-disable-next-line max-len
+            image="https://images.unsplash.com/photo-1627343101316-9adfdfddd8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt="park image"
+          />
+          <FavoriteBorderIcon className='fav-icon'/>
+        </div>
+        <CardContent sx={{ p: 0, mt: 1 }}>
           <Typography variant="h5" component="div">
             { venue.name }
           </Typography>
           <Typography color="text.secondary">
             { venue.vicinity }
           </Typography>
-          <div className='align'> Ratings
-            <StarIcon
-              sx={{ color: yellow[800] }}
-            /> {venue.rating}
-          </div>
-          <Typography variant="h6" m={ 1 }>
-            { venue.busynessTxt }
-          </Typography>
-          <div className='arrow-text'>
-            {getArrow(venue.busynessDelta)}
-            {venue.busynessDeltaTxt}
-          </div>
+          { toggle ?
+          <div>
+            <Typography align='center' color="text.secondary" variant="h6" mt={ 2 }>
+            Busyness:
+            </Typography>
+            <Typography align='center' color="#985d8b" variant="h4" mt={ 0 }>
+              { venue.busynessTxt }
+            </Typography>
+            <Typography align='center' mt={ 0 }>
+              { venue.busynessDeltaTxt }<br/>{ getArrow(venue.busynessDelta) }
+            </Typography>
+          </div> :
+          null }
+          { !toggle ? <Typography color="text.secondary">Busyness: { venue.busynessTxt }</Typography> : null }
+          { toggle ?
+          <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
+            <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>OPEN IN MAPS</Typography>
+            <Typography color="text.secondary"><ImStarEmpty /> Ratings: { venue.rating }</Typography>
+          </div> : null }
         </CardContent>
-        <div className='action-align'>
-          <Button size="small" >Open in Maps</Button>
-          { getIcon(venue.type) }
-        </div>
       </Card>
     </section>
   );
