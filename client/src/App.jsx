@@ -30,7 +30,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<UserSettings />} />
         <Route path="/venues" element={<VenuesList />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/welcome" element={<Home />} />
       </Routes>
       {/* <Footer /> */}
     </Router>

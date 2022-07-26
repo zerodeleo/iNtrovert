@@ -27,10 +27,16 @@ $base-color: #E0E1E0;
 
 .MuiOutlinedInput-root {
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px inset;
+	color: black;
+}
+
+* {
+	font-family: 'Red Hat Display';
 }
 
 fieldset {
 	display: none;
+	color: black;
 }
 
 label {

@@ -8,7 +8,12 @@ import Btn from './Btn';
 const FormSignUp = ({ credentials, handleChange, handleSubmit }) => {
   return (
     <form className="form form-signup pd" onSubmit={handleSubmit}>
-      <Typography variant='h4' align='center'> Sign up</Typography>
+      <Typography variant='h4' align='center'
+        sx={{
+          fontFamily: 'Red Hat Display',
+          color: '#35463d',
+          textTransform: 'uppercase',
+        }}> Sign up</Typography>
       <Input
         className="form__input form__input-signup"
         onChange={handleChange}
@@ -36,14 +41,29 @@ const FormSignUp = ({ credentials, handleChange, handleSubmit }) => {
         autoComplete="new-password"
         label="Repeat password"
       />
-      <Btn
-        className="form__btn form__btn--signup"
-        onSubmit={handleSubmit}
-        txt="sign up"
-        type="submit"
-        variant='contained'
-        color='secondary'
-      />
+      <article style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        width: '100%' }}>
+        <article></article>
+        <Btn
+          className="form__btn form__btn--signup"
+          onSubmit={handleSubmit}
+          txt="sign up"
+          type="submit"
+          variant='contained'
+          color='secondary'
+          sx={{
+            backgroundColor: '#3F273A',
+            borderRadius: '12px',
+            fontFamily: 'Red Hat Display',
+            fontWeight: '500',
+            letterSpacing: '2px',
+            width: '120px',
+          }}
+        />
+        <article></article>
+      </article>
     </form>
   );
 };

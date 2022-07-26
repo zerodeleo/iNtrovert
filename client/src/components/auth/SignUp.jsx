@@ -52,7 +52,9 @@ const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
       { err.msg ? <Err msg={err.msg} /> : null }
       <Btn
         className="btn__navigate btn__navigate--signin "
-        txt="Already a memeber? Sign in"
+        txt="Already a member?"
+        txtNextLine="sign in"
+        sx={{ color: 'rgba(0,0,0,0.5)', fontFamily: 'Red Hat Display' }}
         onClick={() => navigate('/signin')}
       />
     </section>

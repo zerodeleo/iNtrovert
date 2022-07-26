@@ -27,7 +27,9 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
         type="text"
         autoComplete="username"
         label="Username"
-        sx={{ borderRadius: '12px' }}
+        style={{
+          fontFamily: 'Red Hat Display',
+        }}
       />
       <Input
         className="form__input form__input-signin"
@@ -38,8 +40,6 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
         autoComplete="current-password"
         label="Password"
         style={{
-          borderRadius: '12px',
-          borderColor: 'transparent',
           fontFamily: 'Red Hat Display',
         }}
       />
