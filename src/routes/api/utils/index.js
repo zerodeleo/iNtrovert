@@ -59,7 +59,7 @@ const mergeNestedArr = (arr, types) => {
   for (let i = 0; i < arr.length; i ++) {
     if (arr[i]) {
       if (types) {
-        console.log(types);
+        console.log('types ', types);
       }
       resultArr = [...resultArr, ...arr[i]];
     }
@@ -123,7 +123,7 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
       return 'People are expecting to arrive';
     };
 
-    const type = googleVenue.types.filter((el) => el === types.map((el) => el));
+    const types = googleVenue.types.map((el) => el.replace(/_/g, ' '));
 
     return {
       name: googleVenue.name,
@@ -137,7 +137,7 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
       busynessDeltaNum: besttimeVenue.analysis.venue_live_forecasted_delta,
       createdAt: new Date().getTime(),
       id: Math.floor(Math.random() * 10000000000),
-      type: googleVenue.types[0],
+      type: 'park',
     };
   });
 };
