@@ -35,10 +35,11 @@ const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch
           <li key={`section-${sectionId}`}>
             <ul className='ul-container'>
               {/* <ListSubheader >{`Venue list`}</ListSubheader> */}
-              {venuesList.map((venue) => (
+              {venuesList.map((venue, idx) => (
                 <VenueCard
                   key={venue.id}
                   id={venue.place_id}
+                  idx={idx}
                   venue={venue}
                 />
               ))}

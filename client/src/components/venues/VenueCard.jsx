@@ -18,7 +18,7 @@ const getArrow = (busynessDelta) => {
   <ArrowDownwardIcon fontSize='medium'sx={{ color: '#b83d43' }}/>;
 };
 
-const VenueCard = ({ venue }) => {
+const VenueCard = ({ venue, idx }) => {
   const [toggle, setToggle] = useState(false);
 
   const handleMapsClick = (e) => {
