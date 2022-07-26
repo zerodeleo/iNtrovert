@@ -28,6 +28,11 @@ const PreferencesList = ({
     getPreferencesDispatch();
   }, []);
 
+  useEffect(() => {
+    const ls = localStorage.getItem('preferences') ? JSON.parse(localStorage.getItem('preferences')) : null;
+    setPreferences(ls ? ls : venues.preferences);
+  }, []);
+
   const handleClick = (e) => {
     e.stopPropagation();
     const { name, checked } = e.target;

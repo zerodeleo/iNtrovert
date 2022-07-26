@@ -3,30 +3,14 @@ import React, { useState } from 'react';
 // MUI
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { green, red, yellow } from '@mui/material/colors';
 import CardMedia from '@mui/material/CardMedia';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { ImStarEmpty } from 'react-icons/im';
 
 // MUI Icons
-import StarIcon from '@mui/icons-material/Star';
-import LocalBarIcon from '@mui/icons-material/LocalBar';
-import ForestIcon from '@mui/icons-material/Forest';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-
-const getIcon = (type) => {
-  switch (type) {
-    case 'bar':
-      return <LocalBarIcon fontSize='large' sx={{ color: yellow[600] }}/>;
-    case 'park':
-      return <ForestIcon fontSize='large' sx={{ color: green[500] }}/>;
-    default:
-      return;
-  }
-};
 
 const getArrow = (busynessDelta) => {
   return busynessDelta ?
@@ -38,6 +22,7 @@ const VenueCard = ({ venue }) => {
   const [toggle, setToggle] = useState(false);
 
   const handleMapsClick = (e) => {
+
   };
   const handleToggleClick = (e) => {
     setToggle(!toggle);
@@ -82,10 +67,19 @@ const VenueCard = ({ venue }) => {
             </Typography>
           </div> :
           null }
-          { !toggle ? <Typography color="text.secondary">Busyness: { venue.busynessTxt }</Typography> : null }
+          { !toggle ?
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+              <Typography color="text.secondary">Busyness: { venue.busynessTxt }</Typography>
+              <Typography color="text.secondary">{venue.type}</Typography>
+            </div> : null }
           { toggle ?
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
-            <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>OPEN IN MAPS</Typography>
+            <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>
+              <a target="_blank"
+                style={{ textDecoration: 'none', color: 'grey' }}
+                rel="noreferrer"
+                href={`https://www.google.com/maps/place/?q=place_id:${venue.place_id}`}>OPEN IN MAPS</a>
+            </Typography>
             <Typography color="text.secondary"><ImStarEmpty /> Ratings: { venue.rating }</Typography>
           </div> : null }
         </CardContent>
