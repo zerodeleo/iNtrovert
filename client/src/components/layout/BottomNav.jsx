@@ -9,7 +9,7 @@ import Drawer from '@mui/material/Drawer';
 import TuneIcon from '@mui/icons-material/Tune';
 import Btn from './Btn';
 
-import PreferencesList from '../settings/Preferences/PreferencesList';
+import PreferencesList from '../settings/preferences/PreferencesList';
 
 const BottomNav = (props) => {
   const { pref, togglePref } = props;

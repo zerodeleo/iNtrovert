@@ -1,6 +1,4 @@
-$base-color: rgba(91, 201, 135, 0.8);
-$base-color-01: rgba(91, 201, 135, 0.1);
-$font-color:  rgba(67, 37, 93, 0.8);
+$base-color: #E0E1E0;
 
 * {
   margin: 0;
@@ -10,9 +8,20 @@ $font-color:  rgba(67, 37, 93, 0.8);
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
+<<<<<<< HEAD
 	animation-duration: .3s;
 	font-family: 'Red Hat Display',
+=======
+	animation-duration: .1s;
+>>>>>>> d1279516d7cfd4538caf7e6cb6a455b26cbaceef
 	// color: $font-color;
+}
+
+.home {
+	background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
+	height: 100vh;
+	background-size: 150vh;
+	background-position: center;
 }
 
 // html {
@@ -21,14 +30,28 @@ $font-color:  rgba(67, 37, 93, 0.8);
 // 	box-sizing: border-box;
 // }
 
+.MuiOutlinedInput-root {
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px inset;
+}
+
+fieldset {
+	display: none;
+}
+
+label {
+	color: 'red'
+}
+
 body, html {
-	background-color: rgba(255,255,255,0.7); /* For browsers that do not support gradients */
-	background-image: linear-gradient(to bottom right, $base-color, $base-color-01);
-	background-repeat:no-repeat;
-	background-size: cover;
+	background-color: $base-color; /* For browsers that do not support gradients */
+	// background-image: linear-gradient(to bottom right, $base-color, $base-color-01);
 	box-sizing: border-box;
 	height: 100vh;
   width: 100%;
+}
+
+.venue--card {
+	background-color: #9c27b0;
 }
 
 .form__container{

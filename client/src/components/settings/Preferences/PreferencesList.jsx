@@ -24,8 +24,6 @@ const PreferencesList = ({
 }) => {
   const [preferences, setPreferences] = useState({ ...venues.preferences });
 
-  console.log(togglePref);
-
   useEffect(() => {
     getPreferencesDispatch();
   }, []);
@@ -33,7 +31,6 @@ const PreferencesList = ({
   useEffect(() => {
     setPreferences({ ...venues.preferences });
   }, [venues.preferences]);
-
 
   const handleClick = (e) => {
     const { name, checked }= e.target;

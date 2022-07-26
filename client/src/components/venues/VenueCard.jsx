@@ -37,6 +37,7 @@ const getArrow = (busynessDelta) => {
 
 const VenueCard = ({ venue }) => {
   return (
+<<<<<<< HEAD
     <section className='venue--card'>
       <Card sx={{ minWidth: 275, margin: 2, p: 1.5, borderRadius: 4, bgcolor: '#eee' }}>
         <CardMedia
@@ -49,6 +50,11 @@ const VenueCard = ({ venue }) => {
         />
         <FavoriteBorderIcon className='fav-icon'/>
         <CardContent sx={{ p: 0, mt: 1 }}>
+=======
+    <section>
+      <Card className='venue--card' sx={{ minWidth: 275, margin: 2 }}>
+        <CardContent>
+>>>>>>> d1279516d7cfd4538caf7e6cb6a455b26cbaceef
           <Typography variant="h5" component="div">
             { venue.name }
           </Typography>
@@ -59,14 +65,25 @@ const VenueCard = ({ venue }) => {
             <StarIcon
               sx={{ color: yellow[800] }}
             /> {venue.rating}
+<<<<<<< HEAD
           </div> */}
           <Typography variant="h6" mt={ 1 }>
             Busyness:{ venue.busynessTxt }
+=======
+          </div>
+          <Typography variant="h6" m={ 1 }>
+            { venue.busynessTxt }
+>>>>>>> d1279516d7cfd4538caf7e6cb6a455b26cbaceef
           </Typography>
           {/* <div className='arrow-text'>
             {getArrow(venue.busynessDelta)}
+<<<<<<< HEAD
             <Typography>People are expected<br></br> to arrive soon</Typography>
           </div> */}
+=======
+            {venue.busynessDeltaTxt}
+          </div>
+>>>>>>> d1279516d7cfd4538caf7e6cb6a455b26cbaceef
         </CardContent>
         {/* <div className='action-align'>
           <Button size="small"><PlaceIcon /> Open in map</Button>
