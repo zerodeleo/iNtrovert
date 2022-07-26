@@ -5,7 +5,7 @@ const { Router } = require('express');
 require('dotenv').config();
 
 const axios = require('axios');
-const { getGoogleVenues, getBestTimeURLSearchParamsFake, getBestTimeURLSearchParamsFakeOne, combineGoogleAndBesttime, mergeNestedArr } = require('./utils');
+const { getBestTimeURLSearchParamsFake, combineGoogleAndBesttime, mergeNestedArr } = require('./utils');
 const router = new Router();
 
 const fakeGoogleApiPath = 'http://localhost:5001';
@@ -15,9 +15,12 @@ const fakeBestTimeApiPath = 'http://localhost:5002';
 router.route(`/venues`).post(async (req, res) => {
   const { types } = req.body;
 
-  if (types) {
-    await axios.get(`${fakeGoogleApiPath}/data`)
-        .then((res) => getGoogleVenues({ types, res }))
+  if (types.length !== 0) {
+    let query = `type=${types[0]}`;
+    types.forEach((type, idx) => idx === 0 ? null : query += `&type=${type}`);
+    await axios.get(`${fakeGoogleApiPath}/data?${query}`)
+        .then((res) => res.data.map((data) => data.results))
+        .then((data) => mergeNestedArr(data))
         .then((googleVenues) => ({
           googleVenues,
           URLSearchParams: getBestTimeURLSearchParamsFake(googleVenues),
