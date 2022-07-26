@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 
 // Actions
 import { getVenuesList, setPreferences } from '../../../store/actions/venuesActions';
@@ -21,8 +20,11 @@ const PreferencesList = ({
   setPreferencesDispatch,
   uid,
   getPreferencesDispatch,
+  togglePref,
 }) => {
   const [preferences, setPreferences] = useState({ ...venues.preferences });
+
+  console.log(togglePref);
 
   useEffect(() => {
     getPreferencesDispatch();
@@ -32,7 +34,6 @@ const PreferencesList = ({
     setPreferences({ ...venues.preferences });
   }, [venues.preferences]);
 
-  const navigate = useNavigate();
 
   const handleClick = (e) => {
     const { name, checked }= e.target;
@@ -45,7 +46,6 @@ const PreferencesList = ({
     const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
     setPreferencesDispatch({ uid, preferences });
     getVenuesListDispatch({ types });
-    navigate('/');
   };
 
   return (

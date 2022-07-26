@@ -1,25 +1,34 @@
-import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
 
 // Component
+import UserSettings from './settings/UserSettings';
 import VenuesList from './venues/VenuesList';
+import BottomNav from './layout/BottomNav';
 
 // MUI
 import AppBar from '@mui/material/AppBar';
-import IconButton from '@mui/material/IconButton';
-import SettingsIcon from '@mui/icons-material/Settings';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
-
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import PreferencesList from './settings/preferences/PreferencesList';
 
 const Dash = ({ auth }) => {
-  const navigate = useNavigate();
   if (!auth.uid) return <Navigate to="/signin" />;
+
+  const [settings, setSettings] = useState(false);
+  const [pref, setPref] = useState(false);
+
+  const propTest = 'propTest...HELLO';
+
+  const toggleSettings = (boolean) => (event) => {
+    setSettings(boolean);
+  };
+  const togglePref = (boolean) => (event) => {
+    setPref(boolean);
+  };
 
   return (
     <section className="Dash">
@@ -30,20 +39,22 @@ const Dash = ({ auth }) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hello {auth.username}
           </Typography>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={() => navigate('/settings')}
-            color="inherit"
-          >
-            <SettingsIcon />
-          </IconButton>
+          <UserSettings
+            settings={settings}
+            open={settings}
+            toggleSettings={toggleSettings}
+            propTest={propTest}
+          />
+
         </Toolbar>
       </AppBar>
-      <PreferencesList />
       <VenuesList />
+      <BottomNav
+        pref={pref}
+        togglePref={togglePref}
+        open={pref}
+        anchor={'bottom'}
+      />
     </section>
   );
 };

@@ -12,6 +12,7 @@ import PoolIcon from '@mui/icons-material/Pool';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 
 const icon = (bool, preference) => {
+  console.log(preference);
   switch (preference) {
     case 'bar':
       return bool ?
@@ -48,7 +49,7 @@ const PreferencesCard = ({ handleClick, preference, preferences }) => {
       <Checkbox
         icon={ icon(preferences[preference], preference) }
         checkedIcon={ icon(preferences[preference], preference) }
-        checked={ preferences[preference] }
+        checked={ preferences[preference] ? true : false }
         onClick={handleClick}
         name={preference}
       />

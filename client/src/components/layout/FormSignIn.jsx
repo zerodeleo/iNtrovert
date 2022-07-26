@@ -12,18 +12,21 @@ const FormSignIn = ({ credentials, handleChange, handleSubmit }) => {
       <Input
         className="form__input form__input-signin"
         onChange={handleChange}
-        type="text"
-        name="username"
         value={credentials.username}
-        placeholder="Username ..."
+        name="username"
+        type="text"
+        autoComplete="username"
+        label="Username"
+        required
       />
       <Input
         className="form__input form__input-signin"
         onChange={handleChange}
-        type="password"
-        name="password"
         value={credentials.password}
-        placeholder="Password ..."
+        name="password"
+        type="password"
+        autoComplete="current-password"
+        label="Password"
       />
       <Btn
         className="form__btn form__btn--signin"

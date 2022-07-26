@@ -12,26 +12,29 @@ const FormSignUp = ({ credentials, handleChange, handleSubmit }) => {
       <Input
         className="form__input form__input-signup"
         onChange={handleChange}
-        type="text"
-        name="username"
         value={credentials.username}
-        placeholder="Username ..."
+        name="username"
+        type="text"
+        autoComplete="username"
+        label="Username"
       />
       <Input
         className="form__input form__input-signup"
         onChange={handleChange}
-        type="password"
-        name="password"
         value={credentials.password}
-        placeholder="Password ..."
+        name="password"
+        type="password"
+        autoComplete="new-password"
+        label="Enter password"
       />
       <Input
         className="form__input form__input-signup"
         onChange={handleChange}
-        type="password"
-        name="passwordCheck"
         value={credentials.passwordCheck}
-        placeholder="Repeat Password ..."
+        name="passwordCheck"
+        type="password"
+        autoComplete="new-password"
+        label="Repeat password"
       />
       <Btn
         className="form__btn form__btn--signup"
