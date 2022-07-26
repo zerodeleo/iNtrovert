@@ -34,8 +34,8 @@ const getArrow = (busynessDelta) => {
 
 const VenueCard = ({ venue }) => {
   return (
-    <section className='venue--card'>
-      <Card sx={{ minWidth: 275, margin: 2, bgcolor: '#fbf5fc' }}>
+    <section>
+      <Card className='venue--card' sx={{ minWidth: 275, margin: 2 }}>
         <CardContent>
           <Typography variant="h5" component="div">
             { venue.name }
@@ -49,11 +49,11 @@ const VenueCard = ({ venue }) => {
             /> {venue.rating}
           </div>
           <Typography variant="h6" m={ 1 }>
-            Busyness:{ venue.busynessTxt }
+            { venue.busynessTxt }
           </Typography>
           <div className='arrow-text'>
             {getArrow(venue.busynessDelta)}
-            <Typography>People are expected<br></br> to arrive soon</Typography>
+            {venue.busynessDeltaTxt}
           </div>
         </CardContent>
         <div className='action-align'>

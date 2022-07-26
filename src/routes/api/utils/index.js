@@ -113,10 +113,12 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues }) => {
         besttimeVenue.analysis.venue_forecasted_busyness,
     );
 
-    const busynessDeltaTxt =
-    besttimeVenue.analysis.venue_live_forecasted_delta === true ?
-    'People are expecting to leave' :
-    'People are expecting to arrive';
+    const busynessDeltaTxt = () => {
+      if (besttimeVenue.analysis.venue_live_forecasted_delta) {
+        return 'People are expecting to leave';
+      }
+      return 'People are expecting to arrive';
+    };
 
     return {
       name: googleVenue.name,
@@ -125,7 +127,8 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues }) => {
       vicinity: googleVenue.vicinity,
       busynessNum: besttimeVenue.analysis.venue_forecasted_busyness,
       busynessTxt,
-      busynessDeltaTxt,
+      busynessDelta: besttimeVenue.analysis.venue_live_forecasted_delta,
+      busynessDeltaTxt: busynessDeltaTxt(),
       busynessDeltaNum: besttimeVenue.analysis.venue_live_forecasted_delta,
       createdAt: new Date().getTime(),
       id: Math.floor(Math.random() * 10000000000),

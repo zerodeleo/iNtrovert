@@ -20,7 +20,7 @@ router.route(`/:uid`).get(async (req, res) => {
 
 router.route('/:uid').put(async (req, res) => {
   const { uid } = req.params;
-  const { password } = req.body;
+  const { password } = req.body; // this route update updates the password when clicking on edit username
   const username = req.body.username.toLowerCase();
   const userCheck = await User.findOne({ username });
 
@@ -82,7 +82,6 @@ router.route('/:uid').delete((req, res) => {
 });
 
 router.route('/preferences/:uid').put((req, res) => {
-  console.log(req.body, req.params);
   const { preferences } = req.body;
   const { uid } = req.params;
   User.findOneAndUpdate({ uid }, { preferences })
