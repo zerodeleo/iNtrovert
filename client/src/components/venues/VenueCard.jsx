@@ -22,7 +22,6 @@ const getArrow = (busynessDelta) => {
 };
 
 const VenueCard = ({ venue, idx }) => {
-
   const [toggle, setToggle] = useState(false);
 
   const handleMapsClick = (e) => {
@@ -78,8 +77,6 @@ const VenueCard = ({ venue, idx }) => {
             </div> : null }
           { toggle ?
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
-
-            <Typography color="text.secondary" name="maps" onClick={handleMapsClick}sx={{ color: '#35463D' }}>OPEN IN MAPS</Typography>
             <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>
               <a target="_blank"
                 style={{ textDecoration: 'none', color: 'grey' }}
