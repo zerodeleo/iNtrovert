@@ -20,28 +20,17 @@ const BottomNav = (props) => {
   const popupPrefs = () => (
     <Box
       sx={{ width: '100vw' }}
-
     >
       <div>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', p: '10%' }}>
+        <Box>
           <PreferencesList togglePref={togglePref} />
-          <Btn
-            onClick={togglePref(false)}
-            txt="BACK"
-            variant="contained"
-          />
         </Box>
       </div>
     </Box>
   );
   return (
     <div>
-      <Box sx={{
-        bottom: 0,
-        position: 'fixed',
-        width: '100%',
-      }}
-      >
+      <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
         <BottomNavigation sx={{ backgroundColor: '#35463D', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', p: '5px' }}
           showLabels
         >
@@ -57,24 +46,11 @@ const BottomNav = (props) => {
             icon={<AiOutlineHeart />}
             sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }} />
         </BottomNavigation>
-        {/* <BottomNavigation
-          showLabels
-        >
-          {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
-        {/* <BottomNavigationAction onClick={togglePref(true)} label="Preferences" icon={<TuneIcon />} />
-        </BottomNavigation> */}
       </Box>
       <UserSettings
         settings={settings}
         toggleSettings={toggleSettings}
       />
-      {/* <Drawer
-        open={settings}
-        onClose={toggleSettings(false)}
-        anchor={'bottom'}
-      >
-        {popupPrefs(pref)}
-      </Drawer> */}
       <Drawer
         open={pref}
         onClose={togglePref(false)}

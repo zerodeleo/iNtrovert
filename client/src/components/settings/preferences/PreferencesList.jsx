@@ -7,9 +7,11 @@ import { getVenuesList, setPreferences } from '../../../store/actions/venuesActi
 import { allVenuesList } from '../../../utils';
 
 // MUI
-import { Button, Typography } from '@mui/material';
+import { Box, Button, Card, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import PreferencesCard from './PreferencesCard';
+import Grid from '@mui/material/Grid';
+import CardMedia from '@mui/material/CardMedia';
 
 // Actions
 import { getPreferences } from '../../../store/actions/venuesActions';
@@ -20,9 +22,9 @@ const PreferencesList = ({
   setPreferencesDispatch,
   uid,
   getPreferencesDispatch,
-  togglePref,
 }) => {
   const [preferences, setPreferences] = useState(venues.preferences);
+  console.log(preferences, 'whatishappening');
 
   useEffect(() => {
     getPreferencesDispatch();
@@ -34,12 +36,9 @@ const PreferencesList = ({
   }, []);
 
   const handleClick = (e) => {
-    e.stopPropagation();
-    const { name, checked } = e.target;
-    setPreferences({ ...preferences, [name]: checked });
+    const { name }= e.target;
+    setPreferences(preferences[name] ? { ...preferences, [name]: false } : { ...preferences, [name]: true } );
   };
-
-  console.log('hello ', venues.preferences);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,8 +49,7 @@ const PreferencesList = ({
   };
 
   return (
-    <Container sx={{ p: 2 }}>
-      <Typography variant='h5' align='center' mt={ 5 }>How do you like to spend time?</Typography>
+    <Container>
       <div className='icons-container'>
         { allVenuesList.map((name) =>
           <PreferencesCard
@@ -63,10 +61,11 @@ const PreferencesList = ({
       <Button txt="Save"
         type="submit"
         variant='contained'
-        color='secondary'
         fullWidth = {true}
+        sx={{ backgroundColor: '#35463D', mb: 2 }}
         onClick={handleSubmit}
       > Save preferences</Button>
+
     </Container>
   );
 };

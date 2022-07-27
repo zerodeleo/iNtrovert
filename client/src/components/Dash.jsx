@@ -14,6 +14,7 @@ import BottomNav from './layout/BottomNav';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
+import Box from '@mui/material/Box';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 // Actions
@@ -48,45 +49,47 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
 
   return (
     <section className="Dash">
-      <AppBar
-        position="static"
-        sx={{
-          backdropFilter: 'blur(2px)',
-          letterSpacing: '2px',
-          backgroundColor: 'transparent',
-          color: '#3F273A',
-          boxShadow: 'none',
-          zIndex: '999',
-          textTransform: 'uppercase' }}>
-        <Toolbar>
-          {/* <AccountCircleIcon fontSize='large'/> */}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Red Hat Display', paddingLeft: '12px' }}>
+      <Box sx={{ minHeight: '100%' }}>
+        <AppBar
+          position="static"
+          sx={{
+            backdropFilter: 'blur(2px)',
+            letterSpacing: '2px',
+            backgroundColor: 'transparent',
+            color: '#3F273A',
+            boxShadow: 'none',
+            zIndex: '999',
+            textTransform: 'uppercase' }}>
+          <Toolbar>
+            {/* <AccountCircleIcon fontSize='large'/> */}
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Red Hat Display' }}>
               Hello {auth.username}
-          </Typography>
-          <div style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '20px', paddingBottom: '15px' }}>
-            <img
-              style={{ borderRadius: '30px' }}
-              width='60px'
-              height='60px'
-              src='https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=50'/>
-          </div>
+            </Typography>
+            <div style={{ paddingLeft: '15px', paddingTop: '20px', paddingBottom: '15px' }}>
+              <img
+                style={{ borderRadius: '30px' }}
+                width='60px'
+                height='60px'
+                src='https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=50'/>
+            </div>
 
-        </Toolbar>
-      </AppBar>
-      <VenuesList />
-      {/* <UserSettings
+          </Toolbar>
+        </AppBar>
+        <VenuesList />
+        {/* <UserSettings
         settings={settings}
         open={settings}
         toggleSettings={toggleSettings}
         propTest={propTest}
       /> */}
-      <BottomNav
+        <BottomNav
         // anchor={'bottom'}
-        pref={pref}
-        settings={settings}
-        togglePref={togglePref}
-        toggleSettings={toggleSettings}
-      />
+          pref={pref}
+          settings={settings}
+          togglePref={togglePref}
+          toggleSettings={toggleSettings}
+        />
+      </Box>
     </section>
   );
 };
