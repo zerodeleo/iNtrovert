@@ -55,7 +55,6 @@ const VenuesList = ({
           'bgcolor': 'transparent',
           'position': 'relative',
           'overflow': 'auto',
-          // 'maxHeight': height,
           '& ul': { padding: 0 },
         }}
         subheader={<li />}
@@ -63,7 +62,6 @@ const VenuesList = ({
         { venuesList ? [0].map((sectionId) => (
           <li key={`section-${sectionId}`}>
             <ul className='ul-container'>
-              {/* <ListSubheader >{`Venue list`}</ListSubheader> */}
               {venuesList.map((venue, idx) => (
                 <VenueCard
                   key={venue.id}

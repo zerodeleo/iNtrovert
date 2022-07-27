@@ -20,7 +20,7 @@ const getArrow = (busynessDelta) => {
   <ArrowDownwardIcon fontSize='medium'sx={{ color: '#b83d43' }}/>;
 };
 
-const VenueCard = ({ venue, handleHeartClick, isFavourite }) => {
+const VenueCard = ({ venue, handleHeartClick, isFavourite, idx }) => {
   const [toggle, setToggle] = useState(false);
 
   const handleToggleClick = (e) => {

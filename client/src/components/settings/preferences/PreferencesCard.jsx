@@ -3,17 +3,8 @@ import React from 'react';
 // MUI
 import Checkbox from '@mui/material/Checkbox';
 import Card from '@mui/material/Card';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import { green } from '@mui/material/colors';
-import LocalBarIcon from '@mui/icons-material/LocalBar';
-import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
-import PoolIcon from '@mui/icons-material/Pool';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import CardMedia from '@mui/material/CardMedia';
-import Avatar from '@mui/material/Avatar';
 
 // ICONS
-import { GiLaserSparks } from 'react-icons/gi';
 import { Typography } from '@mui/material';
 
 
