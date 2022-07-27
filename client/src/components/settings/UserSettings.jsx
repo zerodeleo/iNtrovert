@@ -193,7 +193,7 @@ const UserSettings = ({
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Box>
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
               <Btn
                 className="btn__settings--delete"
                 txt="Delete Account"

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 // Components
 import Dash from './components/Dash';
-import Home from './components/Home';
+import Welcome from './components/Welcome';
 // import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
@@ -30,7 +30,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<UserSettings />} />
         <Route path="/venues" element={<VenuesList />} />
-        <Route path="/welcome" element={<Home />} />
+        <Route path="/welcome" element={<Welcome />} />
       </Routes>
       {/* <Footer /> */}
     </Router>

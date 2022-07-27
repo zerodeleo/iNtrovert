@@ -53,7 +53,7 @@ const SignUp = ({ signUpDispatch, auth: { uid, authError } }) => {
       <Btn
         className="btn__navigate btn__navigate--signin "
         txt="Already a member?"
-        txtNextLine="sign in"
+        txtnextline="sign in"
         sx={{ color: 'rgba(0,0,0,0.5)', fontFamily: 'Red Hat Display' }}
         onClick={() => navigate('/signin')}
       />

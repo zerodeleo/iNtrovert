@@ -53,9 +53,6 @@ export const parksImg = [
   'https://images.unsplash.com/photo-1612806527197-42af2b64884a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
 ];
 
-// const random = parksImg[Math.floor(Math.random() * arr.length)];
-// console.log(random);
-
 export const randomImg= (type, parksImg, barsImg) =>{
   switch (type) {
     case 'park':

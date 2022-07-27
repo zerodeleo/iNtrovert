@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 
 // Actions
 import { getVenuesList, setPreferences } from '../../../store/actions/venuesActions';
-
 import { allVenuesList } from '../../../utils';
 
 // MUI
-import { Button } from '@mui/material';
+import Box from '@mui/material/Box';
 import { Container } from '@mui/system';
 import PreferencesCard from './PreferencesCard';
 
 // Actions
 import { getPreferences } from '../../../store/actions/venuesActions';
+
+// Components
+import Btn from '../../layout/Btn';
 
 const PreferencesList = ({
   venues,
@@ -22,7 +24,6 @@ const PreferencesList = ({
   getPreferencesDispatch,
 }) => {
   const [preferences, setPreferences] = useState(venues.preferences);
-  console.log(preferences, 'whatishappening');
 
   useEffect(() => {
     getPreferencesDispatch();
@@ -56,14 +57,26 @@ const PreferencesList = ({
             preference={name}
             preferences={preferences} />) }
       </div>
-      <Button txt="Save"
+      {/* <Button txt="Save"
         type="submit"
         variant='contained'
         fullWidth = {true}
         sx={{ backgroundColor: '#35463D', mb: 2 }}
         onClick={handleSubmit}
-      > Save preferences</Button>
-
+      > Save preferences</Button> */}
+      <Box sx={{ display: 'flex', flexDirection: 'column', p: '10%' }}>
+        <Btn
+          onClick={handleSubmit}
+          txt="SAVE"
+          variant="contained"
+          sx={{ backgroundColor: '#35463D',
+            borderRadius: '12px',
+            color: '#CBCDCB',
+            fontFamily: 'Red Hat Display',
+            fontWeight: '500',
+            letterSpacing: '2px' }}
+        />
+      </Box>
     </Container>
   );
 };

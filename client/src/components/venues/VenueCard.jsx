@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { ImStarEmpty } from 'react-icons/im';
 
 // MUI Icons
@@ -44,10 +45,10 @@ const VenueCard = ({ venue, handleHeartClick, isFavourite, idx }) => {
             alt="park image"
           />
           { isFavourite ?
-          <FavoriteBorderIcon
+          <FavoriteIcon
             onClick={(e) => handleHeartClick({ e, id: venue.place_id })}
             className='fav-icon'
-            style={{ color: 'red' }}/> :
+            style={{ color: '#b83d43' }}/> :
           <FavoriteBorderIcon
             onClick={(e) => handleHeartClick({ e, id: venue.place_id })}
             className='fav-icon'/> }
@@ -79,7 +80,7 @@ const VenueCard = ({ venue, handleHeartClick, isFavourite, idx }) => {
             </div> : null }
           { toggle ?
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
-            <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>
+            <Typography color="text.secondary">
               <a target="_blank"
                 style={{ textDecoration: 'none', color: '#35463d' }}
                 rel="noreferrer"

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { CgArrowLongRightL } from 'react-icons/cg';
 import { useNavigate } from 'react-router-dom';
 
-const Home = ({ uid }) => {
+const Welcome = ({ uid }) => {
   const navigate = useNavigate();
   if (uid) navigate('/signin');
 
@@ -49,4 +49,4 @@ const mapStateToProps = (state) => ({
   uid: state.auth.uid,
 });
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Welcome);

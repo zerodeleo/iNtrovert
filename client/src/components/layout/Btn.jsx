@@ -8,7 +8,7 @@ function Btn(props) {
     {...props}
   >
     { props.txt }
-    { props.txtNextLine ? <><br/>{props.txtNextLine}</> : null }
+    { props.txtnextline ? <><br/>{props.txtnextline}</> : null }
     { props.icon ? props.icon : null }
   </Button>;
 }
