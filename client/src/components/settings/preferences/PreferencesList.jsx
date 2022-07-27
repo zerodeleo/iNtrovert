@@ -7,11 +7,9 @@ import { getVenuesList, setPreferences } from '../../../store/actions/venuesActi
 import { allVenuesList } from '../../../utils';
 
 // MUI
-import { Box, Button, Card, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import { Container } from '@mui/system';
 import PreferencesCard from './PreferencesCard';
-import Grid from '@mui/material/Grid';
-import CardMedia from '@mui/material/CardMedia';
 
 // Actions
 import { getPreferences } from '../../../store/actions/venuesActions';
