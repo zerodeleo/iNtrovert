@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import UserSettings from './settings/UserSettings';
 import VenuesList from './venues/VenuesList';
 import BottomNav from './layout/BottomNav';
+import FavouritesList from './settings/FavouritesList';
 
 // MUI
 import AppBar from '@mui/material/AppBar';
@@ -26,7 +27,7 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
 
   const [settings, setSettings] = useState(false);
   const [pref, setPref] = useState(false);
-
+  const [fav, setFav] = useState(false);
   const propTest = 'propTest...HELLO';
 
   const toggleSettings = (boolean) => (event) => {
@@ -35,6 +36,10 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
   const togglePref = (boolean) => (event) => {
     setPref(boolean);
   };
+  const toggleFavourites = (boolean) => (event) => {
+    setFav(boolean);
+  };
+
 
   useEffect(() => {
     const ls = localStorage.getItem('preferences') ? JSON.parse(localStorage.getItem('preferences')) : null;
@@ -76,18 +81,13 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
           </Toolbar>
         </AppBar>
         <VenuesList />
-        {/* <UserSettings
-        settings={settings}
-        open={settings}
-        toggleSettings={toggleSettings}
-        propTest={propTest}
-      /> */}
         <BottomNav
-        // anchor={'bottom'}
           pref={pref}
           settings={settings}
           togglePref={togglePref}
           toggleSettings={toggleSettings}
+          fav={fav}
+          toggleFavourites={toggleFavourites}
         />
       </Box>
     </section>

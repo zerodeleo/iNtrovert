@@ -13,9 +13,10 @@ import Btn from './Btn';
 
 import PreferencesList from '../settings/preferences/PreferencesList';
 import UserSettings from '../settings/UserSettings';
+import FavouritesList from '../settings/FavouritesList';
 
 const BottomNav = (props) => {
-  const { pref, togglePref, settings, toggleSettings } = props;
+  const { pref, togglePref, settings, toggleSettings, fav, toggleFavourites } = props;
 
   const popupPrefs = () => (
     <Box
@@ -43,6 +44,7 @@ const BottomNav = (props) => {
             icon={<TuneIcon />}
             sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }}/>
           <BottomNavigationAction
+            onClick={toggleFavourites(true)}
             icon={<AiOutlineHeart />}
             sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }} />
         </BottomNavigation>
@@ -50,6 +52,11 @@ const BottomNav = (props) => {
       <UserSettings
         settings={settings}
         toggleSettings={toggleSettings}
+      />
+      <FavouritesList
+        fav={fav}
+        toggleFavourites={toggleFavourites}
+        anchor={'bottom'}
       />
       <Drawer
         open={pref}

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-import { randomImg, barsImg, parksImg } from './../../utils';
+import { barsImg, parksImg } from './../../utils';
 
 // MUI
 import Card from '@mui/material/Card';
@@ -40,7 +40,6 @@ const VenueCard = ({ venue, handleHeartClick, isFavourite, idx }) => {
             sx={{ borderRadius: 4 }}
             component="img"
             height="180"
-            // eslint-disable-next-line max-len
             image={venue.type === 'park' ? parksImg[idx] : barsImg[idx]}
             alt="park image"
           />
@@ -80,10 +79,9 @@ const VenueCard = ({ venue, handleHeartClick, isFavourite, idx }) => {
             </div> : null }
           { toggle ?
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
-
             <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>
               <a target="_blank"
-                style={{ textDecoration: 'none', color: 'grey' }}
+                style={{ textDecoration: 'none', color: '#35463d' }}
                 rel="noreferrer"
                 href={`https://www.google.com/maps/place/?q=place_id:${venue.place_id}`}>OPEN IN MAPS</a>
             </Typography>
