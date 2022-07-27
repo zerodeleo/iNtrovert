@@ -26,7 +26,7 @@ const VenuesList = ({ venues: { venuesList, preferences }, getVenuesListDispatch
           'bgcolor': 'transparent',
           'position': 'relative',
           'overflow': 'auto',
-          'maxHeight': height,
+          // 'maxHeight': height,
           '& ul': { padding: 0 },
         }}
         subheader={<li />}

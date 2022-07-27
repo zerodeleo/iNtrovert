@@ -47,10 +47,10 @@ const Dash = ({ auth }) => {
             textTransform: 'uppercase' }}>
           <Toolbar>
             {/* <AccountCircleIcon fontSize='large'/> */}
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Red Hat Display', paddingLeft: '12px' }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Red Hat Display' }}>
               Hello {auth.username}
             </Typography>
-            <div style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '20px', paddingBottom: '15px' }}>
+            <div style={{ paddingLeft: '15px', paddingTop: '20px', paddingBottom: '15px' }}>
               <img
                 style={{ borderRadius: '30px' }}
                 width='60px'

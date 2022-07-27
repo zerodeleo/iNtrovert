@@ -56,39 +56,22 @@ const PreferencesList = ({
 
   return (
     <Container>
-      <Box sx={{ paddingBottom: '5vh' }}>
-        <Box sx={{ width: '100%', paddingBottom: '5vh' }}>
-          <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 3, md: 3 }}
-            sx={{ m: '5%' }}>
-            {
-              allVenuesList.map((name) =>{
-                return (<Grid key={name} item xs={6}>
-                  <Card
-                    onClick={handleClick}
-                  >
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image="https://images.unsplash.com/photo-1517334266-b25264dbe6f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1037&q=80"
-                      alt="green iguana"
-                      name={name}
-                    />
-                  </Card>
-                </Grid>);
-              })
-            }
-          </Grid>
-        </Box>
-        <Box>
-          <Button txt="Save"
-            type="submit"
-            variant='contained'
-            color='secondary'
-            fullWidth = {true}
-            onClick={handleSubmit}
-          > Save preferences</Button>
-        </Box>
-      </Box>
+      <div className='icons-container'>
+        { allVenuesList.map((name) =>
+          <PreferencesCard
+            key={name}
+            handleClick={handleClick}
+            preference={name}
+            preferences={preferences} />) }
+      </div>
+      <Button txt="Save"
+        type="submit"
+        variant='contained'
+        fullWidth = {true}
+        sx={{ backgroundColor: '#35463D', mb: 2 }}
+        onClick={handleSubmit}
+      > Save preferences</Button>
+
     </Container>
   );
 };

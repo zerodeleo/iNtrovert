@@ -35,12 +35,7 @@ const BottomNav = (props) => {
   );
   return (
     <div>
-      <Box sx={{
-        bottom: 0,
-        position: 'absolute',
-        width: '100%',
-      }}
-      >
+      <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
         <BottomNavigation sx={{ backgroundColor: '#35463D', borderRadius: '15px', p: '5px' }}
           showLabels
         >
