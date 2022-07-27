@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { randomImg, barsImg, parksImg } from './../../utils';
 
@@ -21,12 +20,9 @@ const getArrow = (busynessDelta) => {
   <ArrowDownwardIcon fontSize='medium'sx={{ color: '#b83d43' }}/>;
 };
 
-const VenueCard = ({ venue, idx }) => {
+const VenueCard = ({ venue, handleHeartClick, isFavourite }) => {
   const [toggle, setToggle] = useState(false);
 
-  const handleMapsClick = (e) => {
-
-  };
   const handleToggleClick = (e) => {
     setToggle(!toggle);
   };
@@ -48,7 +44,14 @@ const VenueCard = ({ venue, idx }) => {
             image={venue.type === 'park' ? parksImg[idx] : barsImg[idx]}
             alt="park image"
           />
-          <FavoriteBorderIcon className='fav-icon'/>
+          { isFavourite ?
+          <FavoriteBorderIcon
+            onClick={(e) => handleHeartClick({ e, id: venue.place_id })}
+            className='fav-icon'
+            style={{ color: 'red' }}/> :
+          <FavoriteBorderIcon
+            onClick={(e) => handleHeartClick({ e, id: venue.place_id })}
+            className='fav-icon'/> }
         </div>
         <CardContent className='no-padding' sx={{ p: 0, mt: 1 }}>
           <Typography variant="h5" component="div">

@@ -92,11 +92,22 @@ router.route('/preferences/:uid').put((req, res) => {
 router.route('/preferences/:uid').get((req, res) => {
   const { uid } = req.params;
   User.findOne({ uid })
-      .then((data) => {
-        console.log('hello ', data);
-        return data;
-      })
       .then((data) => res.status(200).json(data.preferences))
+      .catch((err) => res.status(500).json(err.message));
+});
+
+router.route('/favourites/:uid').get((req, res) => {
+  const { uid } = req.params;
+  User.findOne({ uid })
+      .then((data) => res.status(200).json(data.favourites))
+      .catch((err) => res.status(500).json(err.message));
+});
+
+router.route('/favourites/:uid').put((req, res) => {
+  const { favourites } = req.body;
+  const { uid } = req.params;
+  User.findOneAndUpdate({ uid }, { favourites })
+      .then(() => res.status(201).json())
       .catch((err) => res.status(500).json(err.message));
 });
 
