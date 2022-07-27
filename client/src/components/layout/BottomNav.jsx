@@ -13,14 +13,14 @@ import Btn from './Btn';
 
 import PreferencesList from '../settings/preferences/PreferencesList';
 import UserSettings from '../settings/UserSettings';
+import FavouritesList from '../settings/FavouritesList';
 
 const BottomNav = (props) => {
-  const { pref, togglePref, settings, toggleSettings } = props;
+  const { pref, togglePref, settings, toggleSettings, fav, toggleFavourites } = props;
 
   const popupPrefs = () => (
     <Box
       sx={{ width: '100vw' }}
-
     >
       <div>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', p: '10%' }}>
@@ -54,27 +54,20 @@ const BottomNav = (props) => {
             icon={<TuneIcon />}
             sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }}/>
           <BottomNavigationAction
+            onClick={toggleFavourites(true)}
             icon={<AiOutlineHeart />}
             sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }} />
         </BottomNavigation>
-        {/* <BottomNavigation
-          showLabels
-        >
-          {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
-        {/* <BottomNavigationAction onClick={togglePref(true)} label="Preferences" icon={<TuneIcon />} />
-        </BottomNavigation> */}
       </Box>
       <UserSettings
         settings={settings}
         toggleSettings={toggleSettings}
       />
-      {/* <Drawer
-        open={settings}
-        onClose={toggleSettings(false)}
+      <FavouritesList
+        fav={fav}
+        toggleFavourites={toggleFavourites}
         anchor={'bottom'}
-      >
-        {popupPrefs(pref)}
-      </Drawer> */}
+      />
       <Drawer
         open={pref}
         onClose={togglePref(false)}
