@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // MUI
 import Card from '@mui/material/Card';
@@ -18,12 +18,9 @@ const getArrow = (busynessDelta) => {
   <ArrowDownwardIcon fontSize='medium'sx={{ color: '#b83d43' }}/>;
 };
 
-const VenueCard = ({ venue, idx }) => {
+const VenueCard = ({ venue, handleHeartClick, isFavourite }) => {
   const [toggle, setToggle] = useState(false);
 
-  const handleMapsClick = (e) => {
-
-  };
   const handleToggleClick = (e) => {
     setToggle(!toggle);
   };
@@ -45,7 +42,14 @@ const VenueCard = ({ venue, idx }) => {
             image="https://images.unsplash.com/photo-1627343101316-9adfdfddd8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
             alt="park image"
           />
-          <FavoriteBorderIcon className='fav-icon'/>
+          { isFavourite ?
+          <FavoriteBorderIcon
+            onClick={(e) => handleHeartClick({ e, id: venue.place_id })}
+            className='fav-icon'
+            style={{ color: 'red' }}/> :
+          <FavoriteBorderIcon
+            onClick={(e) => handleHeartClick({ e, id: venue.place_id })}
+            className='fav-icon'/> }
         </div>
         <CardContent className='no-padding' sx={{ p: 0, mt: 1 }}>
           <Typography variant="h5" component="div">

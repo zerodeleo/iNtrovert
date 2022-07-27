@@ -39,8 +39,6 @@ const PreferencesList = ({
     setPreferences({ ...preferences, [name]: checked });
   };
 
-  console.log('hello ', venues.preferences);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const typesKeys = [...Object.keys(preferences)];
