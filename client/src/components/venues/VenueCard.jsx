@@ -1,4 +1,7 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
+
+import { randomImg, barsImg, parksImg } from './../../utils';
 
 // MUI
 import Card from '@mui/material/Card';
@@ -19,6 +22,7 @@ const getArrow = (busynessDelta) => {
 };
 
 const VenueCard = ({ venue, idx }) => {
+
   const [toggle, setToggle] = useState(false);
 
   const handleMapsClick = (e) => {
@@ -42,7 +46,7 @@ const VenueCard = ({ venue, idx }) => {
             component="img"
             height="180"
             // eslint-disable-next-line max-len
-            image="https://images.unsplash.com/photo-1627343101316-9adfdfddd8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            image={venue.type === 'park' ? parksImg[idx] : barsImg[idx]}
             alt="park image"
           />
           <FavoriteBorderIcon className='fav-icon'/>
@@ -74,6 +78,8 @@ const VenueCard = ({ venue, idx }) => {
             </div> : null }
           { toggle ?
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
+
+            <Typography color="text.secondary" name="maps" onClick={handleMapsClick}sx={{ color: '#35463D' }}>OPEN IN MAPS</Typography>
             <Typography color="text.secondary" name="maps" onClick={handleMapsClick}>
               <a target="_blank"
                 style={{ textDecoration: 'none', color: 'grey' }}

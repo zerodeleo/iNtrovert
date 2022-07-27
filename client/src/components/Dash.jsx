@@ -81,10 +81,11 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
         propTest={propTest}
       /> */}
       <BottomNav
+        // anchor={'bottom'}
         pref={pref}
+        settings={settings}
         togglePref={togglePref}
-        open={pref}
-        anchor={'bottom'}
+        toggleSettings={toggleSettings}
       />
     </section>
   );

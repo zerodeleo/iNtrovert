@@ -123,9 +123,9 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
 
     const busynessDeltaTxt = () => {
       if (besttimeVenue.analysis.venue_live_forecasted_delta) {
-        return 'People are expecting to leave';
+        return 'People are expected to leave';
       }
-      return 'People are expecting to arrive';
+      return 'People are expected to arrive';
     };
 
     return {
