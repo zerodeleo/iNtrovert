@@ -118,9 +118,9 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
 
     const busynessDeltaTxt = () => {
       if (besttimeVenue.analysis.venue_live_forecasted_delta) {
-        return 'People are expecting to leave';
+        return 'People are expected to leave';
       }
-      return 'People are expecting to arrive';
+      return 'People are expected to arrive';
     };
 
     const types = googleVenue.types.map((el) => el.replace(/_/g, ' '));
@@ -137,7 +137,7 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
       busynessDeltaNum: besttimeVenue.analysis.venue_live_forecasted_delta,
       createdAt: new Date().getTime(),
       id: Math.floor(Math.random() * 10000000000),
-      type: 'park',
+      type: 'bar',
     };
   });
 };

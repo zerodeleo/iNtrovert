@@ -6,8 +6,6 @@ import { connect } from 'react-redux';
 
 // MUI
 // import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import Drawer from '@mui/material/Drawer';
 import Accordion from '@mui/material/Accordion';
@@ -107,7 +105,7 @@ const UserSettings = ({
 
   const settingMenu = () => (
     <Box
-      sx={{ width: '100vw' }}
+      sx={{ width: '100vw', fontFamily: 'Red Hat Display' }}
     >
       <div>
         <Accordion expanded={expanded === 'changeUsername'} onChange={handeSettingsMenu('changeUsername')}>
@@ -136,6 +134,7 @@ const UserSettings = ({
                 txt="Save username"
                 name="save-username"
                 onClick={handleClick}
+                sx={{ color: '#985D8A' }}
               />
               { usernameErr ? <Err msg={usernameErr.msg} /> : null }
 
@@ -179,6 +178,7 @@ const UserSettings = ({
                 txt="Save password"
                 name="save-password"
                 onClick={handleClick}
+                sx={{ color: '#985D8A' }}
               />
               { err ? <Err msg={err.msg} /> : null }
             </Box>
@@ -210,6 +210,12 @@ const UserSettings = ({
             onClick={toggleSettings(false)}
             txt="BACK"
             variant="contained"
+            sx={{ backgroundColor: '#35463D',
+              borderRadius: '12px',
+              color: '#CBCDCB',
+              fontFamily: 'Red Hat Display',
+              fontWeight: '500',
+              letterSpacing: '2px' }}
           />
           <Btn
             className="btn btn__settings btn__settings--logout"
@@ -218,6 +224,13 @@ const UserSettings = ({
             txt="Log Out"
             name="logout"
             onClick={handleClick}
+            sx={{
+              backgroundColor: '#653E5C',
+              borderRadius: '12px',
+              color: '#CBCDCB',
+              fontFamily: 'Red Hat Display',
+              fontWeight: '500',
+              letterSpacing: '2px' }}
           />
         </Box>
       </div>
@@ -226,12 +239,10 @@ const UserSettings = ({
 
   return (
     <section className="UserSettings pd">
-      <IconButton onClick={toggleSettings(true)}>
-        <MenuIcon />
-      </IconButton>
       <Drawer
         open={settings}
         onClose={toggleSettings(false)}
+        anchor='bottom'
       >
         {settingMenu(settings)}
       </Drawer>

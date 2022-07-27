@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -10,12 +11,13 @@ import Drawer from '@mui/material/Drawer';
 import TuneIcon from '@mui/icons-material/Tune';
 import Btn from './Btn';
 
-import PreferencesList from '../settings/preferences/PreferencesList';
+import PreferencesList from '../settings/Preferences/PreferencesList';
+import UserSettings from '../settings/UserSettings';
 
 const BottomNav = (props) => {
-  const { pref, togglePref } = props;
+  const { pref, togglePref, settings, toggleSettings } = props;
 
-  const popupMenu = () => (
+  const popupPrefs = () => (
     <Box
       sx={{ width: '100vw' }}
 
@@ -36,15 +38,15 @@ const BottomNav = (props) => {
     <div>
       <Box sx={{
         bottom: 0,
-        position: 'absolute',
+        position: 'fixed',
         width: '100%',
       }}
       >
-        <BottomNavigation sx={{ backgroundColor: '#35463D', borderRadius: '15px', p: '5px' }}
+        <BottomNavigation sx={{ backgroundColor: '#35463D', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', p: '5px' }}
           showLabels
         >
           <BottomNavigationAction
-            onClick={togglePref(true)}
+            onClick={toggleSettings(true)}
             icon={<AiOutlineUser />}
             sx={{ color: '#CBCDCB', fontSize: '25px', p: '3px' }} />
           <BottomNavigationAction
@@ -62,12 +64,23 @@ const BottomNav = (props) => {
         {/* <BottomNavigationAction onClick={togglePref(true)} label="Preferences" icon={<TuneIcon />} />
         </BottomNavigation> */}
       </Box>
+      <UserSettings
+        settings={settings}
+        toggleSettings={toggleSettings}
+      />
+      {/* <Drawer
+        open={settings}
+        onClose={toggleSettings(false)}
+        anchor={'bottom'}
+      >
+        {popupPrefs(pref)}
+      </Drawer> */}
       <Drawer
         open={pref}
         onClose={togglePref(false)}
         anchor={'bottom'}
       >
-        {popupMenu(pref)}
+        {popupPrefs(pref)}
       </Drawer>
     </div>
   );

@@ -8,8 +8,8 @@ const axios = require('axios');
 const { getGoogleVenues, getBestTimeURLSearchParamsFake, getBestTimeURLSearchParamsFakeOne, combineGoogleAndBesttime, mergeNestedArr } = require('./utils');
 const router = new Router();
 
-const fakeGoogleApiPath = 'http://localhost:5001';
-const fakeBestTimeApiPath = 'http://localhost:5002';
+const fakeGoogleApiPath = 'https://fakegoogleapi.herokuapp.com';
+const fakeBestTimeApiPath = 'https://fakebesttimeapi.herokuapp.com';
 
 
 router.route(`/venues`).post(async (req, res) => {
