@@ -9,8 +9,6 @@ const { getGoogleVenues, getBestTimeURLSearchParamsFake, getBestTimeURLSearchPar
 const router = new Router();
 
 
-const fakeGoogleApiPath = 'https://fakegoogleapi.herokuapp.com';
-const fakeBestTimeApiPath = 'https://fakebesttimeapi.herokuapp.com';
 const fakeGoogleApiPath = process.env.MODE === 'development' ? 'http://localhost:5001' : 'https://fakegoogleapi.herokuapp.com';
 const fakeBestTimeApiPath = process.env.MODE === 'development' ? 'http://localhost:5002' : 'https://fakebesttimeapi.herokuapp.com';
 

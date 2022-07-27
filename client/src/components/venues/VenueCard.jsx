@@ -22,7 +22,6 @@ const getArrow = (busynessDelta) => {
 };
 
 const VenueCard = ({ venue, idx }) => {
-
   const [toggle, setToggle] = useState(false);
 
   const handleMapsClick = (e) => {
