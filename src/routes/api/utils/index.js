@@ -59,9 +59,14 @@ const mergeNestedArr = (arr, types) => {
   for (let i = 0; i < arr.length; i ++) {
     if (arr[i]) {
       if (types) {
-        console.log('types ', types);
+        const typesSorted = types.sort();
+        let newObj;
+        for (let j = 0; j < arr[i].length; j++) {
+          newObj = { ...arr[i][j], type: typesSorted[i] };
+          resultArr.push(newObj);
+        }
       }
-      resultArr = [...resultArr, ...arr[i]];
+      if (!types) resultArr = [...resultArr, ...arr[i]];
     }
   };
   return resultArr;
@@ -123,8 +128,6 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
       return 'People are expected to arrive';
     };
 
-    const types = googleVenue.types.map((el) => el.replace(/_/g, ' '));
-
     return {
       name: googleVenue.name,
       place_id: googleVenue.place_id,
@@ -137,7 +140,8 @@ const combineGoogleAndBesttime = ({ googleVenues, besttimeVenues, types }) => {
       busynessDeltaNum: besttimeVenue.analysis.venue_live_forecasted_delta,
       createdAt: new Date().getTime(),
       id: Math.floor(Math.random() * 10000000000),
-      type: 'bar',
+      type: googleVenue.type,
+      types: googleVenue.types,
     };
   });
 };

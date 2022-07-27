@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
 // Redux
@@ -16,8 +16,12 @@ import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-const Dash = ({ auth }) => {
+// Actions
+import { getVenuesList } from '../store/actions/venuesActions';
+
+const Dash = ({ auth, venues, getVenuesListDispatch }) => {
   if (!auth.uid) return <Navigate to="/welcome" />;
+  const [preferences, setPreferences] = useState(venues.preferences);
 
   const [settings, setSettings] = useState(false);
   const [pref, setPref] = useState(false);
@@ -30,6 +34,17 @@ const Dash = ({ auth }) => {
   const togglePref = (boolean) => (event) => {
     setPref(boolean);
   };
+
+  useEffect(() => {
+    const ls = localStorage.getItem('preferences') ? JSON.parse(localStorage.getItem('preferences')) : null;
+    setPreferences(ls ? ls : venues.preferences);
+  }, []);
+
+  useEffect(() => {
+    const typesKeys = [...Object.keys(preferences)];
+    const types = typesKeys.filter((t, idx)=> preferences[`${t}`] ? typesKeys[idx] : null);
+    getVenuesListDispatch({ types });
+  }, [preferences]);
 
   return (
     <section className="Dash">
@@ -79,7 +94,12 @@ const Dash = ({ auth }) => {
 const mapStateToProps = (state) => {
   return {
     auth: state.auth,
+    venues: state.venues,
   };
 };
 
-export default connect(mapStateToProps, null)(Dash);
+const mapDispatchToProps = (dispatch) => ({
+  getVenuesListDispatch: ({ types }) => dispatch(getVenuesList({ types })),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dash);
