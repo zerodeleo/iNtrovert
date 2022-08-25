@@ -18,6 +18,7 @@ const VenuesList = ({
 }) => {
   const { innerWidth: width, innerHeight: height } = window;
   const [favouritesList, setFavouritesList] = useState(favourites);
+  console.log(venuesList);
 
   useEffect(() => {
     const typesKeys = [...Object.keys(preferences)];
@@ -47,36 +48,39 @@ const VenuesList = ({
   };
 
   return (
-    <div>
-      <List
-        sx={{
-          'width': '100%',
-          'maxWidth': width,
-          'bgcolor': 'transparent',
-          'position': 'relative',
-          'overflow': 'auto',
-          '& ul': { padding: 0 },
-        }}
-        subheader={<li />}
-      >
-        { venuesList ? [0].map((sectionId) => (
-          <li key={`section-${sectionId}`}>
-            <ul className='ul-container'>
-              {venuesList.map((venue, idx) => (
-                <VenueCard
-                  key={venue.id}
-                  id={venue.place_id}
-                  idx={idx}
-                  venue={venue}
-                  handleHeartClick={handleHeartClick}
-                  isFavourite={favouritesList.includes(venue.place_id)}
-                />
-              ))}
-            </ul>
-          </li>
-        )) : null }
-      </List>
-    </div>
+    // <div>
+    <List
+      sx={{
+        'width': '100%',
+        'maxWidth': width,
+        'minHeight': '50%',
+        'bgcolor': 'transparent',
+        'position': 'relative',
+        'overflow': 'auto',
+        '& ul': { padding: 0 },
+        'display': 'flex',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+      }}
+    >
+      { venuesList.length > 0 ? [0].map((sectionId) => (
+        <li key={`section-${sectionId}`}>
+          <ul className='ul-container'>
+            {venuesList.map((venue, idx) => (
+              <VenueCard
+                key={venue.id}
+                id={venue.place_id}
+                idx={idx}
+                venue={venue}
+                handleHeartClick={handleHeartClick}
+                isFavourite={favouritesList.includes(venue.place_id)}
+              />
+            ))}
+          </ul>
+        </li>
+      )) : <li sx={{ display: 'flex', color: 'red' }}>Select your preferences below</li> }
+    </List>
+    // </div>
   );
 };
 

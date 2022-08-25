@@ -6,29 +6,29 @@ import { Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // Component
-import UserSettings from './settings/UserSettings';
+// import UserSettings from './settings/UserSettings';
 import VenuesList from './venues/VenuesList';
 import BottomNav from './layout/BottomNav';
-import FavouritesList from './settings/FavouritesList';
+// import FavouritesList from './settings/FavouritesList';
+import Welcome from './Welcome';
 
 // MUI
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 // Actions
 import { getVenuesList } from '../store/actions/venuesActions';
 
 const Dash = ({ auth, venues, getVenuesListDispatch }) => {
-  if (!auth.uid) return <Navigate to="/welcome" />;
+  // if (!auth.uid) return <Navigate to="/welcome" />;
   const [preferences, setPreferences] = useState(venues.preferences);
 
   const [settings, setSettings] = useState(false);
   const [pref, setPref] = useState(false);
   const [fav, setFav] = useState(false);
-  const propTest = 'propTest...HELLO';
 
   const toggleSettings = (boolean) => (event) => {
     setSettings(boolean);
@@ -39,7 +39,6 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
   const toggleFavourites = (boolean) => (event) => {
     setFav(boolean);
   };
-
 
   useEffect(() => {
     const ls = localStorage.getItem('preferences') ? JSON.parse(localStorage.getItem('preferences')) : null;
@@ -52,12 +51,19 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
     getVenuesListDispatch({ types });
   }, [preferences]);
 
+  if (!auth.uid) {
+    return (
+      <Welcome />
+    );
+  }
+
   return (
     <section className="Dash">
-      <Box sx={{ minHeight: '100%' }}>
+      <Box sx={{ minHeight: '100%', minWidth: '100%' }}>
         <AppBar
           position="static"
           sx={{
+            marginTop: '2%',
             backdropFilter: 'blur(2px)',
             letterSpacing: '2px',
             backgroundColor: 'transparent',
@@ -66,18 +72,16 @@ const Dash = ({ auth, venues, getVenuesListDispatch }) => {
             zIndex: '999',
             textTransform: 'uppercase' }}>
           <Toolbar>
-            {/* <AccountCircleIcon fontSize='large'/> */}
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Red Hat Display' }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Red Hat Display', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               Hello {auth.username}
             </Typography>
-            <div style={{ paddingLeft: '15px', paddingTop: '20px', paddingBottom: '15px' }}>
+            {/* <div style={{ paddingLeft: '15px', paddingTop: '20px', paddingBottom: '15px' }}>
               <img
                 style={{ borderRadius: '30px' }}
                 width='60px'
                 height='60px'
                 src='https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=50'/>
-            </div>
-
+            </div> */}
           </Toolbar>
         </AppBar>
         <VenuesList />

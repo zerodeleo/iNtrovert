@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Welcome = ({ uid }) => {
   const navigate = useNavigate();
-  if (uid) navigate('/signin');
+  // if (uid) navigate('/signin');
 
   return (
     <section className="home" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
@@ -41,7 +41,8 @@ const Welcome = ({ uid }) => {
           }}><CgArrowLongRightL size={'1.5rem'} /></div>}/>
       </article>
       <article></article>
-    </section>);
+    </section>
+  );
 };
 
 

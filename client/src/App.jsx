@@ -8,7 +8,6 @@ import { connect } from 'react-redux';
 // Components
 import Dash from './components/Dash';
 import Welcome from './components/Welcome';
-// import Footer from './components/layout/Footer';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import UserSettings from './components/settings/UserSettings';
@@ -22,6 +21,7 @@ const App = ({ signInWithLocalStorageDispatch }) => {
     signInWithLocalStorageDispatch();
   }, []);
 
+
   return (
     <Router>
       <Routes>
@@ -32,7 +32,6 @@ const App = ({ signInWithLocalStorageDispatch }) => {
         <Route path="/venues" element={<VenuesList />} />
         <Route path="/welcome" element={<Welcome />} />
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 };
