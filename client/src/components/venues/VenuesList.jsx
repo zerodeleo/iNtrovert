@@ -18,7 +18,6 @@ const VenuesList = ({
 }) => {
   const { innerWidth: width, innerHeight: height } = window;
   const [favouritesList, setFavouritesList] = useState(favourites);
-  console.log(venuesList);
 
   useEffect(() => {
     const typesKeys = [...Object.keys(preferences)];

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 // MUI
@@ -94,13 +95,6 @@ const PreferencesCard = ({ handleClick, preference, preferences }) => {
             onClick={handleClick}
             name={preference}
           />
-          {/* <Checkbox
-        icon={ icon(preferences[preference], preference) }
-        checkedIcon={ icon(preferences[preference], preference) }
-        checked={ preferences[preference] ? true : false }
-        onClick={handleClick}
-        name={preference}
-      /> */}
           <br/>
         </Card>
         <Typography sx={{

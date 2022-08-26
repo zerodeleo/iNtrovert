@@ -57,13 +57,6 @@ const PreferencesList = ({
             preference={name}
             preferences={preferences} />) }
       </div>
-      {/* <Button txt="Save"
-        type="submit"
-        variant='contained'
-        fullWidth = {true}
-        sx={{ backgroundColor: '#35463D', mb: 2 }}
-        onClick={handleSubmit}
-      > Save preferences</Button> */}
       <Box sx={{ display: 'flex', flexDirection: 'column', p: '10%' }}>
         <Btn
           onClick={handleSubmit}
